@@ -6,22 +6,24 @@ html {
   font-family: 'Pobeda';
   src: url(../fonts/pobeda-regular.ttf);
 }
+
 h1, h3, p {
 	color: #FFF;
   font-family: 'Arial'
 }
+.wil-text {
+  margin-top: -15.4em  
+}
 h1 {
-  font-size: 16vw;
-  float: right;
-  margin-left: 2vw;
-  margin-top: -7.9%
+  font-size: 19em;
+  padding-left: .5vw
 }
 h2 {
   font-family: 'Pobeda';
   color: #FFF;
   font-size: 8em;
-  margin-left: 5vw;
-  margin-bottom: 2vw
+  margin-left: 4vw;
+  margin-bottom: .5em
 }
 p {
   text-align: center;
