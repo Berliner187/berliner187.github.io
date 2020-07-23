@@ -12,10 +12,10 @@ h1, h3, p {
   font-family: 'Arial'
 }
 .wil-text {
-  margin-top: -15.4em  
+  margin-top: -13vw  
 }
 h1 {
-  font-size: 19em;
+  font-size: 16vw;
   padding-left: .5vw
 }
 h2 {
@@ -68,35 +68,37 @@ a {
 /*Элементы меню*/
 .menu {
 	position: absolute;
-	margin: 0 auto;
+  margin: 0 auto;
 	top: 0;
-	margin-top: 1em;
-	width: 100%
+  width: 100%;
+	margin-top: .8vw;
 }
 .buttons {
-	padding-left: 1em;
+	padding-left: 1vw;
 	transition-duration: .5s;
 	color: #000;
 	text-decoration: none;
 	margin: 0 auto;
 	font-family: 'Arial';
-	font-size: 1.5em;
-	margin-left: .2em;
-  border-radius: .8em;
-  padding: .5em 2em;
+	font-size: 1.3vw;
+	margin-left: .3vw;
+  border-radius: .9vw;
+  padding: .65vw 2.2vw;
   display: inline-block;
   transition-duration: .5s;	
 }
 .buttons:hover {
 	color: #FFF;
-	background-color: #b26b4d;
+	background-color: #2a004a;
 	transition-duration: .5s;
+  box-shadow:  10px 10px 39px #9660a4, 
+             -10px -10px 39px #ffa8ff;
 }
 .button-y{
 	background-color: #fde482
 }
 .button-v {
-	background-color: #c66aab
+	background-color: #ce84e1
 }
 .button-o {
 	background-color: #92ddea
