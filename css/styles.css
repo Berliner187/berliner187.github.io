@@ -75,7 +75,6 @@ a {
 }
 .buttons {
 	padding-left: 1vw;
-	transition-duration: .5s;
 	color: #000;
 	text-decoration: none;
 	margin: 0 auto;
@@ -85,12 +84,12 @@ a {
   border-radius: .9vw;
   padding: .65vw 2.2vw;
   display: inline-block;
-  transition-duration: .5s;	
+  transition-duration: .6s;	
 }
 .buttons:hover {
 	color: #FFF;
 	background-color: #2a004a;
-	transition-duration: .5s;
+	transition-duration: .6s;
   box-shadow:  10px 10px 39px #9660a4, 
              -10px -10px 39px #ffa8ff;
 }
