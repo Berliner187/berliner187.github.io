@@ -14,7 +14,7 @@ h1, h3, p {
 .wil-text {
   margin-top: -13vw  
 }
-h1 {
+.h1-willkommen {
   font-size: 16vw;
   padding-left: .5vw
 }
@@ -32,7 +32,7 @@ p {
 }
 .p-font {
   font-family: 'Pobeda';
-  font-size: 4em
+  font-size: 3em
 }
 .p-ctr {
   color: #FFF
@@ -118,6 +118,8 @@ figcaption {
   font-size: .7em;
 }
 hr {
+  left: 0;
+  right: 0
   width: 80%;
   height: 4px;
   background-color: #FFF;
@@ -137,7 +139,8 @@ hr {
 }
 .img-box {
   width: 40vw;
-  margin-bottom: 4em
+  margin-bottom: 4em;
+  margin: 0 auto;
 }
 .img-content {
   border-radius: 1em;
