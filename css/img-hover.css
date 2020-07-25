@@ -2,6 +2,7 @@ figure.snip1104 {
   position: relative;
   overflow: hidden;
   margin: 1em;
+  margin-left: 0;
   width: 100%;
   background: #000;
   color: #FFF;
@@ -95,6 +96,14 @@ figure.snip1104.v {
 figure.snip1104.v h2 {
   background: #000;
 }
+
+figure.snip1104.ocean {
+  background: #7dbbb9;
+}
+figure.snip1104.ocean h2 {
+  background: #000;
+}
+
 
 figure.snip1104.yellow {
   background: #7f5006;

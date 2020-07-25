@@ -25,6 +25,12 @@ h2 {
   margin-left: 4vw;
   margin-bottom: .5em
 }
+.h2-header {
+  text-align: center;
+  font-family: 'Arial';
+  font-size: 4em;
+  margin-left: 0
+}
 p {
   text-align: center;
   font-size: 1.8em;
@@ -32,7 +38,7 @@ p {
 }
 .p-font {
   font-family: 'Pobeda';
-  font-size: 3em
+  font-size: 5em
 }
 .p-ctr {
   color: #FFF
@@ -58,11 +64,11 @@ a {
   font-size: 1.2em;
   display: block;
   text-decoration: underline;
-  transition-duration: .4s;
+  transition-duration: .6s;
 }
 .a-contact:hover {
   color: #fde482;
-  transition-duration: .4s
+  transition-duration: .6s
 }
 
 /*Элементы меню*/
