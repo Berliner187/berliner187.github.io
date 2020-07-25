@@ -7,33 +7,33 @@ html {
   src: url(../fonts/pobeda-regular.ttf);
 }
 
-h1, h3, p {
+h1, h3, p, a {
 	color: #FFF;
   font-family: 'Arial'
 }
 .wil-text {
   margin-top: -13vw  
 }
-.h1-willkommen {
+h1 {
   font-size: 16vw;
   padding-left: .5vw
 }
 h2 {
   font-family: 'Pobeda';
   color: #FFF;
-  font-size: 7em;
+  font-size: 6vw;
   margin-left: 4vw;
-  margin-bottom: .5em
+  margin-bottom: .4vw
 }
 .h2-header {
   text-align: center;
   font-family: 'Arial';
-  font-size: 4em;
+  font-size: 3.5vw;
   margin-left: 0
 }
 p {
   text-align: center;
-  font-size: 1.8em;
+  font-size: 1.4vw;
   margin-top: 1em
 }
 .p-font {
@@ -60,8 +60,8 @@ a {
   color: #FFF;
   text-align: center;
   margin: 0 auto;
-  margin-top: 1em;
-  font-size: 1.2em;
+  margin-top: .8vw;
+  font-size: 1vw;
   display: block;
   text-decoration: underline;
   transition-duration: .6s;
@@ -113,20 +113,20 @@ a {
 /*Контентная часть*/
 figure {
   display: inline-block;
-  padding: 10px;
-  margin: 0 1em 0 0;
+  padding: .1vw;
+  margin: 0 .9vw 0 0;
   vertical-align: top; 
 }
 figcaption { 
   text-align: center;
   color: #FFF;
-  font-size: .7em;
+  font-size: .6vw;
 }
 hr {
   left: 0;
   right: 0;
-  width: 80%;
-  height: 4px;
+  width: 93%;
+  height: .08vw;
   background-color: #FFF;
   color: #FFF;
   border-radius: 2em
@@ -138,6 +138,7 @@ hr {
   color: #FFF;
   border-radius: 2em
 }
+
 .img-con {
   width: 100%;
   display: inline;

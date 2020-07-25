@@ -1,14 +1,14 @@
 figure.snip1104 {
   position: relative;
   overflow: hidden;
-  margin: 1em;
+  margin: 1vw;
   margin-left: 0;
   width: 100%;
   background: #000;
   color: #FFF;
   text-align: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  border-radius: 1em
+  border-radius: 1vw
 }
 
 figure.snip1104 * {
@@ -20,7 +20,7 @@ figure.snip1104 * {
 
 figure.snip1104 img {
   max-width: 100%;
-  opacity: 0.25;
+  opacity: 0.3;
 }
 
 figure.snip1104 figcaption {

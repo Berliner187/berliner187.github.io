@@ -29,10 +29,10 @@
 
 .ip-h1 {
     position: relative;
-    top: -.6em;
+    top: -.5vw;
     height: 51.2vw;
-    -webkit-transform: translate3d(0,25%,0);
-    transform: translate3d(0,25%,0);
+    -webkit-transform: translate3d(0,25vw,0);
+    transform: translate3d(0,15vw,0);
     font-family: 'Pobeda';
     color: #FFF;
     text-align: center;
@@ -187,7 +187,7 @@
 }
 
 @keyframes animLoadedLogo {
-    to { -webkit-transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); transform: translate3d(0,100%,0) translate3d(0,50px,0) scale3d(0.65,0.65,1); }
+    to { -webkit-transform: translate3d(0,100%,0) translate3d(0,1vw,0) scale3d(0.65,0.65,1); transform: translate3d(0,100vw,0) translate3d(0,1.2vw,0) scale3d(0.65,0.65,1); }
 }
 
 .loaded .ip-loader {
@@ -196,11 +196,11 @@
 }
 
 @-webkit-keyframes animLoadedLoader {
-    to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
+    to { opacity: 0; -webkit-transform: translate3d(0,-100vw,0) scale3d(0.3,0.3,1); }
 }
 
 @keyframes animLoadedLoader {
-    to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
+    to { opacity: 0; -webkit-transform: translate3d(0,-100vw,0) scale3d(0.3,0.3,1); transform: translate3d(0,-100vw,0) scale3d(0.3,0.3,1); }
 }
 
 /* Change the color of the logo */
@@ -217,11 +217,11 @@
 }
 
 @-webkit-keyframes animLoadedHeader {
-    to { -webkit-transform: translate3d(0,-100%,0); }
+    to { -webkit-transform: translate3d(0,-100vw,0); }
 }
 
 @keyframes animLoadedHeader {
-    to { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); }
+    to { -webkit-transform: translate3d(0,-100vw,0); transform: translate3d(0,-100vw,0); }
 }
 
 /* Content animations */
