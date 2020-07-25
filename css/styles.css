@@ -6,6 +6,10 @@ html {
   font-family: 'Pobeda';
   src: url(../fonts/pobeda-regular.ttf);
 }
+@font-face {
+    font-family: 'Arial';
+    src: url(../fonts/Arial.ttf);
+}
 
 h1, h3, p, a {
 	color: #FFF;
@@ -16,7 +20,8 @@ h1, h3, p, a {
 }
 h1 {
   font-size: 16vw;
-  padding-left: .5vw
+  padding-left: 11vw;
+  padding: 0
 }
 h2 {
   font-family: 'Pobeda';

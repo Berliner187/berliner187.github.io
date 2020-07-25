@@ -29,7 +29,7 @@
 
 .ip-h1 {
     position: relative;
-    top: -.5vw;
+    top: -2vw;
     height: 51.2vw;
     -webkit-transform: translate3d(0,25vw,0);
     transform: translate3d(0,15vw,0);
