@@ -196,11 +196,11 @@
 }
 
 @-webkit-keyframes animLoadedLoader {
-    to { opacity: 0; -webkit-transform: translate3d(0,-100vw,0) scale3d(0.3,0.3,1); }
+    to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
 }
 
 @keyframes animLoadedLoader {
-    to { opacity: 0; -webkit-transform: translate3d(0,-100vw,0) scale3d(0.3,0.3,1); transform: translate3d(0,-100vw,0) scale3d(0.3,0.3,1); }
+    to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
 }
 
 /* Change the color of the logo */
