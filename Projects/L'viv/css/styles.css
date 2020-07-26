@@ -10,10 +10,6 @@
 	font-family: 'SFNS Display';
 	src: url(../fonts/SFNS.ttf)
 }
-@font-face {
-	font-family: 'Cramaten';
-	src: url(../fonts/Cramaten.ttf)
-}
 html {
 	scroll-behavior: smooth;
 }
@@ -33,11 +29,11 @@ html {
 .menu {
 	position: fixed;
 	margin: 0 auto;
-	margin-top: .5%;
+	margin-top: .2%;
 	top: 0;
 	width: 99.2%;
 	background-color: #f2f3f4;
-	height: 2.8em;
+	height: 3vw;
 	opacity: .5;
 	border-radius: 1.2em;
 	transition-duration: .4s;
@@ -49,11 +45,11 @@ html {
 	text-decoration: none;
 	margin: 0 auto;
 	font-family: 'Arial';
-	font-size: 1.3em;
-	margin-left: .2em;
-    border-radius: 1.1em;
+	font-size: 1.3vw;
+	margin-left: .2vw;
+    border-radius: 1.1vw;
     color: white;
-    padding: .5em 2em;
+    padding: .7vw 2vw;
     background-color: #c7aabc;
     display: inline-block;
     transition-duration: .4s;
@@ -71,11 +67,11 @@ html {
 	text-decoration: none;
 	margin: 0 auto;
 	font-family: 'Arial';
-	font-size: 1.3em;
-	margin-right: 1.2%;
-    border-radius: 1.1em;
+	font-size: 1.3vw;
+	margin-right: 1.2vw;
+    border-radius: 1.1vw;
     color: white;
-    padding: .5em 2em;
+    padding: .7vw 2vw;
     background-color: #c7aabc;
     display: inline-block;
     transition-duration: .4s;	
