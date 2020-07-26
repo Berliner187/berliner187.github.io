@@ -16,11 +16,11 @@ h1, h3, p, a {
   font-family: 'Arial'
 }
 .wil-text {
-  margin-top: -13vw  
+  margin-top: -12.5vw  
 }
 h1 {
   font-size: 16vw;
-  padding-left: 11vw;
+  margin-left: 1vw;
   padding: 0
 }
 h2 {
