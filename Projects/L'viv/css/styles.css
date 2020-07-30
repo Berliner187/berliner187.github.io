@@ -20,9 +20,9 @@ html {
 
 .hesh-tag {
 	font-style: italic;
-	font-size: 38px;
+	font-size: 2.4vw;
 	float: left;
-	margin-top: .1em;
+	margin-top: .3vw;
 	margin-left: 1%;
 	color: #8b4c7a
 }
