@@ -21,6 +21,8 @@ figure.snip1104 * {
 figure.snip1104 img {
   max-width: 100%;
   opacity: 0.3;
+  -webkit-transform: scale(.95);
+  transform: scale(.95);
 }
 
 figure.snip1104 figcaption {
