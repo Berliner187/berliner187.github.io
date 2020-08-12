@@ -26,19 +26,19 @@ h1 {
 h2 {
   font-family: 'Pobeda';
   color: #FFF;
-  font-size: 6vw;
+  font-size: 7.2em;
   margin-left: 4vw;
   margin-bottom: .4vw
 }
 .h2-header {
   text-align: center;
   font-family: 'Arial';
-  font-size: 3.2vw;
+  font-size: 3.5em;
   margin-left: 0
 }
 p {
   text-align: center;
-  font-size: 1.4vw;
+  font-size: 2em;
   margin-top: 1em
 }
 .p-font {
@@ -66,7 +66,7 @@ a {
   text-align: center;
   margin: 0 auto;
   margin-top: .8vw;
-  font-size: 1.2em;
+  font-size: 1.3em;
   display: block;
   text-decoration: underline;
   transition-duration: .6s;
@@ -149,13 +149,13 @@ hr {
   display: inline;
 }
 .img-box {
-  width: 40vw;
+  width: 60em;
   margin-bottom: 4em;
   margin: 0 auto;
 }
 .img-content {
   border-radius: 1em;
-  width: 40vw
+  width: 40em
 }
 
 
