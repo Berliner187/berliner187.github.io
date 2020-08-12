@@ -1,0 +1,192 @@
+html {
+	scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: 'Pobeda';
+  src: url(../fonts/pobeda-regular.ttf);
+}
+@font-face {
+    font-family: 'Arial';
+    src: url(../fonts/Arial.ttf);
+}
+
+h1, h3, p, a {
+	color: #FFF;
+  font-family: 'Arial'
+}
+.wil-text {
+  margin-top: -12.5vw  
+}
+h1 {
+  font-size: 16vw;
+  margin-left: 1vw;
+  padding: 0
+}
+h2 {
+  font-family: 'Pobeda';
+  color: #FFF;
+  font-size: 700%;
+  margin-left: 4vw;
+  margin-bottom: .4vw
+}
+.h2-header {
+  text-align: center;
+  font-family: 'Arial';
+  font-size: 3.2vw;
+  margin-left: 0
+}
+p {
+  text-align: center;
+  font-size: 1.4vw;
+  margin-top: 1em
+}
+.p-font {
+  font-family: 'Pobeda';
+  font-size: 5em
+}
+.p-ctr {
+  color: #FFF
+}
+a {
+  text-decoration: none;
+}
+.a-content {
+  color: #FFF;
+  text-decoration: underline;
+  transition-duration: .3s
+}
+.a-content:hover {
+  color: #c66aab;
+  text-decoration: none;
+  transition-duration: .3s
+}
+.a-contact {
+  color: #FFF;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: .8vw;
+  font-size: 1.2em;
+  display: block;
+  text-decoration: underline;
+  transition-duration: .6s;
+}
+.a-contact:hover {
+  color: #fde482;
+  transition-duration: .6s
+}
+
+/*Элементы меню*/
+.menu {
+	position: absolute;
+  margin: 0 auto;
+	top: 0;
+  width: 100%;
+	margin-top: .8vw;
+}
+.buttons {
+	padding-left: 1vw;
+	color: #000;
+	text-decoration: none;
+	margin: 0 auto;
+	font-family: 'Arial';
+	font-size: 1.3vw;
+	margin-left: .3vw;
+  border-radius: .9vw;
+  padding: .65vw 2.2vw;
+  display: inline-block;
+  transition-duration: .6s;	
+}
+.buttons:hover {
+	color: #FFF;
+	background-color: #2a004a;
+	transition-duration: .6s;
+  box-shadow:  10px 10px 39px #9660a4, 
+             -10px -10px 39px #ffa8ff;
+}
+.button-y{
+	background-color: #fde482
+}
+.button-v {
+	background-color: #ce84e1
+}
+.button-o {
+	background-color: #92ddea
+}
+
+
+/*Контентная часть*/
+figure {
+  display: inline-block;
+  padding: .1vw;
+  margin: 0 .9vw 0 0;
+  vertical-align: top; 
+}
+figcaption { 
+  text-align: center;
+  color: #FFF;
+  font-size: .6vw;
+}
+hr {
+  left: 0;
+  right: 0;
+  width: 93%;
+  height: .08vw;
+  background-color: #FFF;
+  color: #FFF;
+  border-radius: 2em
+}
+.hr-content {
+  width: 50%;
+  height: 4px;
+  background-color: #FFF;
+  color: #FFF;
+  border-radius: 2em
+}
+
+.img-con {
+  width: 100%;
+  display: inline;
+}
+.img-box {
+  width: 40vw;
+  margin-bottom: 4em;
+  margin: 0 auto;
+}
+.img-content {
+  border-radius: 1em;
+  width: 40vw
+}
+
+
+
+
+::-webkit-scrollbar { /* 1 - скроллбар */
+    width: 15px;
+    height: 30px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-button { /* 2 - кнопка */
+	color: #000;
+  }
+
+  ::-webkit-scrollbar-track { /* 3 - трек */
+  	color: #000
+  }
+
+  ::-webkit-scrollbar-track-piece { /* 4 - видимая часть трека */
+  }
+
+  ::-webkit-scrollbar-thumb { /* 5 - ползунок */
+    border-radius: 2em;
+    background-color: #888;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+  	background-color: #FFF;
+
+  ::-webkit-scrollbar-corner { /* 6 - уголок */
+  }
+
+  ::-webkit-resizer { /* 7 - изменение размеров */
+  }
