@@ -140,8 +140,8 @@ figure.snip1104.yellow-blue h2 {
 figure.snip1104:hover img,
 figure.snip1104.hover img {
   opacity: 1;
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 figure.snip1104:hover h2,
