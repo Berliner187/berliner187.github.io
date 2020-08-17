@@ -108,7 +108,7 @@ figure.snip1104.ocean h2 {
 }
 
 figure.snip1104.pink {
-  background: #faafa0;
+  background: #fd9334;
 }
 figure.snip1104.pink h2 {
   background: #000;
@@ -129,10 +129,10 @@ figure.snip1104.yellow h2 {
 }
 
 figure.snip1104.orange-blue {
-  background: #ff7e5f;
+  background: #999;
 }
 figure.snip1104.orange-blue h2 {
-  background: #0be7fb;
+  background: #fe982a;
 }
 figure.snip1104.violet-d {
   background: #2F0743;
@@ -145,8 +145,8 @@ figure.snip1104.violet-d h2 {
 figure.snip1104:hover img,
 figure.snip1104.hover img {
   opacity: 1;
-  -webkit-transform: scale(1.03);
-  transform: scale(1.03);
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 figure.snip1104:hover h2,
