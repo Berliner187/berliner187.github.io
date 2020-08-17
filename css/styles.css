@@ -17,11 +17,8 @@ h1, h3, p, a {
 }
 h1 {
   font-size: 16vw;
-  margin-left: 1vw;
-  padding: 0;
   position: static;
-  margin: 0;
-  margin-top: .7em
+  margin-top: .72em
 }
 h2 {
   font-family: 'Pobeda';
@@ -30,8 +27,9 @@ h2 {
   margin-left: .5em;
   margin-bottom: .4vw;
 }
-.h2-header {
+.header {
   text-align: left;
+  position: static;
 }
 .h2-header {
   text-align: center;
@@ -85,9 +83,9 @@ a {
 .menu {
 	position: absolute;
   margin: 0 auto;
-	top: 0;
+  padding-left: 5vw;
+	top: .8vw;
   width: 100%;
-	margin-top: .8vw;
 }
 .buttons {
 	padding-left: 1vw;
@@ -96,9 +94,9 @@ a {
 	margin: 0 auto;
 	font-family: 'Arial';
 	font-size: 1.3vw;
-	margin-left: .3vw;
+	margin-left: .2vw;
   border-radius: .9vw;
-  padding: .65vw 2.2vw;
+  padding: .62vw 1.5vw;
   display: inline-block;
   transition-duration: .6s;	
 }
@@ -109,14 +107,20 @@ a {
   box-shadow:  10px 10px 39px #9660a4, 
              -10px -10px 39px #ffa8ff;
 }
-.button-y{
+.yellow {
 	background-color: #fde482
 }
-.button-v {
-	background-color: #ce84e1
+.violet {
+	background-color: #9400D3
 }
-.button-o {
-	background-color: #92ddea
+.ocean {
+	background-color: #0be7fb
+}
+.red {
+  background-color: #ff6d69;
+}
+.white {
+  background-color: #f6f6f8;
 }
 
 

@@ -177,7 +177,7 @@
 
 .loaded .ip-h1 {
     -webkit-transform-origin: 40vw 0;
-    transform-origin: 135vw 0;
+    transform-origin: 160vw 0;
     -webkit-animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
     animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
 }
