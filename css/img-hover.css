@@ -124,16 +124,21 @@ figure.snip1104.green h2 {
 figure.snip1104.yellow {
   background: #7f5006;
 }
-
 figure.snip1104.yellow h2 {
   background: #583804;
 }
-figure.snip1104.yellow-blue {
-  background: #fecc50;
-}
 
-figure.snip1104.yellow-blue h2 {
+figure.snip1104.orange-blue {
+  background: #ff7e5f;
+}
+figure.snip1104.orange-blue h2 {
   background: #0be7fb;
+}
+figure.snip1104.violet-d {
+  background: #2F0743;
+}
+figure.snip1104.violet-d h2 {
+  background: #41295a;
 }
 
 

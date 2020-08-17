@@ -28,7 +28,10 @@ h2 {
   color: #FFF;
   font-size: 6em;
   margin-left: .5em;
-  margin-bottom: .4vw
+  margin-bottom: .4vw;
+}
+.h2-header {
+  text-align: left;
 }
 .h2-header {
   text-align: center;
@@ -38,7 +41,7 @@ h2 {
 }
 p {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.4em;
   margin-top: 1em;
   margin-left: 1em;
   margin-right: 1em
@@ -151,7 +154,7 @@ hr {
   display: inline;
 }
 .img-box {
-  width: 45em;
+  width: 46em;
   margin-bottom: 4em;
   margin: 0 auto;
 }
