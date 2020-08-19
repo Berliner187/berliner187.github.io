@@ -18,7 +18,7 @@ h1, h3, p, a {
 h1 {
   font-size: 16vw;
   position: static;
-  margin-top: .72em
+  margin-top: 10.65vw
 }
 h2 {
   font-family: 'Pobeda';
@@ -151,6 +151,9 @@ hr {
   background-color: #FFF;
   color: #FFF;
   border-radius: 2em
+}
+.hr-3 {
+  width: 70%
 }
 
 .img-con {
