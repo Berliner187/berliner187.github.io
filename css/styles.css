@@ -13,7 +13,8 @@ html {
 
 h1, h3, p, a {
 	color: #FFF;
-  font-family: 'Arial'
+  font-family: 'Arial';
+  margin: 0;
 }
 h1 {
   font-size: 16vw;
@@ -27,6 +28,13 @@ h2 {
   margin-left: .5em;
   margin-bottom: .4vw;
 }
+.h3-pobeda {
+  font-family: 'Pobeda';
+  text-align: center;
+  font-size: 500%;
+  margin-top: .8em;
+  margin-bottom: 1.3em;
+}
 .header {
   text-align: left;
   position: static;
@@ -39,18 +47,24 @@ h2 {
 }
 p {
   text-align: center;
-  font-size: 1.4em;
+  font-size: 120%;
   margin-top: 1em;
   margin-left: 1em;
   margin-right: 1em
 }
-.p-font {
+.p-pobeda {
   font-family: 'Pobeda';
-  font-size: 5em
+  font-size: 400%;
+  margin: 1em;
+  text-align: center;
 }
 .p-ctr {
   color: #FFF
 }
+.p-img-hover {
+  position: absolute;
+}
+
 a {
   text-decoration: none;
 }
@@ -124,6 +138,39 @@ a {
 }
 
 
+.block-img-content {
+  position: relative;
+  width: 40%;
+  margin-bottom: 8em;
+}
+.block-left {
+  float: left;
+  margin-left: 4em;
+}
+.block-right {
+  float: right;
+  margin-right: 4em;
+}
+
+.img-content {
+  width: 30em;
+  border-radius: 1em
+}
+.font-content {
+  text-indent: 3em;
+  text-align: left;
+}
+video {
+  border-radius: 1em;
+  width: 100%;
+  margin-top: 6em;
+  margin-bottom: 4em
+}
+.video-large {
+  margin-top: 15em;
+}
+
+
 /*Контентная часть*/
 figure {
   display: inline-block;
@@ -137,33 +184,50 @@ figcaption {
   font-size: .6vw;
 }
 hr {
-  left: 0;
-  right: 0;
-  width: 93%;
-  height: .08vw;
   background-color: #FFF;
   color: #FFF;
-  border-radius: 2em
+  border-radius: 2em;
+  height: .1em;
+  width: 97%
 }
 .hr-content {
   width: 50%;
   height: 4px;
-  background-color: #FFF;
-  color: #FFF;
   border-radius: 2em
 }
+.hr-vertical {
+  height: 110vh;
+  width: .2em;
+  margin-top: 3em;
+  position: absolute;
+  left: 0;
+  right: 0
+}
+.hr-vertical-s {
+  height: 40em;
+  width: .2em;
+  position: absolute;
+  left: 0;
+  right: 0
+}
 .hr-3 {
-  width: 70%
+  width: 70%;
+  margin-top: 10%
+}
+.hr-s {
+  position: static;
+}
+.hr-vertical-m {
+  height: 55em;
+  width: .2em;
+  position: absolute;
+  left: 0;
+  right: 0
 }
 
 .img-con {
   width: 100%;
   display: inline;
-}
-.img-box {
-  width: 46em;
-  margin-bottom: 4em;
-  margin: 0 auto;
 }
 .img-content {
   border-radius: 1em;
