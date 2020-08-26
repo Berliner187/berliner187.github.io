@@ -67,7 +67,7 @@
 }
 
 .ip-header .ip-loader svg path.ip-loader-circle {
-    -webkit-transition: stroke-dashoffset 0.2s;
+    -webkit-transition: stroke-dashoffset 3.2s;
     transition: stroke-dashoffset 0.2s;
     stroke: #fde482;
 }
@@ -157,8 +157,8 @@
 }
 
 .loading .ip-loader {
-    -webkit-animation: animInitialLoader 1.2s cubic-bezier(0.7,0,0.3,1) both;
-    animation: animInitialLoader 1.2s cubic-bezier(0.7,0,0.3,1) both;
+    -webkit-animation: animInitialLoader 2s cubic-bezier(0.7,0,0.3,1) both;
+    animation: animInitialLoader 2.2s cubic-bezier(0.7,0,0.3,1) both;
 }
 
 @-webkit-keyframes animInitialLoader {
@@ -178,8 +178,8 @@
 .loaded .ip-h1 {
     -webkit-transform-origin: 40vw 0;
     transform-origin: 160vw 0;
-    -webkit-animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
-    animation: animLoadedLogo 1s cubic-bezier(0.7,0,0.3,1) forwards;
+    -webkit-animation: animLoadedLogo 4s cubic-bezier(0.7,0,0.3,1) forwards;
+    animation: animLoadedLogo 6s cubic-bezier(0.7,0,0.3,1) forwards;
 }
 
 @-webkit-keyframes animLoadedLogo {
@@ -191,8 +191,8 @@
 }
 
 .loaded .ip-loader {
-    -webkit-animation: animLoadedLoader 1.2s cubic-bezier(0.7,0,0.3,1) forwards;
-    animation: animLoadedLoader 1.2s cubic-bezier(0.7,0,0.3,1) forwards;
+    -webkit-animation: animLoadedLoader 2.2s cubic-bezier(0.7,0,0.3,1) forwards;
+    animation: animLoadedLoader 2.2s cubic-bezier(0.7,0,0.3,1) forwards;
 }
 
 @-webkit-keyframes animLoadedLoader {
@@ -205,15 +205,15 @@
 
 /* Change the color of the logo */
 .loaded .ip-h1 svg path {
-    -webkit-transition: all 0.5s ease 0.3s;
-    transition: all 0.5s ease 0.3s;
+    -webkit-transition: all 4.5s ease 0.3s;
+    transition: all 4.5s ease .3s;
     fill: #FFF;
 }
 
 /* Header animation when loading finishes */
 .loaded .ip-header {
-    -webkit-animation: animLoadedHeader 1.2s cubic-bezier(0.7,0,0.3,1) forwards;
-    animation: animLoadedHeader 1.2s cubic-bezier(0.7,0,0.3,1) forwards;
+    -webkit-animation: animLoadedHeader 6.5s cubic-bezier(0.7,0,0.3,1) forwards;
+    animation: animLoadedHeader 5.5s cubic-bezier(0.7,0,0.3,1) forwards;
 }
 
 @-webkit-keyframes animLoadedHeader {
@@ -227,25 +227,25 @@
 /* Content animations */
 .loaded .ip-main,
 .loaded .codrops-demos {
-    -webkit-animation: animLoadedContent 1.2s cubic-bezier(0.7,0,0.3,1) both;
-    animation: animLoadedContent 1.2s cubic-bezier(0.7,0,0.3,1) both;
+    -webkit-animation: animLoadedContent 4.2s cubic-bezier(0.7,0,0.3,1) both;
+    animation: animLoadedContent 4.2s cubic-bezier(0.7,0,0.3,1) both;
 }
 
 .loaded .ip-main,
 .loaded .ip-main .browser .box:first-child {
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
+    -webkit-animation-delay: 5.1s;
+    animation-delay: 5.1s;
 }
 
 .loaded .codrops-demos,
 .loaded .ip-main .browser .box:nth-child(2) {
-    -webkit-animation-delay: 0.15s;
-    animation-delay: 0.15s;
+    -webkit-animation-delay: 5.15s;
+    animation-delay: 5.5s;
 }
 
 .loaded .ip-main .browser .box:nth-child(3) {
-    -webkit-animation-delay: 0.2s;
-    animation-delay: 0.2s;
+    -webkit-animation-delay: 5.2s;
+    animation-delay: 5.2s;
 }
 
 @-webkit-keyframes animLoadedContent {
