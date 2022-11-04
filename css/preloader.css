@@ -7,7 +7,7 @@
   height: 1000%;
   text-align: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: #000;
 }
 
 #preloader img, #preloader h1 {
@@ -18,12 +18,13 @@
   animation: startPreloader .7s;
 }
 #preloader img {
-  width: 70px;
-  height: 70px;
+  width: 600px;
+  height: auto;
   margin-top: 10em;
-  background-color: #fff;
+  background-color: #000;
 }
 #preloader h1 {
+  color: #fff;
   font-size: 7em;
   margin-top: 10%;
   text-align: center;
