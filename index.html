@@ -9,33 +9,36 @@
     <link rel="stylesheet" type="text/css" href="css/preloader.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/const.css">
-    <link type="image/x-icon" href="img/favicon.png" rel="shortcut icon">
+    <link type="image/png" href="img/favicon.png" rel="shortcut icon">
 </head>
 
 <body>
     <!-- Прелоадер -->
-    <div id='preloader'>
+    <div id="preloader">
         <h1>Kozak</h1>
-        <img src="img/loader.gif" alt="preloader">
+        <img src="img/loader.gif" alt="Preloader">
     </div>
     <script>
         window.onload = function() {
             let preloader = document.getElementById('preloader');
+            let profile = document.getElementById('profile');
             let pills = document.getElementById('pills');
 
             document.body.style.overflow = 'hidden';
-            pills.style.opacity = '0';
-
+            profile.style.opacity = '0';
+            
+            // Скрытие прокрутки и прелоадера
             setInterval(function() {
                 preloader.classList.add('hide-preloader');
                 document.body.style.overflow = 'visible';
             }, 1200);
 
+            // Появление основного содержимого
             setInterval(function() {
                 preloader.classList.add('preloader-hidden');
-                pills.classList.add('startPills');
-                pills.style.opacity = '1';
-            }, 2000);
+                profile.style.opacity = '1';
+                profile.classList.add('startBlock');
+            }, 2200);
         }
     </script>
 

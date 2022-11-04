@@ -1,14 +1,14 @@
 @font-face {
-	font-family: 'Mon Amour';
-    src: url(../fonts/mon-amour.ttf);
+	font-family: 'Libra';
+	src: url(../fonts/libra.woff2);
+}
+@font-face {
+	font-family: 'Buyan';
+	src: url(../fonts/Buyan/BuyanBold.ttf);
 }
 @font-face {
 	font-family: 'Binaria';
     src: url(../fonts/Binaria.otf);
-}
-@font-face {
-	font-family: 'Libra';
-	src: url(../fonts/libra.otf);
 }
 @font-face {
 	font-family: 'Verdana';
@@ -18,9 +18,10 @@
 	font-family: 'Igra';
 	src: url(../fonts/IgraSans.otf);
 }
-@font-face {
-	font-family: 'Buyan';
-	src: url(../fonts/Buyan/BuyanBold.ttf);
+
+/* Стили при загрузке */
+#web, #programming, #profile {
+	opacity: 0;
 }
 
 body {
@@ -33,7 +34,7 @@ html {
 h1 {
 	font-family: 'Libra';
 	font-size: 3.5em;
-	margin: 0;	
+	margin: 0;
 	transition: .5s;
 	user-select: none;
 	text-shadow: #889 2px 8px 14px;
@@ -149,10 +150,10 @@ header {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 10px 10%;
+    padding: 5px 5%;
 	align-items: center;
-    min-width: 1000px;
-    width: 90%;
+    min-width: 800px;
+    width: 96%;
     border-radius: 1.3em;
     background: #E6E9ED;
 }
@@ -245,7 +246,6 @@ header {
 	background-color: #D9B8C4;
 }
 
-
 /* Элементы меню */
 .block-menu {
 	margin-top: 2em;
@@ -275,13 +275,15 @@ header {
 
 
 /* Блоки с контентом */
+.block-contacts, .block-content {
+	background: #E6E9ED;
+}
 .block-content {
 	margin: 0 auto;
 	margin-top: 3.8em;
 	padding: 1rem;
 	padding-bottom: 3%;
-	width: 90%;
-	background: #E6E9ED;
+	width: 92vw;
 }
 
 .block-contacts {
@@ -316,7 +318,6 @@ header {
 .img-img-container {
 	text-align: center;
 }
-
 
 /* Оформление списка */
 .pills {

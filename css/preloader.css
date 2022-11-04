@@ -14,7 +14,7 @@
   animation: startPreloader .7s;
 }
 
-#pills.startPills {
+.startBlock {
   animation: startPreloader .7s;
 }
 #preloader img {
