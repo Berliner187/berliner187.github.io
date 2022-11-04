@@ -67,7 +67,6 @@ h4 {
 p {
 	font-family: 'Igra';
 	text-align: center;
-	text-indent: .5em;
 	font-size: 1.25em;
 }
 
@@ -78,7 +77,6 @@ p {
 	margin: 0 auto;
 	text-align: left;
 	font-size: 1.1em;
-	text-indent: 10px;
 	width: 50%;
 	min-width: 400px;
 }
