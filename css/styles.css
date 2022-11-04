@@ -47,7 +47,6 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 h2, h3 {
-	border-radius: 2em;
 	margin: 0 auto;
 	padding: .4em;
 	font-family: 'Buyan';
@@ -124,11 +123,16 @@ span:hover {
 a {
 	text-decoration: none;
 	color: #6f233f;
-	transition: .2s;
+	transition: .3s;
 }
 a:hover {
 	text-decoration: none;
 	color: #000;
+}
+
+#contacts {
+	font-family: 'Binaria';
+	font-size: 1.1em;
 }
 
 hr {
@@ -287,20 +291,16 @@ header {
 }
 
 .block-contacts {
-	text-align: center;
-	margin: 0 auto;
+	display: flex;
+	flex-direction:row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
 }
-.img-icons {
-	padding: .4em;
-	width: 3.2em;
-	display: inline-block;
-    margin: 0 auto;
-	transition-duration: .2s;
-}
-.img-icons:hover {
-	transform: scale(.95);
-	cursor: pointer;
-	border-radius: 50%;
+.block-contacts a {
+	margin-top: 1em;
+	padding: 0 20px;
 }
 
 /* Тени */
