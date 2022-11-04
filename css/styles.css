@@ -19,9 +19,13 @@
 	src: url(../fonts/IgraSans.otf);
 }
 
-/* Стили при загрузке */
+/* Скрытие блоков при загрузке */
 #web, #programming, #profile {
 	opacity: 0;
+}
+#contacts {
+	font-family: 'Binaria';
+	font-size: 1.1em;
 }
 
 body {
@@ -31,6 +35,8 @@ html {
 	scroll-behavior: smooth;
 	transition: .5s; opacity: 1; background-color: #D6D6E1;
 }
+
+/* Основные теги */
 h1 {
 	font-family: 'Libra';
 	font-size: 3.5em;
@@ -62,14 +68,11 @@ h4 {
 	font-family: 'Binaria';
 	font-size: 1.8em;
 }
-
-
 p {
 	font-family: 'Igra';
 	text-align: center;
 	font-size: 1.25em;
 }
-
 .p-discraption, .pills {
 	font-family: 'Verdana';
 }
@@ -80,34 +83,29 @@ p {
 	width: 50%;
 	min-width: 400px;
 }
-.center {
-	text-align: center;
-}
 
-.profile {
-	background-image: url("../img/white-contour.svg");
-	display: flex;
-	margin: 0 auto;
-    text-align: center;
-	width: 60%;
-	padding: 1.5em;
-	border-radius: 1.5em;
-	box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, .15);
+/* Верзний сайдбар */
+header {
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5%;
+	align-items: center;
+    min-width: 800px;
+    width: 96%;
+    border-radius: 1.3em;
+    background: #E6E9ED;
 }
-/* box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .06); */
-
-.profile img {
-	user-select: none;
-	width: 300px;
-	height: 300px;
-    border-radius: 50%;
-	margin-left: 20%;
-	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .06);
+.nav-links {
+    list-style: none;
 }
-.profile p {
-	text-align: left;
-	margin-left: 5%;
-	width: 40%;
+.nav-links li {
+    display: inline-block;
+    padding: 0 5px;
+}
+.nav-links li a {
+    transition: all .3s ease 0s;
 }
 
 span {
@@ -119,7 +117,6 @@ span {
 span:hover {
 	color: #222222;
 }
-
 a {
 	text-decoration: none;
 	color: #6f233f;
@@ -129,12 +126,9 @@ a:hover {
 	text-decoration: none;
 	color: #000;
 }
-
-#contacts {
-	font-family: 'Binaria';
-	font-size: 1.1em;
+.center {
+	text-align: center;
 }
-
 hr {
 	background-color: #333;
 	width: 90%;
@@ -148,31 +142,30 @@ hr {
 	width: 40%;
 }
 
-/* Navigation bar */
-header {
-    box-sizing: border-box;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 5%;
-	align-items: center;
-    min-width: 800px;
-    width: 96%;
-    border-radius: 1.3em;
-    background: #E6E9ED;
+/* Оформление профиля */
+.profile {
+	background-image: url("../img/white-contour.svg");
+	display: flex;
+	margin: 0 auto;
+    text-align: center;
+	width: 60%;
+	padding: 1.5em;
+	border-radius: 1.5em;
+	box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, .15);
 }
 
-.nav-links {
-    list-style: none;
+.profile img {
+	user-select: none;
+	width: 300px;
+	height: 300px;
+    border-radius: 50%;
+	margin-left: 20%;
+	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .06);
 }
-
-.nav-links li {
-    display: inline-block;
-    padding: 0 5px;
-}
-
-.nav-links li a {
-    transition: all .3s ease 0s;
+.profile p {
+	text-align: left;
+	margin-left: 5%;
+	width: 40%;
 }
 
 /* Оформление кнопок */
@@ -191,11 +184,9 @@ header {
 	box-shadow:  .1em .1em 1em #d3d3d3, 
              -.1em -.1em 1em #d3d3d3;
 }
-
 .change:buttons {
 	width: 20%;
 }
-
 .buttons:hover, .button-redirect:hover {
 	transition-duration: .3s;
 	color: #FFF;
@@ -204,7 +195,7 @@ header {
              -.2em -.2em 1.2em #47001c;
 }
 
-
+/* Кнопки перехода по внутренним страницам */
 .button-redirect {
 	width: 10em;
 }
@@ -213,6 +204,10 @@ header {
 }
 .bg-redirect {
 	background: #e8d7cd;
+}
+/* Блок кнопок перехода */
+.block-buttons {
+	text-align: center;
 }
 
 
@@ -223,7 +218,7 @@ header {
 	background-color: #ddddda
 }
 
-/* Нумерация проектов и цвет к блокам */
+/* Цветовые акценты к проектам */
 .content-color-cafe {
 	background: #dcd7c4
 }
@@ -261,10 +256,6 @@ header {
 	background:#D6D6E1;
 }
 
-/* Контейнеры */
-.block-buttons {
-	text-align: center;
-}
 
 /* Для блока с контентом и кнопок: тени, радиус, анимация */
 .block-content, .buttons, hr, header {
@@ -318,6 +309,7 @@ header {
 .img-img-container {
 	text-align: center;
 }
+
 
 /* Оформление списка */
 .pills {
