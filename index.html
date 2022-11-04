@@ -7,24 +7,36 @@
     <meta charset="UTF-8">
 	<title>Kozak - Developer</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" type="text/css" href="css/preloader.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/img-effect.css">
     <link rel="stylesheet" type="text/css" href="css/const.css">
 </head>
 
 <body>
 
-    <div id="preloader" class="preloader">
-        <div class="preloader__loader">
-            <div class="loadingio-spinner-spinner-58runctecqy"><div class="ldio-y42bhrr48z">
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-                </div></div>
-        </div>
+    <div id='preloader'>
+        <h1>Kozak</h1>
+        <img src="img/loader.gif" alt="preloader">
     </div>
     
-    <script src="js/preloader.js"></script>
+    <script>
+        window.onload = function() {
+            let preloader = document.getElementById('preloader');
 
+            document.body.style.overflow = 'hidden';
+
+            setInterval(function() {
+                preloader.classList.add('hide-preloader');
+                document.body.style.overflow = 'visible';
+            }, 1200);
+
+            setInterval(function() {
+                preloader.classList.add('preloader-hidden');
+            }, 2000);
+        }
+    </script>
+
+    <!-- Шапка -->
     <header id="sidebar">
         <script src="js/header.js"></script>
     </header>
@@ -39,6 +51,15 @@
             <p>Привет. Я Ростислав. Разработчик сайтов, консольных и десктопных приложений.</p>
             <img src="img/avatar.jpg" alt="Ich bin Slavik">
         </div>
+
+        <h2 id="activity">Деятельность</h2>
+        <hr class="separator_hr">
+        <p class="p-discraption">Студент второго курса Тверского Государственного Технического Университета. 
+            Учусь на факультете Информационных технологий по направлению "Информатика и вычислительная техника".</p>
+            <br>
+        <p class="p-discraption">Занимаюсь версткой сайтов, а также разработкой программного обеспечения: консольных приложений, 
+            десктопных программ, приложений для мобильных устройств на базе Android.</p>
+
         <!-- Список основной деятельности -->
         <ol class="pills">
             <a href="web.html">
@@ -50,14 +71,6 @@
             <a href="programming.html#java">
                 <li>Разработка на Java под Android.</li></a>
         </ol>
-
-        <h2 id="activity">Деятельность</h2>
-        <hr class="separator_hr">
-        <p class="p-discraption">Студент второго курса Тверского Государственного Технического Университета. 
-            Учусь на факультете Информационных технологий по направлению "Информатика и вычислительная техника".</p>
-            <br>
-        <p class="p-discraption">Занимаюсь версткой сайтов, а также разработкой программного обеспечения: консольных приложений, 
-            десктопных программ, приложений для мобильных устройств на базе Android.</p>
         
             <h2>Навыки</h2>
         <hr class="separator_hr">

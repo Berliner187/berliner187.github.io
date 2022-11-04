@@ -87,6 +87,7 @@ p {
 }
 
 .profile {
+	background-image: url("../img/white-contour.svg");
 	display: flex;
 	margin: 0 auto;
     text-align: center;
@@ -99,8 +100,8 @@ p {
 
 .profile img {
 	user-select: none;
-	width: 256px;
-	height: 256px;
+	width: 300px;
+	height: 300px;
     border-radius: 50%;
 	margin-left: 20%;
 	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .06);
@@ -152,7 +153,7 @@ header {
     justify-content: space-between;
     padding: 10px 10%;
 	align-items: center;
-    min-width: 800px;
+    min-width: 1000px;
     width: 90%;
     border-radius: 1.3em;
     background: #E6E9ED;
@@ -164,7 +165,7 @@ header {
 
 .nav-links li {
     display: inline-block;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 .nav-links li a {
@@ -205,7 +206,7 @@ header {
 	width: 10em;
 }
 .button-redirect:hover {
-	width: 15em;
+	width: 12em;
 }
 .bg-redirect {
 	background: #e8d7cd;
@@ -281,7 +282,7 @@ header {
 	margin-top: 3.8em;
 	padding: 1rem;
 	padding-bottom: 3%;
-	width: 86vw;
+	width: 90%;
 	background: #E6E9ED;
 }
 
