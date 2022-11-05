@@ -5,6 +5,7 @@ img {
 
 figure {
   width: 40em;
+  max-width: 46em;
   background-color: #f3f3f3;
   color: #000;
   display: inline-flex;

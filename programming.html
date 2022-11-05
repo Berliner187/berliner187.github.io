@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<meta name="copyright" lang="ru" content="Kozak Developer - Programming" />
 <head>
+    <meta name="copyright" lang="ru" content="Kozak Developer - Programming" />
     <meta charset="UTF-8">
     <title>Kozak - Developer</title>
-    <link type="image/ico" href="img/favicon.ico" rel="shortcut icon">
+    <link type="image/png" href="img/moon.png" rel="shortcut icon">
     <link rel="stylesheet" href="css/preloader.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/img-effect.css">
@@ -20,25 +20,48 @@
         window.onload = function() {
             let preloader = document.getElementById('preloader');
             let programming = document.getElementById('programming');
+            let pre__content = document.getElementById('pre__content');
 
             document.body.style.overflow = 'hidden';
 
             setInterval(function() {
                 preloader.classList.add('hide-preloader');
                 document.body.style.overflow = 'visible';
-            }, 1200);
+            }, 500);
 
             setInterval(function() {
                 preloader.classList.add('preloader-hidden');
                 programming.classList.add('startBlock');
                 programming.style.opacity = '1';
-            }, 2200);
+                pre__content.classList.add('startBlock');
+                pre__content.style.opacity = '1';
+            }, 1000);
         }
     </script>
     
     <header id="sidebar">
         <script src="js/header.js"></script>
     </header>
+
+    <!-- Блок предконтента -->
+    <div id="pre__content" class="block-content">
+        <h2>Программирование</h2>
+        <div class="pre__content">
+            <div class="pre__text">
+                <p>В данном разделе собраны работы по программированию.</p>
+                <p>Все проекты нацелены на техническую составляющуу.</p>
+            </div>
+        </div>
+        <!-- Кнопки перехода -->
+        <div class="block-buttons">
+            <a class="button-redirect content-color-dark" href="#python">Python
+                <img src="img/icons/python.png" alt=""></a>
+            <a class="button-redirect content-color-dark" href="#csharp">C sharp
+                <img src="img/icons/sharp.png" alt=""></a>
+            <a class="button-redirect content-color-dark" href="#java">Java
+                <img src="img/icons/java.png" alt=""></a>
+        </div>
+    </div>
 
     <div id="programming" class="programming">
         <div id="python" class="block-content bg-image-about">
@@ -273,12 +296,14 @@
         <div id="c-sharp" class="block-content bg-image-about">
             <h2>C Sharp</h2>
             <hr>
+            <h3>Скоро.</h3>
         </div>
 
 
         <div id="java" class="block-content bg-image-about">
             <h2>Java</h2>
             <hr>
+            <h3>Скоро.</h3>
         </div>
     </div>
 

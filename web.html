@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link type="image/png" href="img/moon.png" rel="shortcut icon">
     <meta charset="UTF-8">
     <title>Kozak - Developer</title>
-    <link type="image/ico" href="img/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" type="text/css" href="css/preloader.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/img-effect.css">
@@ -19,6 +19,7 @@
         window.onload = function() {
             let preloader = document.getElementById('preloader');
             let web = document.getElementById('web');
+            let pre__content = document.getElementById('pre__content');
 
             document.body.style.overflow = 'hidden';
             web.style.display = 'none';
@@ -27,20 +28,32 @@
                 preloader.classList.add('hide-preloader');
                 document.body.style.overflow = 'visible';
                 web.style.display = 'block';
-            }, 1200);
+            }, 500);
 
             setInterval(function() {
                 preloader.classList.add('preloader-hidden');
                 web.classList.add('startBlock');
                 web.style.opacity = '1';
-            }, 2200);
+                pre__content.classList.add('startBlock');
+                pre__content.style.opacity = '1';
+            }, 1000);
         }
     </script>
-
 
     <header id="sidebar">
         <script src="js/header.js"></script>
     </header>
+
+    <!-- Блок предконтента -->
+    <div id="pre__content" class="block-content">
+        <h2>Веб-разработка</h2>
+        <div class="pre__content">
+            <div class="pre__text">
+                <p>В данном разделе собраны работы по веб-разработке.</p>
+                <p>Проекты с использованием HTML5, CSS3 и JavaScript.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Блок с контентом: веб-разработка -->
     <div id="web" class="block-content">

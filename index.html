@@ -1,18 +1,17 @@
-</body>
-</html>
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
+    <meta name="copyright" lang="ru" content="Kozak - Developer Sites and Software" />
 	<title>Kozak - Developer</title>
+    <link type="image/png" href="img/moon.png" rel="shortcut icon">
     <link rel="stylesheet" type="text/css" href="css/preloader.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/const.css">
-    <link type="image/ico" href="img/favicon.ico" rel="shortcut icon">
 </head>
 
 <body>
+    
     <!-- Прелоадер -->
     <div id="preloader">
         <h1>Kozak</h1>
@@ -31,14 +30,14 @@
             setInterval(function() {
                 preloader.classList.add('hide-preloader');
                 document.body.style.overflow = 'visible';
-            }, 1200);
+            }, 500);
 
             // Появление основного содержимого
             setInterval(function() {
                 preloader.classList.add('preloader-hidden');
                 profile.style.opacity = '1';
                 profile.classList.add('startBlock');
-            }, 2200);
+            }, 1000);
         }
     </script>
 
@@ -53,8 +52,8 @@
         <h2>Профиль</h2>
         <hr>
 
-        <div class="profile">
-            <p>Привет. <br> Я Ростислав. <br> Студент. <br><br> Разработчик сайтов, консольных и десктопных приложений.</p>
+        <div class="pre__content">
+            <p>Привет, я Ростислав. <br>Разработчик. <br> Студент. <br><br> Разрабатываю сайты, <br> консольные и десктопные <br> приложения.</p>
             <img src="img/avatar.jpg" alt="Ich bin Slavik">
         </div>
 
@@ -86,7 +85,6 @@
             <a class="button-redirect content-color-dark" href="programming.html#python"># python</a>
             <a class="button-redirect content-color-dark" href="programming.html#c-sharp">// c#</a>
             <a class="button-redirect content-color-dark" href="programming.html#java">// java</a>
-
         </div>
     </div>
     
