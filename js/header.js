@@ -3,7 +3,7 @@ document.getElementById("sidebar").innerHTML = '\
 <nav>\
     <ul class="nav-links">\
         <li><a class="buttons white" href="index.html">Профиль</a></li>\
-        <li><a class="buttons white" href="index.html#activity">Портфолио</a></li>\
+        <li><a class="buttons white" href="index.html#portfolio">Портфолио</a></li>\
         <li><a class="buttons content-color-dark" class="cta" href="index.html#contacts">Контакты</a></li>\
     </ul>\
 </nav>';

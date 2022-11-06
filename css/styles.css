@@ -144,51 +144,54 @@ hr {
 
 /* Оформление профиля */
 .pre__content {
-	background-image: url("../img/carpet.jpg");
+	background-image: url("../img/wave-pattern.jpg");
 	background-size: 100%;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 0 auto;
     text-align: center;
 	width: 70%;
 	padding: 1em;
 	border-radius: 1.5em;
-	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .16);
 }
 /* box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, .15); */
 .pre__content .pre__text {
 	display: flex;
 	flex-direction: column;
+	width: 40%;
+	min-width: 500px;
 } 
 
+.pre__content img, .pre__content p {
+	transition: .4s;
+	user-select: none;
+	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .16);
+}
 .pre__content img {
-	width: 30%;
-	height: 30%;
+	width: 20%;
+	height: 20%;
     border-radius: 50%;
 	margin-left: 20%;
 	opacity: .95;
 	user-select: none;
-	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .16);
 }
 .pre__content p {
-	transition: .3s;
 	display: table-cell;
 	background-color: #fff;
 	border-radius: 1.5em;
-	orientation: horizontal;
 	opacity: .9;
-	padding: 1em;
+	padding: 1.4em;
 	text-align: left;
-	margin-left: 5%;
 	width: 40%;
 	height: 100%;
-	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .16);
-	box-shadow: inset 0 0 0 0 rgba(0, 0, 0, .01);
 }
-.pre__content p:hover {
-	box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, .2);
+.pre__content p:hover, .pre__content img:hover {
+	box-shadow: .1em .2em .9em .7em #444;
 }
 .pre__content div img {
-	width: 20%;
+	width: 6em;
+	height: 6em;
 }
 
 /* Оформление кнопок */
@@ -280,6 +283,31 @@ hr {
 }
 
 
+/* Портфолио */
+.portfolio {
+	display: inline-flex;
+	flex-direction: row;
+}
+.portfolio div {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.portfolio div a, .portfolio div {
+	width: 90%;
+	margin: 0 auto;
+}
+.portfolio div a img {
+	transition: .3s;
+	border-radius: 1.5em;
+	background-color: #D6D6E1;
+	width: 70%;
+	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .06);
+}
+.portfolio div a img:hover {
+	box-shadow: .1em .2em .9em .7em #6f233f;
+}
+
 /* Для блока с контентом и кнопок: тени, радиус, анимация */
 .block-content, .buttons, hr, header {
 	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .06);
@@ -363,24 +391,23 @@ hr {
 	padding-left: 1em;
 	border-top-right-radius: 1em;
 	border-bottom-right-radius: 1em;
-    background: linear-gradient(to left, #eeeeee 50%, #4e5454 50%) right;
+    background: linear-gradient(to left, #eeeeee 50%, #222222 50%) right;
     background-size: 200%;
 }
-span {
-	background-color: #4e5454;
-}
+
 /* Цвет фона (насыщенный) */
-.pills li:hover, .pills li:before {
-	background: #4e5454;
+.pills li:hover, .pills li:before, span {
+	background: #222222;
 }
 /* Цвет фона (пастельный) */
 span:hover, .under-pills-content {
 	background-color: #eeeeee;
 }
+
 .pills li:hover {
 	color: white;
 	cursor: pointer;
-	background: linear-gradient(to right, #4e5454 50%, #eeeeee 50%) left;
+	background: linear-gradient(to right, #222222 50%, #eeeeee 50%) left;
 	transition: .5s ease-out;
     background-size: 200%;
 }

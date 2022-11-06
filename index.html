@@ -21,7 +21,6 @@
         window.onload = function() {
             let preloader = document.getElementById('preloader');
             let profile = document.getElementById('profile');
-            let pills = document.getElementById('pills');
 
             document.body.style.overflow = 'hidden';
             profile.style.opacity = '0';
@@ -30,14 +29,14 @@
             setInterval(function() {
                 preloader.classList.add('hide-preloader');
                 document.body.style.overflow = 'visible';
-            }, 500);
+            }, 330);
 
             // Появление основного содержимого
             setInterval(function() {
                 preloader.classList.add('preloader-hidden');
-                profile.style.opacity = '1';
                 profile.classList.add('startBlock');
-            }, 1000);
+                profile.style.opacity = '1';
+            }, 1100);
         }
     </script>
 
@@ -74,17 +73,37 @@
             <a href="programming.html#c-sharp">
                 <li>Разработка на C# консольных и десктопных приложений.</li></a>
             <a href="programming.html#java">
-                <li>Разработка на Java под Android.</li></a>
+                <li>Мобильная разработка на Java под Android.</li></a>
         </ol>
         
-            <h2>Навыки</h2>
+        <h2>Навыки</h2>
         <hr class="separator_hr">
         <!-- Кнопки перехода -->
         <div class="block-buttons">
             <a class="button-redirect content-color-dark" href="web.html">< html /></a>
+            <a class="button-redirect content-color-dark" href="programming.html#java">< xml /></a>
+            <a class="button-redirect content-color-dark" href="web.html">// js</a>
+            <br>
             <a class="button-redirect content-color-dark" href="programming.html#python"># python</a>
             <a class="button-redirect content-color-dark" href="programming.html#c-sharp">// c#</a>
             <a class="button-redirect content-color-dark" href="programming.html#java">// java</a>
+        </div>
+
+        <h2 id="portfolio">Портфолио</h2>
+        <hr class="separator_hr">
+        <div class="portfolio">
+            <div>
+                <p>Веб-разработка</p>
+                <a href="web.html">
+                    <img src="img/icons/web-tech.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <p>Программирование</p>
+                <a href="programming.html">
+                    <img src="img/icons/programming.jpg" alt="">
+                </a>
+            </div>
         </div>
     </div>
     
