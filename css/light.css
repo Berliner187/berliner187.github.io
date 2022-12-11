@@ -104,6 +104,10 @@ span:hover, .under-pills-content {
              -.1em -.1em 1em #d3d3d3;
 }
 
+
+.bg-redirect {
+	background: #e8d7cd;
+}
 a {
 	color: #610010;
 }

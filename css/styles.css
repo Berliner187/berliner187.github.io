@@ -18,6 +18,10 @@
 	font-family: 'Igra';
 	src: url(../fonts/IgraSans.otf);
 }
+@font-face {
+	font-family: 'SFNS';
+	src: url(../fonts/SFNS.ttf);
+}
 
 /* Скрытие блоков при загрузке */
 #web, #programming, #profile, #pre__content {
@@ -33,6 +37,7 @@ html {
 }
 body {
     transition: 1s;
+	font-family: 'SFNS';
 	/* background-color: #D6D6E1; */
 }
 
@@ -138,10 +143,11 @@ span:hover {
 a {
 	text-decoration: none;
 	transition: .3s;
+	font-size: 1.1em;
 }
 a:hover {
 	text-decoration: none;
-	color: #373737;
+	opacity: .7;
 }
 .center {
 	text-align: center;
@@ -220,7 +226,6 @@ hr {
 	margin-bottom: 2%;
 	font-size: 1.2em;
 	border-radius: 1em;
-	background-color: #610010;
 	padding: 20px;
 	display: inline-block;
 	transition-duration: .6s;
@@ -230,26 +235,45 @@ hr {
 }
 .buttons:hover, .button-redirect:hover {
 	transition-duration: .3s;
-	color: #e0e0e0;
-	opacity: .65;
-	background-color: #610010;
-	box-shadow:  .2em .2em 1.2em #300013, 
-             -.2em -.2em 1.2em #300013;
+	box-shadow:  .2em .2em 1.5em #2b2b2b, 
+             -.2em -.2em 1.5em #2b2b2b;
 }
 
 /* Кнопки перехода по внутренним страницам */
 .button-redirect {
-	width: 11em;
+	width: 200px;
 }
 .button-redirect:hover {
-	width: 10em;
-}
-.bg-redirect {
-	background: #e8d7cd;
+	width: 350px;
 }
 /* Блок кнопок перехода */
 .block-buttons {
+	font-family: 'SFNS';
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	max-width: 1000px;
+	justify-content: space-around;
+	flex-direction: row;
 	text-align: center;
+}
+.block-buttons div {
+	background-color: #2e2e41;
+	padding: 20px;
+	border-radius: 20px;
+	transition-duration: .3s;
+	width: 400px;
+}
+.block-buttons span {
+	font-size: 1.5em;
+	background: none;
+}
+.block-buttons span:hover {
+	background: none;
+	color: #4ed164;
+}
+.block-buttons a:hover {
+	text-decoration: underline;
 }
 
 
