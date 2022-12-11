@@ -49,7 +49,7 @@
 }
 /* Цвет фона (пастельный) */
 span:hover, .under-pills-content {
-	background-color: #eeeeee;
+	background-color: #232323;
 }
 
 .pills li:hover {
@@ -76,7 +76,7 @@ span:hover, .under-pills-content {
 	content: counter(li);
 }
 
-/* Оформление раскрывающегося списка */
+/* Оформление внутри раскрывающегося списка */
 .under-pills-collapsible {
 	color: white;
 	cursor: pointer;
