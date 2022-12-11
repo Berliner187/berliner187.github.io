@@ -1,0 +1,109 @@
+.block-contacts, .block-content, body, header {
+	background: #E6E9ED;
+    color: #232323;
+}
+
+.pre__content img, .pre__content p {
+	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .16);
+}
+
+
+/* Оформление списка */
+.pills {
+	width: 50%;
+	min-width: 650px;
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 3em;
+	margin-bottom: 3em;
+	list-style: none;
+	font-size: 1.2em;
+	counter-reset: li;
+}
+.pills li, span {
+	transition: .4s;
+}
+.pills li {
+	user-select: none;
+	top: 0;
+	left: -230px;
+	padding: 10px 0;
+	position: relative;
+	left: 1.5em;
+	color: #373737;
+	margin-bottom: 1em;
+	padding-left: 1em;
+	border-top-right-radius: 1em;
+	border-bottom-right-radius: 1em;
+    background: linear-gradient(to left, #eeeeee 50%, #222222 50%) right;
+    background-size: 200%;
+}
+
+/* Цвет фона (насыщенный) */
+.pills li:hover, .pills li:before, span {
+	background: #222222;
+}
+/* Цвет фона (пастельный) */
+span:hover, .under-pills-content {
+	background-color: #eeeeee;
+}
+
+.pills li:hover {
+	color: #e0e0e0;
+	cursor: pointer;
+	background: linear-gradient(to right, #222222 50%, #eeeeee 50%) left;
+	transition: .5s ease-out;
+    background-size: 200%;
+}
+.pills li:before {
+	text-align: center;
+	padding: 10px 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -2em;
+	width: 2em;
+	right: 2em;
+	color: white;
+	font-weight: bold;
+	border-bottom-left-radius: 70em;
+	border-top-left-radius: 70em;
+	counter-increment: li;
+	content: counter(li);
+}
+
+/* Оформление раскрывающегося списка */
+.under-pills-collapsible {
+	color: white;
+	cursor: pointer;
+	width: 100%;
+	font-size: 20px;
+}
+.under-pills-content, .under-pills-img-content {
+	border-radius: 2em;
+}
+.under-pills-content {
+	margin: 0 auto;
+	width: 80%;
+	opacity: 0;
+	max-width: 800px;
+	margin-bottom: 1em;
+	max-height: 0;
+	font-size: .8em;
+	overflow: hidden;
+	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .18);
+	transition: max-height .4s ease-out;
+}
+.under-pills-img-content {
+	width: 100%;
+}
+
+
+.buttons, .button-redirect {
+	box-shadow:  .1em .1em 1em #d3d3d3, 
+             -.1em -.1em 1em #d3d3d3;
+}
+
+a {
+	color: #610010;
+}

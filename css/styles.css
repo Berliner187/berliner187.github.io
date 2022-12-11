@@ -21,7 +21,7 @@
 
 /* Скрытие блоков при загрузке */
 #web, #programming, #profile, #pre__content {
-	opacity: 0;
+	opacity: 1;
 }
 #contacts {
 	font-family: 'Binaria';
@@ -30,10 +30,10 @@
 
 html {
 	scroll-behavior: smooth;
-	background-color: #D6D6E1;
 }
 body {
     transition: 1s;
+	/* background-color: #D6D6E1; */
 }
 
 /* Основные теги */
@@ -43,7 +43,7 @@ h1 {
 	margin: 0;
 	transition: .5s;
 	user-select: none;
-	text-shadow: #889 2px 8px 14px;
+	text-shadow: #444444 2px 8px 14px;
 	opacity: 1;
 }
 h1:hover {
@@ -56,13 +56,13 @@ h2, h3 {
 	margin: 0 auto;
 	padding: .4em;
 	font-family: 'Buyan';
-	text-shadow: #888 0 8px 14px;
+	text-shadow: #5c5c5c 0 7px 12px;
 }
 h2 {
-	font-size: 3.6em;
+	font-size: 4.1em;
 }
 h3 {
-	font-size: 3em;
+	font-size: 2.2em;
 }
 h4 {
 	font-family: 'Binaria';
@@ -73,6 +73,17 @@ p {
 	text-align: center;
 	font-size: 1.25em;
 }
+
+.img-container-abouter {
+	text-align: center;
+}
+.img-container-abouter img {
+	width: 60%;
+	border-radius: 20px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 .p-discraption, .pills {
 	font-family: 'Verdana';
 }
@@ -95,10 +106,18 @@ header {
     min-width: 800px;
     width: 96%;
     border-radius: 1.3em;
-    background: #E6E9ED;
+}
+button {
+	border: none;
+	border-radius: 50%;
+}
+button:hover {
+	cursor: pointer;
 }
 .nav-links {
     list-style: none;
+	display: flex;
+	align-items: center;
 }
 .nav-links li {
     display: inline-block;
@@ -109,22 +128,20 @@ header {
 }
 
 span {
-	color: #FFF;
 	border-radius: 1.5em;
 	padding: .4em;
 	font-size: .8em;
 }
 span:hover {
-	color: #222222;
+	color: #373737;
 }
 a {
 	text-decoration: none;
-	color: #6f233f;
 	transition: .3s;
 }
 a:hover {
 	text-decoration: none;
-	color: #000;
+	color: #373737;
 }
 .center {
 	text-align: center;
@@ -166,7 +183,6 @@ hr {
 .pre__content img, .pre__content p {
 	transition: .4s;
 	user-select: none;
-	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .16);
 }
 .pre__content img {
 	width: 20%;
@@ -178,7 +194,7 @@ hr {
 }
 .pre__content p {
 	display: table-cell;
-	background-color: #fff;
+	background-color: #e0e0e0;
 	border-radius: 1.5em;
 	opacity: .9;
 	padding: 1.4em;
@@ -196,7 +212,7 @@ hr {
 
 /* Оформление кнопок */
 .buttons, .button-redirect {
-	color: #000;
+	color: #373737;
 	font-family: 'Binaria';
 	text-decoration: none;
 	margin: .5%;
@@ -204,21 +220,21 @@ hr {
 	margin-bottom: 2%;
 	font-size: 1.2em;
 	border-radius: 1em;
+	background-color: #610010;
 	padding: 20px;
 	display: inline-block;
-	transition-duration: .6s;	
-	box-shadow:  .1em .1em 1em #d3d3d3, 
-             -.1em -.1em 1em #d3d3d3;
+	transition-duration: .6s;
 }
 .change:buttons {
 	width: 20%;
 }
 .buttons:hover, .button-redirect:hover {
 	transition-duration: .3s;
-	color: #FFF;
-	background-color: #6f233f;
-	box-shadow:  .2em .2em 1.2em #47001c, 
-             -.2em -.2em 1.2em #47001c;
+	color: #e0e0e0;
+	opacity: .65;
+	background-color: #610010;
+	box-shadow:  .2em .2em 1.2em #300013, 
+             -.2em -.2em 1.2em #300013;
 }
 
 /* Кнопки перехода по внутренним страницам */
@@ -298,14 +314,15 @@ hr {
 	margin: 0 auto;
 }
 .portfolio div a img {
-	transition: .3s;
+	transition: .5s;
 	border-radius: 1.5em;
 	background-color: #D6D6E1;
 	width: 70%;
-	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .06);
+	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .16);
 }
 .portfolio div a img:hover {
-	box-shadow: .1em .2em .9em .7em #6f233f;
+	box-shadow: .1em .2em .9em .7em #6e6e6e;
+	transform: rotate3d(1, 1, 0, 45deg);
 }
 
 /* Для блока с контентом и кнопок: тени, радиус, анимация */
@@ -316,14 +333,11 @@ hr {
 }
 .block-content:hover, header:hover {
 	transition: 0.15s linear;
-	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .16);
+	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .09);
 }
 
 
 /* Блоки с контентом */
-.block-contacts, .block-content {
-	background: #E6E9ED;
-}
 .block-content {
 	margin: 0 auto;
 	margin-top: 3.8em;
@@ -364,93 +378,41 @@ hr {
 }
 
 
-/* Оформление списка */
-.pills {
-	width: 50%;
-	min-width: 650px;
-	max-width: 1000px;
-	margin: 0 auto;
-	margin-top: 3em;
-	margin-bottom: 3em;
-	list-style: none;
-	font-size: 1.2em;
-	counter-reset: li;
+.pref-btn li button {
+	height: 58px;
+	width: 60px;
 }
-.pills li, span {
-	transition: .4s;
-}
-.pills li {
-	user-select: none;
-	top: 0;
-	left: -230px;
-	padding: 10px 0;
+
+input.apple-switch {
 	position: relative;
-	left: 1.5em;
-	color: black;
-	margin-bottom: 1em;
-	padding-left: 1em;
-	border-top-right-radius: 1em;
-	border-bottom-right-radius: 1em;
-    background: linear-gradient(to left, #eeeeee 50%, #222222 50%) right;
-    background-size: 200%;
-}
-
-/* Цвет фона (насыщенный) */
-.pills li:hover, .pills li:before, span {
-	background: #222222;
-}
-/* Цвет фона (пастельный) */
-span:hover, .under-pills-content {
-	background-color: #eeeeee;
-}
-
-.pills li:hover {
-	color: white;
-	cursor: pointer;
-	background: linear-gradient(to right, #222222 50%, #eeeeee 50%) left;
-	transition: .5s ease-out;
-    background-size: 200%;
-}
-.pills li:before {
-	text-align: center;
-	padding: 10px 0;
+	-webkit-appearance: none;
+	outline: none;
+	width: 50px;
+	height: 30px;
+	background-color: #fff;
+	border: 1px solid #D9DADC;
+	border-radius: 50px;
+	box-shadow: inset -20px 0 0 0 #fff;
+  }
+  
+input.apple-switch:after {
+	content: "";
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: -2em;
-	width: 2em;
-	right: 2em;
-	color: white;
-	font-weight: bold;
-	border-bottom-left-radius: 70em;
-	border-top-left-radius: 70em;
-	counter-increment: li;
-	content: counter(li);
+	top: 1px;
+	left: 1px;
+	background: transparent;
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
 }
 
-/* Оформление раскрывающегося списка */
-.under-pills-collapsible {
-	color: white;
-	cursor: pointer;
-	width: 100%;
-	font-size: 20px;
-}
-.under-pills-content, .under-pills-img-content {
-	border-radius: 2em;
-}
-.under-pills-content {
-	margin: 0 auto;
-	width: 80%;
-	opacity: 0;
-	max-width: 800px;
-	margin-bottom: 1em;
-	max-height: 0;
-	font-size: .8em;
-	overflow: hidden;
-	box-shadow: .1em .2em .9em .7em rgba(0, 0, 0, .18);
-	transition: max-height .4s ease-out;
-}
-.under-pills-img-content {
-	width: 100%;
+input.apple-switch:checked {
+	box-shadow: inset 20px 0 0 0 #4ed164;
+	border-color: #4ed164;
 }
 
+input.apple-switch:checked:after {
+	left: 20px;
+	box-shadow: -2px 4px 3px rgba(0,0,0,0.05);
+}

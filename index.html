@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="copyright" lang="ru" content="Kozak - Developer Sites and Software" />
 	<title>Kozak - Developer</title>
-    <link type="image/png" href="img/moon.png" rel="shortcut icon">
+    <link type="image/png" href="img/favicon.png" rel="shortcut icon">
     <link rel="stylesheet" type="text/css" href="css/preloader.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/const.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/light.css" id="theme-link"> -->
+    <link rel="stylesheet" type="text/css" href="css/light.css" media="(prefers-color-scheme: light)" id="theme-link">
+    <link rel="stylesheet" type="text/css" href="css/dark.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: dark)" id="theme-link">
 </head>
 
 <body>
+
     
-    <!-- Прелоадер -->
+    <!-- START Прелоадер -->
     <div id="preloader">
         <h1>Kozak</h1>
         <img src="img/loader.gif" alt="Preloader">
@@ -39,10 +43,21 @@
             }, 1100);
         }
     </script>
+    <!-- END Прелоадер -->
 
     <!-- Шапка -->
     <header id="sidebar">
-        <script src="js/header.js"></script>
+        <!-- <script src="js/header.js"></script> -->
+
+        <h1>Kozak</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="buttons white" href="index.html">Профиль</a></li>
+                <li><a class="buttons white" href="index.html#portfolio">Портфолио</a></li>
+                <li><a class="buttons content-color-dark" class="cta" href="index.html#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+
     </header>
 
     <!-- Блок с личной информацией -->
@@ -111,6 +126,36 @@
     <footer id="contacts">
         <script src="js/footer.js"></script>
     </footer>
+
+
+    <script>
+        var btn = document.getElementById("change-theme");
+        var link = document.getElementById("theme-link");
+
+        btn.addEventListener("click", function () { ChangeTheme(); });
+
+        function ChangeTheme() {
+            let lightTheme = "css/light.css";
+            let darkTheme = "css/dark.css";
+
+            var currTheme = link.getAttribute("href");
+            console.log(currTheme);
+            var theme = "";
+
+            if(currTheme == lightTheme)
+            {
+            currTheme = darkTheme;
+            theme = "dark";
+            }
+            else
+            {    
+            currTheme = lightTheme;
+            theme = "light";
+            }
+
+            link.setAttribute("href", currTheme);
+        }
+    </script>
 
     <!-- <div id="contacts" class="block-content">
         <h2>Контакты</h2>
