@@ -25,7 +25,7 @@
 
 /* Скрытие блоков при загрузке */
 #web, #programming, #profile, #pre__content {
-	opacity: 1;
+	opacity: 0;
 }
 #contacts {
 	font-family: 'Binaria';
@@ -60,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 h2, h3, h4 {
+	margin-top: 1em;
 	margin: 0 auto;
 	padding: .3em;
 	font-family: 'SFNS';
@@ -68,6 +69,7 @@ h2 {
 	font-size: 3.6em;
 }
 h3 {
+	margin-top: 1em;
 	font-size: 2.8em;
 }
 h4 {
@@ -109,7 +111,7 @@ header {
     padding: 5px 5%;
 	align-items: center;
     min-width: 800px;
-    width: 100%;
+    width: 92vw;
     border-radius: 1.3em;
 }
 button {
