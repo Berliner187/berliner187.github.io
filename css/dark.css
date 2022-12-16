@@ -4,20 +4,20 @@
 }
 
 .pre__content img, .pre__content p {
-	box-shadow: .1em .2em .9em .7em rgba(20, 20, 20, 0.16);
+	box-shadow: .1em .2em .5em .3em rgba(20, 20, 20, 0.16);
 }
 
-.pre__content p {
-	display: table-cell;
-	background-color: #373737;
+.block-pills {
+	margin: 0 auto;
+	margin-left: -6.5em;
 }
-
 /* Оформление списка */
 .pills {
 	width: 50%;
 	min-width: 650px;
 	max-width: 1000px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;;
 	margin-top: 3em;
 	margin-bottom: 3em;
 	list-style: none;
@@ -30,44 +30,50 @@
 .pills li {
 	user-select: none;
 	top: 0;
+	text-align: left;
 	left: -230px;
 	padding: 10px 0;
 	position: relative;
 	left: 1.5em;
 	margin-bottom: 1em;
 	padding-left: 1em;
+	border-radius: 30px;
 	border-top-right-radius: 1em;
 	border-bottom-right-radius: 1em;
     color: #eeeeee;
     background: linear-gradient(to left, #373737 50%, #393939 50%) right;
     background-size: 200%;
 }
+.pills li {
+	text-indent: 40px;
+	font-size: 22px;
+}
 
 /* Цвет фона (насыщенный) */
 .pills li:hover, .pills li:before, span {
-	background: #222222;
+	background: #111;
 }
 /* Цвет фона (пастельный) */
 span:hover, .under-pills-content {
-	background-color: #232323;
+	background-color: #111;
 }
 
 .pills li:hover {
 	color: #e0e0e0;
 	cursor: pointer;
-	background: linear-gradient(to right, #222222 50%, #393939 50%) left;
+	background: linear-gradient(to right, #111 50%, #393939 50%) left;
 	transition: .5s ease-out;
     background-size: 200%;
 }
 .pills li:before {
 	text-align: center;
 	padding: 10px 0;
+	text-indent: 0;
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	left: -2em;
+	left: 0;
 	width: 2em;
-	right: 2em;
 	color: white;
 	font-weight: bold;
 	border-bottom-left-radius: 70em;
@@ -104,22 +110,30 @@ span:hover, .under-pills-content {
 
 
 .buttons, .button-redirect {
-	box-shadow:  .1em .1em 1em #292929, 
-             -.1em -.1em 1em #292929;
+	box-shadow:  .1em .1em .3em #1a1a1a, 
+             -.1em -.1em .3em #1a1a1a;
 }
 
-.bg-redirect {
-	color: #dadada;
-	background: #fa8743;
+/* Цветовые акценты */
+/* ВСЕ КНОПКИ */
+.button-redirect {
+	transition-duration: .3s;
+	color: #232323;
+	background: rgb(70,148,255);
+	background: linear-gradient(180deg, rgba(70,148,255,1) 0%, rgba(66,245,225,1) 100%);
 }
 .button-redirect:hover {
-	color: #dadada;
-	opacity: .5;
+	background: rgb(70,148,255);
+	background: linear-gradient(180deg, rgba(70,148,255,1) 0%, rgba(66,245,225,1) 100%);
 }
+.accent-color {
+	background-color: #00e0c7
+}
+/* Кнопки меню */
 .buttons:hover {
-	color: #fff;
-	background: #fa8743;
+	background: #999;
 }
+/* Ссылки */
 a {
-	color: #fa8743;
+	color: #00e0c7;
 }

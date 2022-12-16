@@ -15,7 +15,7 @@
 <body>
 
     <!-- START Прелоадер -->
-    <div id='preloader'>
+    <!-- <div id='preloader'>
         <h1>Kozak</h1>
         <img src="img/loader.gif" alt="preloader">
     </div>
@@ -40,12 +40,23 @@
                 pre__content.style.opacity = '1';
             }, 1100);
         }
-    </script>
+    </script> -->
     <!-- END Прелоадер -->
     
+    <!-- START Верхнее меню -->
     <header id="sidebar">
-        <script src="js/header.js"></script>
+        <!-- <script src="js/header.js"></script> -->
+        <h1>Kozak</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="buttons white" href="index.html">Профиль</a></li>
+                <li><a class="buttons boom-color" href="programming.html">Программирование</a></li>
+                <li><a class="buttons white" href="web.html">Веб-разработка</a></li>
+                <li><a class="buttons accent-color" href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
     </header>
+    <!-- END Верхнее меню -->
 
     <!-- Блок предконтента -->
     <div id="pre__content" class="block-content">
@@ -58,10 +69,10 @@
             <img src="img/icons/programming.png" alt="">
         </div>
         <!-- Кнопки перехода -->
-        <p>Быстрый переход:</p>
+        <h3>Языки:</h3>
         <div class="block-buttons">
             <a class="button-redirect bg-redirect" href="#python">Python</a>
-            <a class="button-redirect bg-redirect" href="#csharp">C sharp</a>
+            <a class="button-redirect bg-redirect" href="#c-sharp">C sharp</a>
             <a class="button-redirect bg-redirect" href="#java">Java</a>
         </div>
     </div>
@@ -71,8 +82,8 @@
         <div id="python" class="block-content bg-image-about">
             <h2>Python</h2>
             <hr>
-            <h3>Elba</h3>
-            <p>Менеджер паролей, хранитель заметок и шифровальщик файлов.</p>
+            <h3 id="elba">Elba</h3>
+            <p>Менеджер паролей.</p>
 
             <div class="img-img-container">
                 <div class="img-container">
@@ -103,57 +114,61 @@
             <p>Цель программы - сохранить Ваши данные в конфиденциальности.</p>
             
             <!-- Список -->
-            <ol class="pills">
-                
-                <li class="under-pills-collapsible" title="Развернуть">Только Вы знаете пароли от своих сервисов. <span>Ещё ᐯ</span></li>
-                    <!-- Вложенный текст -->
-                    <div class="under-pills-content">
-                        <br><br><p class="p-discraption">Только авторизовавшись можно добавлять и просматривать пароли от сервисов.</p>
-                        <br>
-                        <p class="p-discraption">Хранение по принципу связки: Сервис > Логин > Пароль.</p>
-                        <br>
-                        <p class="p-discraption">Для шифрования ваших данных о сервисе используется единажды созданный generic-key.</p>
-                        <img class="under-pills-img-content" src="img/elba-resources.png" alt="Elba Services">
-                    </div>
+            <div class="block-pills">
+                <ol class="pills">
+                    <li class="under-pills-collapsible" title="Развернуть">Только Вы знаете пароли от своих сервисов. <span>Ещё ᐯ</span></li>
+                        <!-- Вложенный текст -->
+                        <div class="under-pills-content">
+                            <br><br><p class="p-discraption">Только авторизовавшись можно добавлять и просматривать пароли от сервисов.</p>
+                            <br>
+                            <p class="p-discraption">Хранение по принципу связки: <br> Сервис > Логин > Пароль.</p>
+                            <br>
+                            <p class="p-discraption">Для шифрования ваших данных о сервисе используется единажды созданный generic-key.</p>
+                            <img class="under-pills-img-content" src="img/elba-resources.png" alt="Elba Services">
+                        </div>
+                    <li class="under-pills-collapsible" title="Развернуть">Ваши заметки остаются в тайне. <span>Ещё ᐯ</span></li>
+                        <!-- Вложенный текст -->
+                        <div class="under-pills-content">
+                            <br><br><p class="p-discraption">Только авторизовавшись можно добавлять и просматривать заметки.</p>
+                            <br>
+                            <p class="p-discraption">Хранение по принципу связки: <br> Имя заметки > Заметка.</p>
+                            <br>
+                            <p class="p-discraption">Для шифрования ваших заметок используется единажды созданный generic-key.</p>
+                            <img class="under-pills-img-content" src="img/elba-notes.png" alt="Elba Notes">
+                        </div>
+                    <li class="under-pills-collapsible" title="Развернуть">Файлы остаются надежно зашифрованными. <span>Ещё ᐯ</span></li>
+                        <!-- Вложенный текст -->
+                        <div class="under-pills-content">
+                            <br><br><p class="p-discraption">Только авторизовавшись можно шифровать и просматривать зашифрованные файлы.</p><br>
+                            <p class="p-discraption">Поддерживается шифрование директорий, в которые вложены файлы.</p>
+                            <br>
+                            <p class="p-discraption">Поддерживается шифрование ЛЮБЫХ типов файлов без потерь.</p>
+                            <br>
+                            <p class="p-discraption">Надежность обеспечивается методом симметричного и быстрого шифрования AES с дополнительными подписями и проверками подлинности.</p>
+                            <br>
+                            <img class="under-pills-img-content" src="img/elba-encryption.png" alt="Elba Enryption">
+                        </div>
+                </ol>
+            </div>
 
-                <li class="under-pills-collapsible" title="Развернуть">Ваши заметки остаются в тайне. <span>Ещё ᐯ</span></li>
-                    <!-- Вложенный текст -->
-                    <div class="under-pills-content">
-                        <br><br><p class="p-discraption">Только авторизовавшись можно добавлять и просматривать заметки.</p>
-                        <br>
-                        <p class="p-discraption">Хранение по принципу связки: Имя заметки > Заметка.</p>
-                        <br>
-                        <p class="p-discraption">Для шифрования ваших заметок используется единажды созданный generic-key.</p>
-                        <img class="under-pills-img-content" src="img/elba-notes.png" alt="Elba Notes">
-                    </div>
-
-                <li class="under-pills-collapsible" title="Развернуть">Файлы остаются надежно зашифрованными. <span>Ещё ᐯ</span></li>
-                    <!-- Вложенный текст -->
-                    <div class="under-pills-content">
-                        <br><br><p class="p-discraption">Только авторизовавшись можно шифровать и просматривать зашифрованные файлы.</p><br>
-                        <p class="p-discraption">Поддерживается шифрование директорий, в которые вложены файлы.</p>
-                        <br>
-                        <p class="p-discraption">Поддерживается шифрование ЛЮБЫХ типов файлов без потерь.</p>
-                        <br>
-                        <p class="p-discraption">Надежность обеспечивается методом симметричного и быстрого шифрования AES с дополнительными подписями и проверками подлинности.</p>
-                        <br>
-                        <img class="under-pills-img-content" src="img/elba-encryption.png" alt="Elba Enryption">
-                    </div>
-            </ol>
-
-            <p class="p-discraption">За конфиденциальность данных отвечают методы шифрования Base64 и AES. 
+            <p class="p-discraption center">За конфиденциальность данных отвечают методы шифрования Base64 и AES. 
                 Также имеются хеши подтверждения подлинности как программы, так и пользовательских данных. 
                 Я старался сделать программу максимально простой в использовании, но с мощной начинкой внутри.</p>
             <br>
 
             <div class="block-buttons">
-                <a target="_blank" class="button-redirect bg-redirect" href="works/elba/about.html">УЗНАТЬ БОЛЬШЕ</a>
+                <a target="_blank" class="button-redirect" href="works/programming/elba/about.html">ПОДРОБНЕЕ</a>
             </div>
+            <p>Эта программа лицензирована по <a target="_blank" href="https://github.com/Berliner187/elba/blob/delta/LICENSE">GPL v3.0</a>.</p>
+            <p>Исходный код доступен на <a target="_blank" href="https://github.com/Berliner187/elba">GitHub</a>.</p>
 
             <hr>
 
             <h3>Парсер Wildberries</h3>
             <p>Парсит артикулы по введенному запросу на Wildberries.</p>
+            <div class="block-buttons">
+                <a target="_blank" class="button-redirect"  href="https://github.com/Berliner187/parsing">РЕПОЗИТОРИЙ</a>
+            </div>
 
             <!-- КОНТЕНТ -->
 

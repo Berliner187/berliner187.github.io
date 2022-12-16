@@ -17,7 +17,7 @@
 
     
     <!-- START Прелоадер -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <h1>Kozak</h1>
         <img src="img/loader.gif" alt="Preloader">
     </div>
@@ -42,22 +42,21 @@
                 profile.style.opacity = '1';
             }, 1100);
         }
-    </script>
+    </script> -->
     <!-- END Прелоадер -->
 
     <!-- Шапка -->
     <header id="sidebar">
         <!-- <script src="js/header.js"></script> -->
-
         <h1>Kozak</h1>
         <nav>
             <ul class="nav-links">
-                <li><a class="buttons white" href="index.html">Профиль</a></li>
-                <li><a class="buttons white" href="index.html#portfolio">Портфолио</a></li>
-                <li><a class="buttons content-color-dark" class="cta" href="index.html#contacts">Контакты</a></li>
+                <li><a class="buttons boom-color" href="index.html">Профиль</a></li>
+                <li><a class="buttons white" href="programming.html">Программирование</a></li>
+                <li><a class="buttons white" href="web.html">Веб-разработка</a></li>
+                <li><a class="buttons accent-color" href="#contacts">Контакты</a></li>
             </ul>
         </nav>
-
     </header>
 
     <!-- Блок с личной информацией -->
@@ -67,7 +66,7 @@
         <hr>
 
         <div class="pre__content">
-            <p>Привет, я Ростислав. <br>Разработчик. <br> Студент. <br><br> Разрабатываю сайты, <br> консольные и десктопные <br> приложения.</p>
+            <p>Привет, я Ростислав. <br>Разработчик. <br> Студент. <br><br> Разрабатываю сайты, <br> консольные, десктопные <br> и мобильные приложения.</p>
             <img src="img/avatar.jpg" alt="Ich bin Slavik">
         </div>
 
@@ -80,16 +79,14 @@
             десктопных программ, приложений для мобильных устройств на базе Android.</p>
 
         <!-- Список основной деятельности -->
-        <ol id="pills" class="pills">
-            <a href="web.html">
-                <li>Веб-разработка на HTML, CSS и JS.</li></a>
-            <a href="programming.html#python">
-                <li>Разработка на Python. Консольные приложения, GUI.</li></a>
-            <a href="programming.html#c-sharp">
-                <li>Разработка на C# консольных и десктопных приложений.</li></a>
-            <a href="programming.html#java">
-                <li>Мобильная разработка на Java под Android.</li></a>
-        </ol>
+        <div class="block-pills">
+            <ol id="pills" class="pills">
+                <a href="web.html"><li>Веб-разработка на HTML, CSS и JS.</li></a>
+                <a href="programming.html#python"><li>Разработка на Python. Консольные приложения, GUI.</li></a>
+                <a href="programming.html#c-sharp"><li>Разработка на C# консольных и десктопных приложений.</li></a>
+                <a href="programming.html#java"><li>Мобильная разработка на Java под Android.</li></a>
+            </ol>
+        </div>
         
         <h2>Навыки</h2>
         <hr class="separator_hr">
@@ -98,7 +95,8 @@
             <a class="button-redirect content-color-dark" href="web.html">< html /></a>
             <a class="button-redirect content-color-dark" href="programming.html#java">< xml /></a>
             <a class="button-redirect content-color-dark" href="web.html">// js</a>
-            <br>
+        </div>
+        <div class="block-buttons">
             <a class="button-redirect content-color-dark" href="programming.html#python"># python</a>
             <a class="button-redirect content-color-dark" href="programming.html#c-sharp">// c#</a>
             <a class="button-redirect content-color-dark" href="programming.html#java">// java</a>
@@ -121,41 +119,18 @@
             </div>
         </div>
     </div>
-    
+
+    <div class="block-content">
+        <div class="merry-christmas">
+            <h1>2023</h1>
+            <h2>🎄Happy New Year!🎄</h2>
+        </div>
+    </div>
+        
     <!-- Блок с контактами -->
     <footer id="contacts">
         <script src="js/footer.js"></script>
     </footer>
-
-
-    <script>
-        var btn = document.getElementById("change-theme");
-        var link = document.getElementById("theme-link");
-
-        btn.addEventListener("click", function () { ChangeTheme(); });
-
-        function ChangeTheme() {
-            let lightTheme = "css/light.css";
-            let darkTheme = "css/dark.css";
-
-            var currTheme = link.getAttribute("href");
-            console.log(currTheme);
-            var theme = "";
-
-            if(currTheme == lightTheme)
-            {
-            currTheme = darkTheme;
-            theme = "dark";
-            }
-            else
-            {    
-            currTheme = lightTheme;
-            theme = "light";
-            }
-
-            link.setAttribute("href", currTheme);
-        }
-    </script>
 
     <!-- <div id="contacts" class="block-content">
         <h2>Контакты</h2>

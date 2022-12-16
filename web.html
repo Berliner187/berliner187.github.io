@@ -4,6 +4,7 @@
     <link type="image/png" href="img/favicon.png" rel="shortcut icon">
     <meta charset="UTF-8">
     <title>Kozak - Developer</title>
+    <script src="js/templates/container-web.js"></script>
     <link rel="stylesheet" type="text/css" href="css/preloader.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/img-effect.css">
@@ -13,7 +14,7 @@
 </head>
 <body>
     <!-- Прелоадер -->
-    <div id='preloader'>
+    <!-- <div id='preloader'>
         <h1>Kozak</h1>
         <img src="img/loader.gif" alt="preloader">
     </div>
@@ -40,10 +41,19 @@
                 pre__content.style.opacity = '1';
             }, 1100);
         }
-    </script>
+    </script> -->
 
     <header id="sidebar">
-        <script src="js/header.js"></script>
+        <!-- <script src="js/header.js"></script> -->
+        <h1>Kozak</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="buttons white" href="index.html">Профиль</a></li>
+                <li><a class="buttons white" href="programming.html">Программирование</a></li>
+                <li><a class="buttons boom-color" href="web.html">Веб-разработка</a></li>
+                <li><a class="buttons accent-color" href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Блок предконтента -->
@@ -60,226 +70,10 @@
 
     <!-- Блок с контентом: веб-разработка -->
     <div id="web" class="block-content">
-        <h3>Спортивная школа</h3>
-        <p class="align-center">Сайт о спортивной школе в Москве.</p>
-        <!-- Контейнер с картинками -->
-        <div id="img-img-container" class="img-img-container">
-            <div class="img-container">
-                <figure class="content-color1">
-                    <figcaption>
-                        <img src="img/sport-school-1.png">
-                        <h2>Спортивная школа</h2>
-                        <p>Главная</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="img-container ">
-                <figure class="content-color1">
-                    <figcaption>
-                        <img src="img/sport-school-2.png">
-                        <h2>Спортивная школа</h2>
-                        <p>Запись в школу</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <!-- Кнопка перехода -->
-        <div class="block-buttons">
-            <a target="_blank" class="button-redirect bg-redirect " href="sites/sport-school/index.html">ПЕРЕЙТИ</a>
-            <a target="_blank" class="button-redirect bg-redirect " href="sites/template.html">РЕПОЗИТОРИЙ</a>
-        </div>
-
-        <hr>
-
-        <h3>Финансовый калькулятор</h3>
-        <p class="align-center">Реализация расчёта кредита и вклада при помощи JavaScript.</p>
-        <!-- Контейнер с картинками -->
-        <div class="img-img-container">
-            <div class="img-container">
-                <figure class="content-color-dark">
-                    <figcaption>
-                        <img src="img/bank-finance-1.png">
-                        <h2>Bank Finance</h2>
-                        <p>Аннуитетный кредит</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="img-container ">
-                <figure class="content-color-dark">
-                    <figcaption>
-                        <img src="img/bank-finance-2.png">
-                        <h2>Bank Finance</h2>
-                        <p>Вклад</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <!-- Кнопки перехода -->
-        <div class="block-buttons">
-            <a target="_blank" class="button-redirect bg-redirect " href="sites/bank/index.html">ПЕРЕЙТИ</a>
-            <a target="_blank" class="button-redirect bg-redirect " href="https://github.com/Berliner187/BankFinance">РЕПОЗИТОРИЙ</a>
-        </div>
-
-        <hr>
-
-        <h3>Meiner Siten</h3>
-        <p>Предыдущая версия сайта</p>
-        <!-- Контейнер с картинками -->
-        <div class="img-img-container">
-            <div class="img-container">
-                <figure class="content-color-black">
-                    <figcaption>
-                        <img src="img/SiteFace-old.jpg">
-                        <h2>Meiner Siten</h2>
-                        <p>Main Page</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <!-- Кнопки перехода -->
-        <div class="block-buttons">
-            <a target="_blank" class="button-redirect bg-redirect " href="sites/old-personal-site/index.html">ПЕРЕЙТИ</a>
-        </div>
-
-        <hr>
-
-        <h3>О городе Львов</h2>
-        <p class="align-center">История города, интересные места и достопримечательности.</p>
-        <!-- Контейнер с картинками -->
-        <div class="img-img-container">
-            <div class="img-container">
-                <figure class="content-color2">
-                    <figcaption>
-                        <img src="img/SiteFace.jpg">
-                        <h2>Мiсто Львiв</h2>
-                        <p>Гарне мiсто Львiв</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="img-container">
-                <figure class="content-color2">
-                    <figcaption>
-                        <img src="img/Lviv-1.png">
-                        <h2>Мiсто Львiв</h2>
-                        <p>Львівська ратуша</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <!-- Кнопки перехода -->
-        <div class="block-buttons">
-            <a target="_blank" class="button-redirect bg-redirect " href="sites/lviv/main-page.html">ПЕРЕЙТИ</a>
-            <a target="_blank" class="button-redirect bg-redirect " href="https://github.com/Berliner187/Lviv">РЕПОЗИТОРИЙ</a>
-        </div>
-        
-        <hr>
-
-        <h3>Mercedes-Benz</h3>
-        <p class="align-center">История, модели, характеристики.</p>
-        <!-- Контейнер с картинками -->
-        <div class="img-img-container">
-            <div class="img-container">
-                <figure class="content-color-black">
-                    <figcaption>
-                        <img src="img/mercedes-benz-auto.jpg">
-                        <h2>Mercedes-Benz</h2>
-                        <p>S-Класс</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="img-container">
-                <figure class="content-color-black">
-                    <figcaption>
-                        <img src="img/mercedes-benz-history.png">
-                        <h2>Mercedes-Benz</h2>
-                        <p>История</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <!-- Кнопка перехода -->
-        <div class="block-buttons">
-            <a target="_blank" class="button-redirect bg-redirect " href="sites/mercedes/mercedes-benz-main.html">ПЕРЕЙТИ</a>
-            <a target="_blank" class="button-redirect bg-redirect " href="sites/template.html">РЕПОЗИТОРИЙ</a>
-        </div>
-
-        <hr>
-
-        <h3>Редизайн</h3>
-        <p class="align-center">Редизайн статей.</p>
-        <!-- Контейнер с картинками -->
-        <div class="img-img-container">
-            <div class="img-container">
-                <figure class="content-color-redesign">
-                    <figcaption>
-                        <img src="img/redesign.png">
-                        <h2>ReDesign</h2>
-                        <p>Неоморфизм</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <!-- Кнопка перехода -->
-        <div class="block-buttons">
-            <a target="_blank" class="button-redirect bg-redirect " href="sites/re-design/linux.html">ПЕРЕЙТИ</a>
-            <a target="_blank" class="button-redirect bg-redirect " href="https://github.com/Berliner187/reDesign">РЕПОЗИТОРИЙ</a>
-        </div>
-
-        <hr>
-
-        <h3>Стилист</h3>
-        <p class="align-center">Сайт-визитка парикхмахера-стилиста.</p>
-        <!-- Контейнер с картинками -->
-        <div class="img-img-container">
-            <div class="img-container">
-                <figure class="content-color-cafe" style="background-color: #E7E7E7;">
-                    <figcaption>
-                        <img src="img/hair.png">
-                        <h2>Effa Ivasishina</h2>
-                        <p>Стилист</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <!-- Кнопка перехода -->
-        <div class="block-buttons">
-            <a target="_blank" class="button-redirect bg-redirect " href="sites/stylist/index.html">ПЕРЕЙТИ</a>
-            <a target="_blank" class="button-redirect bg-redirect " href="sites/template.html">РЕПОЗИТОРИЙ</a>
-        </div>
-
-        <hr>
-
-        <h3>Лофт кофейня</h3>
-        <p class="align-center">Сайт о кофейне в стиле лофт.</p>
-        <!-- Контейнер с картинками -->
-        <div class="img-img-container">
-            <div class="img-container">
-                <figure class="content-color-cafe">
-                    <figcaption>
-                        <img src="img/Cafe-Main.png">
-                        <h2>Loft Cafe</h2>
-                        <p>Кофейня</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="img-container ">
-                <figure class="content-color-cafe">
-                    <figcaption>
-                        <img src="img/Cafe-Menu.png">
-                        <h2>Loft Cafe</h2>
-                        <p>Меню</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <!-- Кнопка перехода -->
-        <div class="block-buttons">
-            <a target="_blank" class="button-redirect bg-redirect " href="sites/cafe/index.html">ПЕРЕЙТИ</a>
-            <a target="_blank" class="button-redirect bg-redirect " href="https://github.com/Berliner187/Loft_Cafe">РЕПОЗИТОРИЙ</a>
-        </div>
-
+        <script>templateContainer()</script>
     </div>
 
+    <!-- Контейнер с контактными данными -->
     <div id="contacts">
         <script src="js/footer.js"></script>
     </div>

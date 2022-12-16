@@ -105,9 +105,20 @@ span:hover, .under-pills-content {
 }
 
 
+/* Цветовые акценты */
+/* ВСЕ КНОПКИ */
+.accent-color, .button-redirect, 
 .bg-redirect {
-	background: #e8d7cd;
+	background: #00e0c7
 }
+.bg-redirect, .button-redirect {
+	color: #232323;
+}
+/* Кнопки меню */
+.buttons:hover {
+	background: #999;
+}
+/* Ссылки */
 a {
-	color: #610010;
+	color: #00e0c7;
 }
