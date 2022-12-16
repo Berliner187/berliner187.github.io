@@ -10,24 +10,25 @@
   background-color: #000;
 }
 
-#preloader img, #preloader h1 {
+#preloader img, #preloader h1, #preloader h2 {
   animation: startPreloader .7s;
 }
 
 .startBlock {
   animation: startPreloader .7s;
 }
+
+#preloader h1 {
+  color: #E6E9ED;
+  font-size: 10em;
+  margin-top: 5%;
+  text-align: center;
+}
 #preloader img {
   width: 600px;
   height: auto;
-  margin-top: 10em;
+  margin-top: 5%;
   background-color: #000;
-}
-#preloader h1 {
-  color: #E6E9ED;
-  font-size: 7em;
-  margin-top: 10%;
-  text-align: center;
 }
 
 #preloader.hide-preloader {
