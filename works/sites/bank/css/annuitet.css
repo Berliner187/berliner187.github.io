@@ -1,0 +1,17 @@
+body {
+	background-color: #222
+}
+.main-block {
+	background: rgb(225,65,95);
+background: -moz-linear-gradient(90deg, rgba(225,65,95,1) 0%, rgba(91,26,26,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(225,65,95,1) 0%, rgba(91,26,26,1) 100%);
+background: linear-gradient(90deg, rgba(225,65,95,1) 0%, rgba(91,26,26,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1415f",endColorstr="#5b1a1a",GradientType=1);
+}
+.btn-change {
+	background: rgb(225,65,95);
+background: -moz-linear-gradient(90deg, rgba(225,65,95,1) 0%, rgba(91,26,26,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(225,65,95,1) 0%, rgba(91,26,26,1) 100%);
+background: linear-gradient(90deg, rgba(225,65,95,1) 0%, rgba(91,26,26,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1415f",endColorstr="#5b1a1a",GradientType=1);
+}

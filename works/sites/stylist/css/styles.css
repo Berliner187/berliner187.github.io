@@ -1,0 +1,239 @@
+body {
+  background-image: url(../img/background5.gif);
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: 'Mon Amour One';
+  src: url(../fonts/mon-amour.ttf);
+}
+.a {
+  font-family: 'Mon Amour One';
+  color: #000;
+  text-decoration: none;
+}
+.a:hover {
+  color: #610010  
+}
+h1 {
+  font-family: 'Mon Amour One';
+  font-size: 5em;
+  text-align: center;
+}
+h2 {
+  font-family: 'SFNS Display';
+  font-size: 3vw;
+  text-align: center;
+}
+.g {
+  margin-top: 0px;
+  margin-bottom: 50px
+}
+
+p {
+  font-family: 'SFNS Display';
+  font-size: 1.95vw;
+  text-indent: 100px;
+}
+
+.pl {
+  text-align: left;
+  font-family: 'SFNS Display';
+  display: block;
+  width: 96%; 
+  height: 12em;
+  margin-right: 100px;
+  margin-bottom: 2em;
+  text-indent: 70px;
+  padding-top: 80px;
+}
+
+.pr {
+  font-family: 'SFNS Display';
+  width: 52vw; 
+  height: 6vw;
+  margin-top: 5em;
+  text-indent: 70px;
+  padding-left: 7vw;
+}
+.pd {
+  text-align: center;
+  width: 80%;
+  margin-left: 120px;
+  margin-right: 120px
+}
+
+.list {
+  font-size: 1.8vw;
+  margin-left: 4vw;
+  margin-top: 3%;
+  height: 30vw
+}
+.beadroll {
+  font-family: 'SFNS Display';
+  display: block;
+  width: 50vw;
+  margin-left: 50px
+}
+
+.p2 {
+  width: 60%;
+  height: 500px;
+  text-indent: 70px;
+  padding-right: 1000px;
+  padding-left: 550px
+}
+.p3 {
+  font-size: 65px;
+  text-align: center;
+  margin: 0 auto;
+}
+.leftimg {
+    float: left; 
+}
+hr {
+  width: 70%;
+  height: 3px;
+  margin-top: 7em;
+  margin-bottom: 5em;
+  background-color: #000;
+}
+
+/* Округление фото */
+.w {
+  width: 100%;
+  display: inline;
+  text-align: center;
+  margin-left: 2.6%;
+  margin-right: 2.6%
+}
+.w .round {
+  display: inline;
+  margin-left: 1em;
+  width: 17vw;
+}
+.st {
+  width: 32vw;
+  margin-top: 10px;
+  float: left;
+}
+.round {
+  border-radius: 3%; 
+}
+
+.rig {
+  display: block;
+  float: left;
+  text-align: left;
+  width: 37vw;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 90px
+}
+.fig {
+    display: flex;
+    width: 34vw;
+    margin-right: 20px;
+    float: right;
+    margin-top: 20px;
+}
+
+.nv {
+  text-align: center;
+}
+.nr {
+  width: 500px;
+}
+.nc {
+  text-align: center;
+}
+
+.li-2 {
+  display: block;
+  font-family: 'SFNS Display';
+  font-size: 1.8vw
+}
+
+
+/* Меню с якорями */
+.menu {
+  margin-top: -50px;
+}
+ul {
+    display: block;
+    list-style-type: none; 
+    padding: 0;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+ /* Creates a horizontal list with spacing */
+
+li {
+  float: left;
+  width: 250px;
+}
+
+/*Style for menu links */
+
+li a {
+  display: block;
+  min-width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-family: 'SFNS Display';
+  color: #fff;
+  background: #BCBEBD;
+  text-decoration: none; 
+  
+}
+
+/* Hover State for top level links*/
+
+li:hover a {
+  background: #2F164D;
+}
+
+/* Style for dropdown links*/
+
+li:hover ul a {
+  background: #BCBEBD;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* Hover state for dropdown links */ 
+li:hover ul a:hover {
+  background: #2F164D;
+  color: #fff;
+}
+
+/*Hide dropdown links until they are need */
+li ul {
+  display: none;
+}
+
+/*Make dropdown links vertical */
+
+li ul li {
+  display: block; 
+  float: none; 
+  text-align: center;
+}
+
+/*Prevent text wrapping */
+li ul li a {
+  width: auto; 
+  min-width: 100px; 
+  padding: 0 20px; 
+  text-align: center;
+  text-align: center;
+}
+
+/*Display the dropdown on hover */
+ul li a:hover + .hidden, .hidden:hover {
+  display: block; 
+  text-align: center;
+}

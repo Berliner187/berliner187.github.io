@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kozak - Developer</title>
+	<meta charset="utf-8">
+	<meta property="og:image" content="img/SiteFace-5.png">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/img-hover.css">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="css/start-effect.css">
+	<link rel="stylesheet" type="text/css" href="css/btn.css">
+	<script type="text/javascript" src="js/btn.js"></script>
+	<script type="text/javascript" src="js/img-hover.js"></script>
+</head>
+<body bgcolor="#000">
+
+<!-- Контейнер со стартовым эффектом -->
+	<div id="ip-container" class="ip-container">
+			<header class="ip-header">
+				<h1 class="ip-h1">Kozak - Developer</h1>
+
+				<div class="ip-loader">
+					<svg class="ip-inner" width="100px" height="100px" viewBox="0 0 80 80">
+						<path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+					</svg>
+				</div>
+			</header>
+
+
+			<div class="ip-main">
+				<nav class="codrops-demos"></nav>
+					<div class="browser clearfix">
+						<div class="box">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/modernize.custom.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/pathLoader.js"></script>
+		<script src="js/main.js"></script>
+<!-- Конец -->	
+<!-- Контент -->
+	<div class="menu" align="center">
+		<a class="buttons violet" href="#about">Обо мне</a>
+		<a class="buttons ocean" href="#web">HTML&CSS</a>
+		<a class="buttons yellow" href="#python">Python</a>
+		<a class="buttons red" href="#contact">Контакты</a>
+		<a class="buttons white"  href="https://github.com/Berliner187" target="_blank">GitHub</a>
+	</div>
+
+	<h1>Willkommen auf meiner Seite</h1>
+
+	<h2 id="about" class="header">Обо мне</h2>
+		<p>Разрабатываю веб-сайты на HTML, CSS и JS. Ниже представлены мои проекты.</p>
+		<p>Также пишу программы на <a href="https://ru.wikipedia.org/wiki/Python" class="a-content" target="_blank">Python</a>. Проекты на <a href="#python" class="a-content">нем</a>.</p><br>
+		<p>Все проекты нацелены на техническую составляющую.</p>
+
+	<hr>
+	<h2 id="web" class="header">Проекты на html и css</h2>
+	
+		<div class="img-con" align="center">
+
+			<div class="img-box">
+				<p class="p-font">О городе Львов</p>
+				<p>Сайт о городе Львов. О его происхождении, достопримечательностях и интересных местах.</p>
+				<figure class="snip1104 yellow">
+					<img src="img/SiteFace.jpg" alt="Lviv">
+			  			<figcaption>
+    						<h2 class="">Мiсто  <span> Львiв</span></h2>
+  						</figcaption>
+  						<a href="Projects/L'viv/main-page.html" target="_blank"></a>
+					</figure>
+				</div>
+
+			<hr class="hr-3">
+		
+			<div class="img-box">
+				<p class="p-font">Редизайн статей</p>
+				<p>Проект, в котором собраны редизайны статей.</p>
+				<figure class="snip1104 blue">
+					<img src="img/SiteFace-2.png" alt="reDesign">
+			  			<figcaption>
+    						<h2>re  <span> Design</span></h2>
+  						</figcaption>
+  						<a href="Projects/reDesign/main-page.html" target="_blank"></a>
+					</figure>
+				</div>
+
+			<hr class="hr-3">
+
+			<div class="img-box">
+				<p class="p-font">Mercedes-Benz</p>
+				<p>Клон реального сайта Mercedes, но написан с нуля и немного отличается.</p>
+				<figure class="snip1104 v">
+					<img src="img/SiteFace-3.jpg" alt="Mercedes-Benz">
+			  			<figcaption>
+    						<h2>Mercedes -<span> Benz</span></h2>
+  						</figcaption>
+  						<a href="Projects/Mercedes/mercedes-benz-main.html" target="_blank"></a>
+					</figure>
+				</div>
+
+			<hr class="hr-3">
+
+			<div class="img-box">
+				<p class="p-font">Кофейня в стиле Loft</p>
+				<p>Сайт о вымышленной кофейне, которой в действительности не существует.</p>
+				<figure class="snip1104 red">
+					<img src="img/SiteFace-4.png" alt="Loft Cafe">
+			  			<figcaption>
+    						<h2>Loft  <span> Cafe</span></h2>
+  						</figcaption>
+  						<a href="Projects/Cafe/index.html" target="_blank"></a>
+					</figure>
+				</div>
+			</div>
+
+	<hr class="hr-border">
+
+	<h2 id="python" class="header">Проекты на Python</h2>	
+
+			<div class="img-con" align="center">
+				<div class="img-box">
+					<h2 class="h2-header">Конвертер валют</h2>
+						<p>Написано при помощи библиотек <a href="https://requests.readthedocs.io/en/master/" class="a-content" target="_blank">requests</a> и <a href="https://pypi.org/project/beautifulsoup4/" class="a-content" target="_blank">bs4</a>.
+						</p>	
+						<p>Программа получает актуальные данные о курсе валют и конвертирует в рубли число, заданное пользователем.</p>		
+				
+						<figure class="snip1104 orange-grau">
+							<img src="img/CurConv.png" alt="Currency Converter">
+					  			<figcaption>
+		    						<h2>Currency <span>Converter</span></h2>
+		  						</figcaption>
+		  						<a href="https://github.com/Berliner187/Currency_Converter" target="_blank"></a>
+							</figure>
+					</div>
+
+			<hr class="hr-content">
+
+				<div class="img-con" align="center">
+					<div class="img-box">
+						<h2 class="h2-header">Конвертер валют с графическим интерфейсом</h2>
+							<p>Дизайн написан на HTML и CSS, а библиотека <a href="https://github.com/samuelhwilliams/Eel" class="a-content" target="_blank">eel</a> обрабатывает входные данные на Python.
+							<br><br>Конвертирование происходит на стороне пользователя при помощи JavaScript.
+							<br><br>Запускается как приложение.</p>		
+					
+							<figure class="snip1104 violet-d">
+								<img src="img/GUI-CС.png" alt="GUI Currency Converter">
+						  			<figcaption>
+			    						<h2>GUI Currency <span>Converter</span></h2>
+			  						</figcaption>
+			  						<a href="https://github.com/Berliner187/Currency_Converter" target="_blank"></a>
+								</figure>
+						</div>
+
+				<hr class="hr-3">		
+				
+					<div class="img-con" align="center">
+						<div class="img-box">	
+						<h2 class="h2-header">Динамика акций в реальном времени</h2>
+							<p>Написано при помощи библиотек <a href="https://requests.readthedocs.io/en/master/" class="a-content" target="_blank">requests</a> и <a href="https://pypi.org/project/beautifulsoup4/" class="a-content" target="_blank">bs4</a>.</p>
+							<p>Программа делает запрос на указанные сайты с акциями, выбирает нужные данные и их выводит в консоль с задержкой в 2 секунды.</p>	
+
+								<figure class="snip1104 orange-dark">
+									<img src="img/DynLive.png" alt="Promotions Dynamics">
+							  			<figcaption>
+				    						<h2>Promotions <span>Dynamics</span></h2>
+				  						</figcaption>
+				  						<a href="https://github.com/Berliner187/PromotionsDynamics_Python" target="_blank"></a>
+									</figure>
+
+								<p>В <a href="https://github.com/Berliner187/PromotionsDynamics_Python" class="a-content">репозитории</a> лежит GUI версия 0.1 с графическим интерфейсом. Интерфейс в стадии разработки.</p>
+							</div>
+						</div>
+
+				<hr class="hr-content">
+
+					<div class="img-box">	
+						<h2 class="h2-header">Версия с графическим интерфесом</h2>
+							<p>Получает и обрабатывает актуальные данные Python-скрипт, а JavaScript позволяет взаимодействовать с полученными данными.</p>	
+
+								<figure class="snip1104 pastel-1">
+									<img src="img/GUI-PromDyn.png" alt="Promotions Dynamics">
+							  			<figcaption>
+				    						<h2>GUI Promotions <span>Dynamics</span></h2>
+				  						</figcaption>
+				  						<a href="https://github.com/Berliner187/PromotionsDynamics_Python" target="_blank"></a>
+									</figure>
+
+								<p>При клике на любую из предложенных компаний программа выводит актуальную стоимость акции.</p>
+								<p>Есть возможность вычислить размер дивидендов (блок слева).</p>
+								<p>А также вычислить прибыль на акцию, если та (условно) была куплена ранее.</p>
+								<p>Внизу есть крафик, на котором отображается стоимость акций за последние несколько недель. На текущий момент еще в разработке.</p>
+							</div>
+						</div>
+
+				<hr class="hr-content">
+
+					<div class="img-con" align="center">
+						<div class="img-box">
+						<h2 class="h2-header">Запись данных в Excel-файл</h2>
+							<p>Более продвинутая версия программы "Promotions Dynamics", написано при помощи библиотеки <a href="https://pandas.pydata.org/">Pandas</a>.</p>
+							<p>Программа получает актуальные на текущий момент данные об акциях и записывает их в Excel-файл.</p>
+							<br>
+							<p>Каждый файл пронумерован и датирован автоматически.</p>	
+
+								<figure class="snip1104 green">
+									<img src="img/Pandas.jpg" alt="Promotions Dynamics with Pandas">
+							  			<figcaption>
+				    						<h2>Write to <span>Excel</span></h2>
+				  						</figcaption>
+				  						<a href="https://github.com/Berliner187/PromotionsDynamics_Python" target="_blank"></a>
+									</figure>
+								</div>
+							</div>
+
+				<hr class="hr-border">	
+	
+					<div class="img-con" align="center">
+						<div class="img-box">
+						<h2 id="python" class="h2-header">ИИ на Python</h2>
+							<p>Простой ИИ на низкоуровневой библиотеке <a href="https://numpy.org/">NumPy</a>.</p>
+
+							<div class="img-box">
+								<figure class="snip1104 ocean">
+									<img src="img/AI_Python-2.jpg" alt="AI on Python">
+							  			<figcaption>
+				    						<h2>Artificial <span> Intelligence</span></h2>
+				  						</figcaption>
+				  						<a href="https://github.com/Berliner187/AI_Python" target="_blank"></a>
+									</figure>
+
+								<figure class="snip1104 ocean">
+									<img src="img/AI_Python-1.jpg" alt="AI on Python">
+							  			<figcaption>
+				    						<h2>Result</h2>
+				  						</figcaption>
+				  						<a href="https://github.com/Berliner187" target="_blank"></a>
+									</figure>
+								</div>	
+							</div>
+			</div>						
+
+
+	<hr>
+
+	<h2 id="contact" class="header">Контакты</h2>
+		<p>Связаться со мной можно через: </p>
+		<div class="a-contact">
+			<a href="https://instagram.com/cisc_101" class="a-contact" target="_blank">Instagram</a>
+			<a href="https://t.me/CISC_101" class="a-contact" target="_blank">Telegram</a>
+			<a href="mailto: consumer-cisc@mail.ru" class="a-contact" target="_blank">E-mail</a>
+		</div>	
+</body>
+</html>
