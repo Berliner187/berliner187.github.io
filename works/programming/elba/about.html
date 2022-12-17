@@ -6,14 +6,41 @@
     <link rel="shortcut icon" href="../../../img/favicon.png" type="image/png">
     <link rel="stylesheet" href="../../../css/styles.css">
     <link rel="stylesheet" href="../../../css/const.css">
+    <link rel="stylesheet" href="../../../css/preloader.css">
     <link rel="stylesheet" type="text/css" href="../../../css/light.css" media="(prefers-color-scheme: light)" id="theme-link">
     <link rel="stylesheet" type="text/css" href="../../../css/dark.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: dark)" id="theme-link">
     <title>Проекты • Эльба</title>
 </head>
 <body>
-    <!-- <header id="sidebar">
-        <script src="../../js/header.js"></script>
-    </header> -->
+    
+    <!-- START Прелоадер -->
+    <div id='preloader'>
+        <h1>Kozak</h1>
+        <h2>Проекты. Эльба.</h2>
+        <img src="../../../img/loader.gif" alt="preloader">
+    </div>
+    <script>
+        window.onload = function() {
+            let preloader = document.getElementById('preloader');
+            let hidden = document.getElementById('hide');
+
+            document.body.style.overflow = 'hidden';
+            hidden.style.opacity = '0';
+            
+            // Скрытие прокрутки и прелоадера
+            setInterval(function() {
+                preloader.classList.add('hide-preloader');
+                document.body.style.overflow = 'visible';
+            }, 300);
+
+            // Появление основного содержимого
+            setInterval(function() {
+                preloader.classList.add('preloader-hidden');
+                hidden.style.opacity = '1';
+            }, 700);
+        }
+    </script>
+    <!-- END Прелоадер -->
     
     <!-- START Шапка -->
     <header id="sidebar">
@@ -30,7 +57,7 @@
     </header>
     <!-- END Шапка -->
 
-    <div class="block-content">
+    <div id="hide" class="block-content">
         <h2>Что такое Эльба?</h2>
         <h3>Больше, чем менеджер паролей.</h3>
         <!-- Блок с преимуществами -->
@@ -51,12 +78,14 @@
                 <p class="p-discraption center">Комбинация симметричного шифрования и 256-битного хеширования создают мощное решение.</p>
             </div>
         </div>
-        <hr>
-        <p class="p-discraption"> 
+        
+        <!-- <hr> -->
+        <!-- <p class="p-discraption"> 
             Эльба позволяет хранить ваши пароли от сервисов в безопасности, сохранить зашифрованные заметки в тайне и шифровать файлы любых типов.
-        </p>
+        </p> -->
 
         <h2>Зачем?</h2>
+        <hr>
         <p>Ниже описаны три главные идеи, которые реализовывает Эльба.</p>
         <h3>Идея первая</h3>
         
