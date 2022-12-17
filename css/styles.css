@@ -24,14 +24,12 @@
 }
 
 /* Скрытие блоков при загрузке */
-#web, #programming, #profile, #pre__content {
+#web, #programming, #profile, 
+#pre__content, #hide {
 	opacity: 0;
 }
 #contacts {
 	font-family: 'Binaria';
-}
-#contacts div {
-	font-size: 20px;
 }
 
 html {
@@ -124,6 +122,7 @@ button:hover {
 .nav-links {
     list-style: none;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 }
 .nav-links li {
@@ -391,6 +390,7 @@ hr {
 	align-content: stretch;
 }
 .block-contacts a {
+	font-size: 20px;
 	margin-top: 1em;
 	padding: 0 20px;
 }
@@ -469,7 +469,7 @@ hr {
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 30px;
-	background: url(https://images.unsplash.com/photo-1513297887119-d46091b24bfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+	background: url(https://images.unsplash.com/photo-1669824112132-24e28fcf0342?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -480,14 +480,15 @@ hr {
 	backdrop-filter: blur(6px);
 	width: fit-content;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 12px;
+	transition: .2s;
 	padding-left: 10%;
 	padding-right: 10%;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	border-radius: 30px;
 	box-shadow: 0 0 10px 10px rgba(17, 17, 17, 0.7);
 }
-.merry-christmas h1:hover {
+.merry-christmas h1:hover, .merry-christmas h2:hover {
 	color: #e0e0e0;
 }
