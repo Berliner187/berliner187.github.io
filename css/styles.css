@@ -93,7 +93,6 @@ p {
 .p-discraption {
 	margin: 0 auto;
 	text-align: left;
-	font-size: 1.6em;
 	text-align: center;
 	width: 60%;
 	min-width: 400px;
@@ -261,6 +260,7 @@ hr {
 	margin: 0 auto;
 	padding: 10px;
 	display: flex;
+	flex-wrap: wrap;
 	max-width: 1000px;
 	justify-content: space-around;
 	flex-direction: row;
@@ -268,6 +268,7 @@ hr {
 }
 .block-buttons div {
 	background-color: #2e2e41;
+	margin: 1em;
 	padding: 20px;
 	border-radius: 20px;
 	transition-duration: .3s;
@@ -432,17 +433,22 @@ hr {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-evenly;
 	background: url(https://images.ctfassets.net/kdawwlsweh27/73v8l2HnjGv3e5UmXFwUMc/39b2c778ed19774255d895ac4ee0ff9e/home-hero-banner-image.png);
-	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
+	box-shadow:  .3em 0 .7em rgba(155, 48, 255, .7), 
+             -.1em -.2em .5em rgba(252, 179, 48, .7);
 }
 .block-advantages div {
+	min-width: 400px;
 	align-items: center;
-	display: flex;
+	margin: 1em;
 	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
 	flex-direction: column;
 	max-width: 450px;
 	width: 25%;

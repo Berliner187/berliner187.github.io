@@ -147,6 +147,11 @@ a {
 }
 
 
+#block-404 {
+	font-size: 2em;
+}
+
+
 /* СКРОЛЛБАР */
 ::-webkit-scrollbar-thumb { /* 5 - ползунок */
 	border-radius: 3em;

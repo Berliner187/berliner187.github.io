@@ -8,7 +8,7 @@ window.onload = function loader () {
     content.style.opacity = '0';
     hide.style.opacity = '0';
     contacts.style.opacity = '0';
-    content.style.display = 'none';
+    // content.style.display = 'none';
 
     document.body.style.overflow = 'hidden';
 
@@ -21,7 +21,7 @@ window.onload = function loader () {
         preloader.classList.add('preloader-hidden');
         content.classList.add('startBlock');
         content.style.opacity = '1';
-        content.style.display = 'block';
+        // content.style.display = 'block';
         hide.classList.add('startBlock');
         hide.style.opacity = '1';
         contacts.style.opacity = '1';
