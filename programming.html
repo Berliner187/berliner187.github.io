@@ -20,27 +20,8 @@
         <h2>Программирование.</h2>
         <img src="img/loader.gif" alt="preloader">
     </div>
-    <script>
-        window.onload = function() {
-            let preloader = document.getElementById('preloader');
-            let programming = document.getElementById('programming');
-            let pre__content = document.getElementById('pre__content');
-
-            document.body.style.overflow = 'hidden';
-
-            setInterval(function() {
-                preloader.classList.add('hide-preloader');
-                document.body.style.overflow = 'visible';
-            }, 300);
-
-            setInterval(function() {
-                preloader.classList.add('preloader-hidden');
-                programming.classList.add('startBlock');
-                programming.style.opacity = '1';
-                pre__content.classList.add('startBlock');
-                pre__content.style.opacity = '1';
-            }, 700);
-        }
+    <script src="js/preloader.js">
+        loader(); 
     </script>
     <!-- END Прелоадер -->
     
@@ -59,270 +40,277 @@
     </header>
     <!-- END Верхнее меню -->
 
-    <!-- Блок предконтента -->
-    <div id="pre__content" class="block-content">
-        <h2>Программирование</h2>
-        <div class="pre__content">
-            <div class="pre__text">
-                <p>В данном разделе собраны работы по программированию.
-                <br><br> Все проекты нацелены на техническую составляющую.</p>
+    <div id="content">
+
+        <!-- Блок предконтента -->
+        <div id="pre__content" class="block-content">
+            <h2>Программирование</h2>
+            <div class="pre__content">
+                <div class="pre__text">
+                    <p>В этом разделе собраны работы по программированию.
+                    <br><br>Все проекты нацелены на техническую составляющую.</p>
+                </div>
+                <img src="img/icons/programming.png" alt="">
             </div>
-            <img src="img/icons/programming.png" alt="">
+            <!-- Кнопки перехода -->
+            <h3>Языки:</h3>
+            <div class="block-buttons">
+                <a class="button-redirect bg-redirect" href="#python">Python</a>
+                <a class="button-redirect bg-redirect" href="#c-sharp">C sharp</a>
+                <a class="button-redirect bg-redirect" href="#java">Java</a>
+            </div>
         </div>
-        <!-- Кнопки перехода -->
-        <h3>Языки:</h3>
-        <div class="block-buttons">
-            <a class="button-redirect bg-redirect" href="#python">Python</a>
-            <a class="button-redirect bg-redirect" href="#c-sharp">C sharp</a>
-            <a class="button-redirect bg-redirect" href="#java">Java</a>
+        
+        <div id="programming" class="programming">
+            <div id="python" class="block-content">
+                <h2>Python</h2>
+                <hr>
+                <h3 id="elba">Elba</h3>
+                <p>Менеджер паролей.</p>
+
+                <div class="img-img-container">
+                    <div class="img-container">
+                        <figure class="content-color-elba">
+                            <figcaption>
+                                <img src="img/elba-start.png">
+                                <h2>Elba Start Work</h2>
+                                <p>Начало работы с Elba</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="img-container">
+                        <figure class="content-color-elba">
+                            <figcaption>
+                                <img src="img/elba-login.png">
+                                <h2>Elba Login</h2>
+                                <p>Вход в приложение</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                
+                <p class="p-discraption">
+                    С помощью этой программы вы можете 
+                    безопасно хранить пароли к сервисам, хранить зашифрованные заметки
+                    и шифровать файлы любого типа и размера.</p>
+                <br>
+                <p>Цель программы - сохранить Ваши данные в конфиденциальности.</p>
+                
+                <!-- Список -->
+                <div class="block-pills">
+                    <ol class="pills">
+                        <li class="under-pills-collapsible" title="Развернуть">Только Вы знаете пароли от своих сервисов. <span>Ещё ᐯ</span></li>
+                            <!-- Вложенный текст -->
+                            <div class="under-pills-content">
+                                <br><br><p class="p-discraption">Только авторизовавшись можно добавлять и просматривать пароли от сервисов.</p>
+                                <br>
+                                <p class="p-discraption">Хранение по принципу связки: <br> Сервис > Логин > Пароль.</p>
+                                <br>
+                                <p class="p-discraption">Для шифрования ваших данных о сервисе используется единажды созданный generic-key.</p>
+                                <img class="under-pills-img-content" src="img/elba-resources.png" alt="Elba Services">
+                            </div>
+                        <li class="under-pills-collapsible" title="Развернуть">Ваши заметки остаются в тайне. <span>Ещё ᐯ</span></li>
+                            <!-- Вложенный текст -->
+                            <div class="under-pills-content">
+                                <br><br><p class="p-discraption">Только авторизовавшись можно добавлять и просматривать заметки.</p>
+                                <br>
+                                <p class="p-discraption">Хранение по принципу связки: <br> Имя заметки > Заметка.</p>
+                                <br>
+                                <p class="p-discraption">Для шифрования ваших заметок используется единажды созданный generic-key.</p>
+                                <img class="under-pills-img-content" src="img/elba-notes.png" alt="Elba Notes">
+                            </div>
+                        <li class="under-pills-collapsible" title="Развернуть">Файлы остаются надежно зашифрованными. <span>Ещё ᐯ</span></li>
+                            <!-- Вложенный текст -->
+                            <div class="under-pills-content">
+                                <br><br><p class="p-discraption">Только авторизовавшись можно шифровать и просматривать зашифрованные файлы.</p><br>
+                                <p class="p-discraption">Поддерживается шифрование директорий, в которые вложены файлы.</p>
+                                <br>
+                                <p class="p-discraption">Поддерживается шифрование ЛЮБЫХ типов файлов без потерь.</p>
+                                <br>
+                                <p class="p-discraption">Надежность обеспечивается методом симметричного и быстрого шифрования AES с дополнительными подписями и проверками подлинности.</p>
+                                <br>
+                                <img class="under-pills-img-content" src="img/elba-encryption.png" alt="Elba Enryption">
+                            </div>
+                    </ol>
+                </div>
+
+                <p class="p-discraption center">За конфиденциальность данных отвечают методы шифрования Base64 и AES. 
+                    Также имеются хеши подтверждения подлинности как программы, так и пользовательских данных. 
+                    Я старался сделать программу максимально простой в использовании, но с мощной начинкой внутри.</p>
+                <br>
+
+                <div class="block-buttons">
+                    <a target="_blank" class="button-redirect" href="works/programming/elba/about.html">ПОДРОБНЕЕ</a>
+                </div>
+                <p>Эта программа лицензирована по <a target="_blank" href="https://github.com/Berliner187/elba/blob/delta/LICENSE">GPL v3.0</a>.</p>
+                <p>Исходный код доступен на <a target="_blank" href="https://github.com/Berliner187/elba">GitHub</a>.</p>
+
+                <hr>
+
+                <h3>Парсер Wildberries</h3>
+                <p>Парсит артикулы по введенному запросу на Wildberries.</p>
+                <div class="block-buttons">
+                    <a target="_blank" class="button-redirect"  href="https://github.com/Berliner187/parsing">РЕПОЗИТОРИЙ</a>
+                </div>
+
+                <!-- КОНТЕНТ -->
+
+                <hr>
+                <h3>Money Flow</h3>
+                <p>Программа для учёта денежных расходов.</p>
+
+                <!-- КОНТЕНТ -->
+
+                <hr>
+                <h3>Currency Converter</h3>
+                <h4>Конвертер валют, работающий по принципу парсинга.</h4>
+
+                <hr class="separator_hr">
+                <p>Версия в консоли.</p>
+                <div class="img-img-container">
+                    <div class="img-container">
+                        <figure>
+                            <figcaption>
+                                <img src="img/cur-conv-cons-1.png">
+                                <h2>Console Currency Converter</h2>
+                                <p>Конвертирование</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <hr class="separator_hr">
+                <p>Версия с графическим интерфейсом.</p>
+                <div class="img-img-container">
+                    <div class="img-container">
+                        <figure class="content-cur-conv">
+                            <figcaption>
+                                <img src="img/gui-cur-conv-to-currency.png">
+                                <h2>GUI Currency Converter</h2>
+                                <p>Рубли в валюту</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="img-container">
+                        <figure class="content-cur-conv">
+                            <figcaption>
+                                <img src="img/gui-cur-conv-to-rubles.png">
+                                <h2>GUI Currency Converter</h2>
+                                <p>Валюту в рубли</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <p class="p-discraption">Внешний вид реализован за счёт HTML и CSS. Библиотеки bs4 и requests парсят стоимоть валюты (в рублях). Библиотека <a href="#">eel</a> позволяет реализовать графический интерфейс HTML/CSS/JS с полным доступом к библиотекам Python.</p>
+                <br>
+                <p class="p-discraption center">Конвертирование происходит на стороне пользователя при помощи JavaScript.</p>
+
+                <!-- Кнопка перехода в репозиторий -->
+                <div class="block-buttons">
+                    <a target="_blank" class="button-redirect bg-redirect" href="https://github.com/Berliner187/Currency_Converter">РЕПОЗИТОРИЙ</a>
+                </div>
+
+                <hr>
+
+                <h3>Promotion Dynamics</h3>
+                <h4>Программа для отслеживания текущих котировок ценных бумаг.</h4>
+                <p class="p-discraption center">Работает по принципу парсинга (как и Currency Converter). Котировки берутся с <a href="https://ru.investing.com/">investing.com</a>.</p>
+                
+                <p>Консольная версия.</p>
+                <div class="img-img-container">
+                    <div class="img-container">
+                        <figure>
+                            <figcaption>
+                                <img src="img/console-prom-dyn.png">
+                                <h2>Promotion Dynamics</h2>
+                                <p>Главное окно</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <hr class="separator_hr">
+                <p>Версия с графическим интерфейсом.</p>
+                <div class="img-img-container">
+                    <div class="img-container">
+                        <figure class="content-prom-dyn">
+                            <figcaption>
+                                <img src="img/gui-prom-dyn.png">
+                                <h2>Promotion Dynamics</h2>
+                                <p>Главное окно</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="img-img-container">
+                    <div class="img-container">
+                        <figure>
+                            <figcaption>
+                                <img src="img/prom-dyn-excel.jpg">
+                                <h2>Promotion Dynamics</h2>
+                                <p>Выгрузка в Excel</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <p class="p-discraption">Доступен расчёт дивидендов (кол-во бумаг и дивидендный процент) и профита (разность текущей стоимости и стоимости покупки).</p>
+                <br>
+                <p class="p-discraption">Есть возможность упаковать актуальные котировки в Excel-файл при помощи сторонней библиотеки <a href="#">Pandas</a>. При создании автоматически именуется файл, категория ценных бумаг и время сбора данных.</p>
+                <!-- Кнопка перехода в репозиторий -->
+                <div class="block-buttons">
+                    <a target="_blank" class="button-redirect bg-redirect" href="https://github.com/Berliner187/PromotionsDynamics_Python">РЕПОЗИТОРИЙ</a>
+                </div>
+
+                <hr>
+
+                <h3>Clock</h3>
+                <h4>Часы.</h4>
+                <div class="img-img-container">
+                    <div class="img-container">
+                        <figure class="content-color-black">
+                            <figcaption>
+                                <img src="img/gui-clock.png">
+                                <h2>Clock</h2>
+                                <p></p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <p>Написаны при помощи библиотеки tkinter.</p>
+                <!-- Кнопка перехода в репозиторий -->
+                <div class="block-buttons">
+                    <a target="_blank" class="button-redirect bg-redirect" href="https://github.com/Berliner187/clock">РЕПОЗИТОРИЙ</a>
+                </div>
+
+            </div>
+
+
+            <div id="c-sharp" class="block-content bg-image-about">
+                <h2>C Sharp</h2>
+                <hr>
+                <h3>Скоро.</h3>
+            </div>
+
+
+            <div id="java" class="block-content bg-image-about">
+                <h2>Java</h2>
+                <hr>
+                <h3>Скоро.</h3>
+            </div>
         </div>
     </div>
 
-    
-    <div id="programming" class="programming">
-        <div id="python" class="block-content bg-image-about">
-            <h2>Python</h2>
-            <hr>
-            <h3 id="elba">Elba</h3>
-            <p>Менеджер паролей.</p>
-
-            <div class="img-img-container">
-                <div class="img-container">
-                    <figure class="content-color-elba">
-                        <figcaption>
-                            <img src="img/elba-start.png">
-                            <h2>Elba Start Work</h2>
-                            <p>Начало работы с Elba</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="img-container">
-                    <figure class="content-color-elba">
-                        <figcaption>
-                            <img src="img/elba-login.png">
-                            <h2>Elba Login</h2>
-                            <p>Вход в приложение</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            
-            <p class="p-discraption">
-                С помощью этой программы вы можете 
-                безопасно хранить пароли к сервисам, хранить зашифрованные заметки
-                и шифровать файлы любого типа и размера.</p>
-            <br>
-            <p>Цель программы - сохранить Ваши данные в конфиденциальности.</p>
-            
-            <!-- Список -->
-            <div class="block-pills">
-                <ol class="pills">
-                    <li class="under-pills-collapsible" title="Развернуть">Только Вы знаете пароли от своих сервисов. <span>Ещё ᐯ</span></li>
-                        <!-- Вложенный текст -->
-                        <div class="under-pills-content">
-                            <br><br><p class="p-discraption">Только авторизовавшись можно добавлять и просматривать пароли от сервисов.</p>
-                            <br>
-                            <p class="p-discraption">Хранение по принципу связки: <br> Сервис > Логин > Пароль.</p>
-                            <br>
-                            <p class="p-discraption">Для шифрования ваших данных о сервисе используется единажды созданный generic-key.</p>
-                            <img class="under-pills-img-content" src="img/elba-resources.png" alt="Elba Services">
-                        </div>
-                    <li class="under-pills-collapsible" title="Развернуть">Ваши заметки остаются в тайне. <span>Ещё ᐯ</span></li>
-                        <!-- Вложенный текст -->
-                        <div class="under-pills-content">
-                            <br><br><p class="p-discraption">Только авторизовавшись можно добавлять и просматривать заметки.</p>
-                            <br>
-                            <p class="p-discraption">Хранение по принципу связки: <br> Имя заметки > Заметка.</p>
-                            <br>
-                            <p class="p-discraption">Для шифрования ваших заметок используется единажды созданный generic-key.</p>
-                            <img class="under-pills-img-content" src="img/elba-notes.png" alt="Elba Notes">
-                        </div>
-                    <li class="under-pills-collapsible" title="Развернуть">Файлы остаются надежно зашифрованными. <span>Ещё ᐯ</span></li>
-                        <!-- Вложенный текст -->
-                        <div class="under-pills-content">
-                            <br><br><p class="p-discraption">Только авторизовавшись можно шифровать и просматривать зашифрованные файлы.</p><br>
-                            <p class="p-discraption">Поддерживается шифрование директорий, в которые вложены файлы.</p>
-                            <br>
-                            <p class="p-discraption">Поддерживается шифрование ЛЮБЫХ типов файлов без потерь.</p>
-                            <br>
-                            <p class="p-discraption">Надежность обеспечивается методом симметричного и быстрого шифрования AES с дополнительными подписями и проверками подлинности.</p>
-                            <br>
-                            <img class="under-pills-img-content" src="img/elba-encryption.png" alt="Elba Enryption">
-                        </div>
-                </ol>
-            </div>
-
-            <p class="p-discraption center">За конфиденциальность данных отвечают методы шифрования Base64 и AES. 
-                Также имеются хеши подтверждения подлинности как программы, так и пользовательских данных. 
-                Я старался сделать программу максимально простой в использовании, но с мощной начинкой внутри.</p>
-            <br>
-
-            <div class="block-buttons">
-                <a target="_blank" class="button-redirect" href="works/programming/elba/about.html">ПОДРОБНЕЕ</a>
-            </div>
-            <p>Эта программа лицензирована по <a target="_blank" href="https://github.com/Berliner187/elba/blob/delta/LICENSE">GPL v3.0</a>.</p>
-            <p>Исходный код доступен на <a target="_blank" href="https://github.com/Berliner187/elba">GitHub</a>.</p>
-
-            <hr>
-
-            <h3>Парсер Wildberries</h3>
-            <p>Парсит артикулы по введенному запросу на Wildberries.</p>
-            <div class="block-buttons">
-                <a target="_blank" class="button-redirect"  href="https://github.com/Berliner187/parsing">РЕПОЗИТОРИЙ</a>
-            </div>
-
-            <!-- КОНТЕНТ -->
-
-            <hr>
-            <h3>Money Flow</h3>
-            <p>Программа для учёта денежных расходов.</p>
-
-            <!-- КОНТЕНТ -->
-
-            <hr>
-            <h3>Currency Converter</h3>
-            <h4>Конвертер валют, работающий по принципу парсинга.</h4>
-
-            <hr class="separator_hr">
-            <p>Версия в консоли.</p>
-            <div class="img-img-container">
-                <div class="img-container">
-                    <figure>
-                        <figcaption>
-                            <img src="img/cur-conv-cons-1.png">
-                            <h2>Console Currency Converter</h2>
-                            <p>Конвертирование</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <hr class="separator_hr">
-            <p>Версия с графическим интерфейсом.</p>
-            <div class="img-img-container">
-                <div class="img-container">
-                    <figure class="content-cur-conv">
-                        <figcaption>
-                            <img src="img/gui-cur-conv-to-currency.png">
-                            <h2>GUI Currency Converter</h2>
-                            <p>Рубли в валюту</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="img-container">
-                    <figure class="content-cur-conv">
-                        <figcaption>
-                            <img src="img/gui-cur-conv-to-rubles.png">
-                            <h2>GUI Currency Converter</h2>
-                            <p>Валюту в рубли</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <p class="p-discraption">Внешний вид реализован за счёт HTML и CSS. Библиотеки bs4 и requests парсят стоимоть валюты (в рублях). Библиотека <a href="#">eel</a> позволяет реализовать графический интерфейс HTML/CSS/JS с полным доступом к библиотекам Python.</p>
-            <br>
-            <p class="p-discraption center">Конвертирование происходит на стороне пользователя при помощи JavaScript.</p>
-
-            <!-- Кнопка перехода в репозиторий -->
-            <div class="block-buttons">
-                <a target="_blank" class="button-redirect bg-redirect" href="https://github.com/Berliner187/Currency_Converter">РЕПОЗИТОРИЙ</a>
-            </div>
-
-            <hr>
-
-            <h3>Promotion Dynamics</h3>
-            <h4>Программа для отслеживания текущих котировок ценных бумаг.</h4>
-            <p class="p-discraption center">Работает по принципу парсинга (как и Currency Converter). Котировки берутся с <a href="https://ru.investing.com/">investing.com</a>.</p>
-            
-            <p>Консольная версия.</p>
-            <div class="img-img-container">
-                <div class="img-container">
-                    <figure>
-                        <figcaption>
-                            <img src="img/console-prom-dyn.png">
-                            <h2>Promotion Dynamics</h2>
-                            <p>Главное окно</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <hr class="separator_hr">
-            <p>Версия с графическим интерфейсом.</p>
-            <div class="img-img-container">
-                <div class="img-container">
-                    <figure class="content-prom-dyn">
-                        <figcaption>
-                            <img src="img/gui-prom-dyn.png">
-                            <h2>Promotion Dynamics</h2>
-                            <p>Главное окно</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <div class="img-img-container">
-                <div class="img-container">
-                    <figure>
-                        <figcaption>
-                            <img src="img/prom-dyn-excel.jpg">
-                            <h2>Promotion Dynamics</h2>
-                            <p>Выгрузка в Excel</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <p class="p-discraption">Доступен расчёт дивидендов (кол-во бумаг и дивидендный процент) и профита (разность текущей стоимости и стоимости покупки).</p>
-            <br>
-            <p class="p-discraption">Есть возможность упаковать актуальные котировки в Excel-файл при помощи сторонней библиотеки <a href="#">Pandas</a>. При создании автоматически именуется файл, категория ценных бумаг и время сбора данных.</p>
-            <!-- Кнопка перехода в репозиторий -->
-            <div class="block-buttons">
-                <a target="_blank" class="button-redirect bg-redirect" href="https://github.com/Berliner187/PromotionsDynamics_Python">РЕПОЗИТОРИЙ</a>
-            </div>
-
-            <hr>
-
-            <h3>Clock</h3>
-            <h4>Часы.</h4>
-            <div class="img-img-container">
-                <div class="img-container">
-                    <figure class="content-color-black">
-                        <figcaption>
-                            <img src="img/gui-clock.png">
-                            <h2>Clock</h2>
-                            <p></p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-            <p>Написаны при помощи библиотеки tkinter.</p>
-            <!-- Кнопка перехода в репозиторий -->
-            <div class="block-buttons">
-                <a target="_blank" class="button-redirect bg-redirect" href="https://github.com/Berliner187/clock">РЕПОЗИТОРИЙ</a>
-            </div>
-
-        </div>
-
-
-        <div id="c-sharp" class="block-content bg-image-about">
-            <h2>C Sharp</h2>
-            <hr>
-            <h3>Скоро.</h3>
-        </div>
-
-
-        <div id="java" class="block-content bg-image-about">
-            <h2>Java</h2>
-            <hr>
-            <h3>Скоро.</h3>
-        </div>
-    </div>
-
-    <!-- Блок с контактами -->
+    <!-- Контейнер с контактами -->
     <div id="contacts">
         <script src="js/footer.js"></script>
     </div>
+
+    <!-- MERRY CHRISTMAS -->
+    <footer id="merry_christmas"></footer>
+    <script src="js/templates/merry_xmas.js"></script>
+    <!-- END MERRY CHRISTMAS -->
 
     <!-- Скрипт открывает скрытый контент PILLS по клику -->
     <script>

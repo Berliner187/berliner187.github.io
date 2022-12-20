@@ -1,10 +1,29 @@
 
-const media = document.querySelectorAll('img');
+window.onload = function loader () {
+    let preloader = document.getElementById('preloader');
+    let content = document.getElementById("content");
+    let hide = document.getElementById("hide");
+    let contacts = document.getElementById("contacts");
 
-document.body.classList.add('preloader--hide');
+    content.style.opacity = '0';
+    hide.style.opacity = '0';
+    contacts.style.opacity = '0';
+    content.style.display = 'none';
 
-setTimeout(() => {
-    preloader.classList.add('preloader--hide');
-    document.body.classList.add('preloader--on');
+    document.body.style.overflow = 'hidden';
 
-}, 500)
+    setInterval(function() {
+        preloader.classList.add('hide-preloader');
+        document.body.style.overflow = 'visible';
+    }, 200);
+
+    setInterval(function() {
+        preloader.classList.add('preloader-hidden');
+        content.classList.add('startBlock');
+        content.style.opacity = '1';
+        content.style.display = 'block';
+        hide.classList.add('startBlock');
+        hide.style.opacity = '1';
+        contacts.style.opacity = '1';
+    }, 800);
+}

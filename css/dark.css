@@ -3,6 +3,10 @@
     color: #dadada;
 }
 
+.pre__content {
+	background-image: url(https://images.unsplash.com/photo-1554110397-9bac083977c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+}
+
 .pre__content img, .pre__content p {
 	box-shadow: .1em .2em .5em .3em rgba(20, 20, 20, 0.16);
 }
@@ -140,4 +144,16 @@ a {
 
 .merry-christmas {
 	color: #dadada;
+}
+
+
+/* СКРОЛЛБАР */
+::-webkit-scrollbar-thumb { /* 5 - ползунок */
+	border-radius: 3em;
+	background-color: rgba(115, 115, 115, .7);
+}
+  ::-webkit-scrollbar-thumb:hover {
+	background-color: rgb(24, 24, 24);
+	width: 1.8em;
+	transition: 1s;
 }

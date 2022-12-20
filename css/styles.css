@@ -24,8 +24,7 @@
 }
 
 /* Скрытие блоков при загрузке */
-#web, #programming, #profile, 
-#pre__content, #hide {
+#hide, #content {
 	opacity: 0;
 }
 #contacts {
@@ -52,7 +51,7 @@ h1 {
 	opacity: 1;
 }
 h1:hover {
-	color: #47001c;
+	color: #5215fc;
 }
 h1, h2, h3, h4, h5, h6 {
 	text-align: center;
@@ -67,8 +66,7 @@ h2 {
 	font-size: 3.6em;
 }
 h3 {
-	margin-top: 1em;
-	font-size: 2.8em;
+	font-size: 2.6em;
 }
 h4 {
 	font-size: 1.8em;
@@ -95,8 +93,9 @@ p {
 .p-discraption {
 	margin: 0 auto;
 	text-align: left;
-	font-size: 1.2em;
-	width: 55%;
+	font-size: 1.6em;
+	text-align: center;
+	width: 60%;
 	min-width: 400px;
 }
 
@@ -172,7 +171,6 @@ hr {
 
 /* Оформление профиля */
 .pre__content {
-	background-image: url(https://images.unsplash.com/photo-1554110397-9bac083977c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
 	background-size: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -430,14 +428,13 @@ hr {
 	margin-top: 1em;
 	margin-bottom: 1em;
 	width: 90%;
-	color: #000;
 	padding: 10px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	background: url(https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+	background: url(https://images.ctfassets.net/kdawwlsweh27/73v8l2HnjGv3e5UmXFwUMc/39b2c778ed19774255d895ac4ee0ff9e/home-hero-banner-image.png);
 	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -449,10 +446,12 @@ hr {
 	flex-direction: column;
 	max-width: 450px;
 	width: 25%;
-	background: rgba(255, 255, 255, .7);
+	color: #222;
+	background: rgba(216, 216, 216, 0.7);
 	-webkit-backdrop-filter: blur(2px);
-	backdrop-filter: blur(2px);
+	backdrop-filter: blur(1.5px);
 	border: 1px solid rgba(255, 255, 255, 0.125);
+	box-shadow: 0 0 8px 8px rgba(24, 24, 24, 0.3);
 }
 .block-advantages div img {
 	width: 160px;

@@ -24,6 +24,9 @@
   margin-top: 5%;
   text-align: center;
 }
+#preloader h2 {
+  color: #b9b9b9;
+}
 #preloader img {
   width: 600px;
   height: auto;

@@ -21,7 +21,10 @@
         <h2>Студент. Разработчик.</h2>
         <img src="img/loader.gif" alt="Preloader">
     </div>
-    <script>
+    <script src="js/preloader.js">
+        loader(); 
+    </script>
+    <!-- <script>
         window.onload = function() {
             let preloader = document.getElementById('preloader');
             let profile = document.getElementById('profile');
@@ -34,17 +37,18 @@
             setInterval(function() {
                 preloader.classList.add('hide-preloader');
                 document.body.style.overflow = 'visible';
-            }, 300);
+            }, 200);
 
             // Появление основного содержимого
             setInterval(function() {
                 preloader.classList.add('preloader-hidden');
                 profile.classList.add('startBlock');
+                hidden.classList.add('startBlock');
                 profile.style.opacity = '1';
                 hidden.style.opacity = '1';
-            }, 700);
+            }, 800);
         }
-    </script>
+    </script> -->
     <!-- END Прелоадер -->
 
     <!-- Шапка -->
@@ -55,105 +59,84 @@
             <ul class="nav-links">
                 <li><a class="buttons boom-color" href="index.html">Профиль</a></li>
                 <li><a class="buttons white" href="programming.html">Программирование</a></li>
-                <li><a class="buttons white" href="web.html">Веб</a></li>
+                <li><a class="buttons white" href="web.html">Веб-разработка</a></li>
                 <li><a class="buttons accent-color" href="#contacts">Контакты</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Блок с личной информацией -->
-    <div id="profile" class="block-content bg-image-about">
+    <div id="content">
+        <!-- Блок с личной информацией -->
+        <div id="profile" class="block-content bg-image-about">
+            <h2>Профиль</h2>
+            <hr>
 
-        <h2>Профиль</h2>
-        <hr>
-
-        <div class="pre__content">
-            <p>Привет, я Ростислав. <br>Разработчик. <br> Студент. <br><br> Разрабатываю сайты, <br> консольные, десктопные <br> и мобильные приложения.</p>
-            <img src="img/avatar.jpg" alt="Ich bin Slavik">
-        </div>
-
-        <h2 id="activity">Деятельность</h2>
-        <hr class="separator_hr">
-        <p class="p-discraption">Студент второго курса Тверского Государственного Технического Университета. 
-            Учусь на факультете Информационных технологий по направлению "Информатика и вычислительная техника".</p>
-            <br>
-        <p class="p-discraption">Занимаюсь версткой сайтов, а также разработкой программного обеспечения: консольных приложений, 
-            десктопных программ, приложений для мобильных устройств на базе Android.</p>
-
-        <!-- Список основной деятельности -->
-        <div class="block-pills">
-            <ol id="pills" class="pills">
-                <a href="web.html"><li>Веб-разработка на HTML, CSS и JS.</li></a>
-                <a href="programming.html#python"><li>Разработка на Python. Консольные приложения, GUI.</li></a>
-                <a href="programming.html#c-sharp"><li>Разработка на C# консольных и десктопных приложений.</li></a>
-                <a href="programming.html#java"><li>Мобильная разработка на Java под Android.</li></a>
-            </ol>
-        </div>
-        
-        <h2>Навыки</h2>
-        <hr class="separator_hr">
-        <!-- Кнопки перехода -->
-        <div class="block-buttons">
-            <a class="button-redirect content-color-dark" href="web.html">< html /></a>
-            <a class="button-redirect content-color-dark" href="programming.html#java">< xml /></a>
-            <a class="button-redirect content-color-dark" href="web.html">// js</a>
-        </div>
-        <div class="block-buttons">
-            <a class="button-redirect content-color-dark" href="programming.html#python"># python</a>
-            <a class="button-redirect content-color-dark" href="programming.html#c-sharp">// c#</a>
-            <a class="button-redirect content-color-dark" href="programming.html#java">// java</a>
-        </div>
-
-        <h2 id="portfolio">Портфолио</h2>
-        <hr class="separator_hr">
-        <div class="portfolio">
-            <div>
-                <p>Веб-разработка</p>
-                <a href="web.html">
-                    <img src="img/icons/web-tech.jpg" alt="">
-                </a>
+            <div class="pre__content">
+                <p>Привет, я Ростислав. <br>Разработчик. <br> Студент. <br><br> Разрабатываю сайты, <br> консольные, десктопные <br> и мобильные приложения.</p>
+                <img src="img/avatar.jpg" alt="Ich bin Slavik">
             </div>
-            <div>
-                <p>Программирование</p>
-                <a href="programming.html">
-                    <img src="img/icons/programming.jpg" alt="">
-                </a>
+
+            <h2 id="activity">Деятельность</h2>
+            <hr class="separator_hr">
+            <p class="p-discraption">Студент второго курса Тверского Государственного Технического Университета. 
+                Учусь на факультете Информационных технологий по направлению "Информатика и вычислительная техника".</p>
+                <br>
+            <p class="p-discraption">Занимаюсь версткой сайтов, а также разработкой программного обеспечения: консольных приложений, 
+                десктопных программ, приложений для мобильных устройств на базе Android.</p>
+
+            <!-- Список основной деятельности -->
+            <div class="block-pills">
+                <ol id="pills" class="pills">
+                    <a href="web.html"><li>Веб-разработка на HTML, CSS и JS.</li></a>
+                    <a href="programming.html#python"><li>Разработка на Python. Консольные приложения, GUI.</li></a>
+                    <a href="programming.html#c-sharp"><li>Разработка на C# консольных и десктопных приложений.</li></a>
+                    <a href="programming.html#java"><li>Мобильная разработка на Java под Android.</li></a>
+                </ol>
+            </div>
+            
+            <h2>Навыки</h2>
+            <hr class="separator_hr">
+            <!-- Кнопки перехода -->
+            <div class="block-buttons">
+                <a class="button-redirect content-color-dark" href="web.html">< html /></a>
+                <a class="button-redirect content-color-dark" href="programming.html#java">< xml /></a>
+                <a class="button-redirect content-color-dark" href="web.html">// js</a>
+            </div>
+            <div class="block-buttons">
+                <a class="button-redirect content-color-dark" href="programming.html#python"># python</a>
+                <a class="button-redirect content-color-dark" href="programming.html#c-sharp">// c#</a>
+                <a class="button-redirect content-color-dark" href="programming.html#java">// java</a>
+            </div>
+
+            <h2 id="portfolio">Портфолио</h2>
+            <hr class="separator_hr">
+            <div class="portfolio">
+                <div>
+                    <p>Веб-разработка</p>
+                    <a href="web.html">
+                        <img src="img/icons/web-tech.jpg" alt="">
+                    </a>
+                </div>
+                <div>
+                    <p>Программирование</p>
+                    <a href="programming.html">
+                        <img src="img/icons/programming.jpg" alt="">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+
         
-    <!-- Блок с контактами -->
-    <footer id="contacts">
+    <!-- Контейнер с контактами -->
+    <div id="contacts">
         <script src="js/footer.js"></script>
-    </footer>
-
-    <div id="hide" class="merry-christmas">
-        <h1>2023</h1>
-        <h2>🎄Happy New Year!🎄</h2>
     </div>
 
-    <!-- <div id="contacts" class="block-content">
-        <h2>Контакты</h2>
-        <hr>
-        <p>
-            Написать на почту: <a href="mailto:kozak187er@yandex.com" title="Написать на почту">kozak187er@yandex.com</a>
-        </p>
-        <div id="contacts" class="block-contacts">
-            <a target="_blank" href="https://github.com/Berliner187" title="Страница на GitHub">
-                GitHub
-            </a>
-            <a target="_blank" href="https://vk.com/hochgeschwindigkeitszug" title="Страница VK">
-                Вконтакте
-            </a>
-            <a target="_blank" href="https://www.youtube.com/channel/UCKKwdEHfiAaiu1B7-yrC9SA" title="Канал на YouTube">
-                YouTube
-            </a>
-            <a target="_blank" href="https://t.me/schneller_los" title="Написать в Telegram">
-                Telegram
-            </a>
-            </a>
-        </div>
-    </div> -->
+    <!-- MERRY CHRISTMAS -->
+    <footer id="merry_christmas"></footer>
+    <script src="js/templates/merry_xmas.js"></script>
+    <!-- END MERRY CHRISTMAS -->
 
 </body>
 
