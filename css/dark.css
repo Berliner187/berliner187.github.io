@@ -114,21 +114,23 @@ span:hover, .under-pills-content {
 
 
 .buttons, .button-redirect {
-	box-shadow:  .1em .1em .3em #1a1a1a, 
-             -.1em -.1em .3em #1a1a1a;
+	color: #232323;
+	box-shadow:  .1em .1em .3em rgba(26, 26, 26, .3), 
+             -.1em -.1em .3em rgba(26, 26, 26, .3);
 }
 
 /* Цветовые акценты */
+.boom-color {
+	color: #D6D6E1;
+}
+.block-buttons div {
+	background-color: #014751;
+}
 /* ВСЕ КНОПКИ */
 .button-redirect {
 	transition-duration: .3s;
 	color: #232323;
-	background: rgb(70,148,255);
-	background: linear-gradient(180deg, rgba(70,148,255,1) 0%, rgba(66,245,225,1) 100%);
-}
-.button-redirect:hover {
-	background: rgb(70,148,255);
-	background: linear-gradient(180deg, rgba(70,148,255,1) 0%, rgba(66,245,225,1) 100%);
+	background: #c6dbda;
 }
 .accent-color {
 	background-color: #00e0c7
@@ -139,16 +141,11 @@ span:hover, .under-pills-content {
 }
 /* Ссылки */
 a {
-	color: #00e0c7;
+	color: #9067c6;
 }
 
 .merry-christmas {
 	color: #dadada;
-}
-
-
-#block-404 {
-	font-size: 2em;
 }
 
 

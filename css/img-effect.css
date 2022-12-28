@@ -28,7 +28,6 @@ figure h2 {
 figure p {
   user-select: none;
   font-family: 'Igra';
-  font-style: italic;
   font-style: bold;
   font-size: 1.3em;
   transition: .5s;

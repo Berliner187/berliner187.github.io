@@ -3,16 +3,8 @@
 	src: url(../fonts/libra.woff2);
 }
 @font-face {
-	font-family: 'Buyan';
-	src: url(../fonts/Buyan/BuyanBold.ttf);
-}
-@font-face {
 	font-family: 'Binaria';
     src: url(../fonts/Binaria.otf);
-}
-@font-face {
-	font-family: 'Verdana';
-	src: url(../fonts/Verdana.ttf);
 }
 @font-face {
 	font-family: 'Igra';
@@ -28,14 +20,14 @@
 	opacity: 0;
 }
 #contacts {
-	font-family: 'Binaria';
+	font-family: 'Libra';
 }
 
 html {
 	scroll-behavior: smooth;
 }
 body {
-    transition: 1s;
+    transition: .7s;
 	font-family: 'SFNS';
 	/* background-color: #D6D6E1; */
 }
@@ -140,6 +132,7 @@ span:hover {
 	color: #373737;
 }
 a {
+	font-size: 20px;
 	text-align: center;
 	text-decoration: none;
 	transition: .3s;
@@ -223,7 +216,6 @@ hr {
 
 /* Оформление кнопок */
 .buttons, .button-redirect {
-	color: #373737;
 	font-family: 'Binaria';
 	text-decoration: none;
 	margin: 2px;
@@ -233,15 +225,13 @@ hr {
 	text-align: center;
 	padding: 20px;
 	display: inline-block;
-	transition-duration: .6s;
+	transition-duration: .25s;
 }
 .change:buttons {
 	width: 20%;
 }
 .buttons:hover, .button-redirect:hover {
 	transition-duration: .3s;
-	box-shadow:  .2em .2em .5em #2b2b2b, 
-             -.2em -.2em .5em #2b2b2b;
 }
 
 
@@ -256,7 +246,6 @@ hr {
 
 /* Блок кнопок перехода */
 .block-buttons {
-	font-family: 'SFNS';
 	margin: 0 auto;
 	padding: 10px;
 	display: flex;
@@ -267,7 +256,6 @@ hr {
 	text-align: center;
 }
 .block-buttons div {
-	background-color: #2e2e41;
 	margin: 1em;
 	padding: 20px;
 	border-radius: 20px;
@@ -280,7 +268,7 @@ hr {
 }
 .block-buttons span:hover {
 	background: none;
-	color: #4ed164;
+	color: #949494;
 }
 .block-buttons a:hover {
 	text-decoration: underline;
@@ -378,6 +366,7 @@ hr {
 	padding: 1rem;
 	padding-bottom: 3%;
 	width: 92vw;
+	min-width: 400px;
 }
 
 .block-contacts {
@@ -457,7 +446,7 @@ hr {
 	-webkit-backdrop-filter: blur(2px);
 	backdrop-filter: blur(1.5px);
 	border: 1px solid rgba(255, 255, 255, 0.125);
-	box-shadow: 0 0 8px 8px rgba(24, 24, 24, 0.3);
+	box-shadow: 0 0 8px 8px rgba(24, 24, 24, 0.09);
 }
 .block-advantages div img {
 	width: 160px;
@@ -496,4 +485,12 @@ hr {
 }
 .merry-christmas h1:hover, .merry-christmas h2:hover {
 	color: #e0e0e0;
+}
+
+/* БЛОК 404 */
+#block-404 {
+	font-size: 36px;
+}
+#block-404 a {
+	font-size: 40px;
 }

@@ -25,5 +25,5 @@ window.onload = function loader () {
         hide.classList.add('startBlock');
         hide.style.opacity = '1';
         contacts.style.opacity = '1';
-    }, 800);
+    }, 1000);
 }
