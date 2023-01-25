@@ -12,9 +12,6 @@ document.getElementById("contacts").innerHTML = '\
             <a target="_blank" href="https://vk.com/hochgeschwindigkeitszug" title="Страница VK">\
                 Вконтакте\
             </a>\
-            <a target="_blank" href="https://www.youtube.com/channel/UCKKwdEHfiAaiu1B7-yrC9SA" title="Канал на YouTube">\
-                YouTube\
-            </a>\
             <a target="_blank" href="https://t.me/schneller_los" title="Написать в Telegram">\
                 Telegram\
             </a>\

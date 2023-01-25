@@ -6,7 +6,7 @@ window.onload = function loader () {
     let contacts = document.getElementById("contacts");
 
     content.style.opacity = '0';
-    hide.style.opacity = '0';
+    // hide.style.opacity = '0';
     contacts.style.opacity = '0';
     // content.style.display = 'none';
 
@@ -22,8 +22,8 @@ window.onload = function loader () {
         content.classList.add('startBlock');
         content.style.opacity = '1';
         // content.style.display = 'block';
-        hide.classList.add('startBlock');
-        hide.style.opacity = '1';
+        // hide.classList.add('startBlock');
+        // hide.style.opacity = '1';
         contacts.style.opacity = '1';
     }, 1000);
 }
