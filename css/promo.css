@@ -17,6 +17,12 @@ body {
     font-family: 'SFNS';
 }
 
+/* Для прелоадера */
+#preloader h1 {
+    font-family: 'Libra';
+    text-align: center;
+}
+
 .container {
     margin: 0 auto;
     width: 100%;
@@ -110,6 +116,7 @@ ul li {
     background-color: #E7E7E7;
     color: #232323;
     padding: 12px;
+    font-size: 18px;
     margin: 10px 0px 10px 0px;
     transition: .2s;
 }
