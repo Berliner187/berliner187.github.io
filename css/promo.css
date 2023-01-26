@@ -10,11 +10,15 @@
 	font-family: 'SFNS';
 	src: url(../fonts/SF-Display.ttf);
 }
+@font-face {
+	font-family: 'Inter';
+	src: url(../fonts/inter.ttf);
+}
 
 body {
     background-color: #1A191F;
     padding: 20px;
-    font-family: 'SFNS';
+    font-family: 'Inter';
 }
 
 /* Для прелоадера */
@@ -108,22 +112,39 @@ ul li {
     flex-direction: column;
     width: 90%;
     margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 0;
 }
 .button-link-container a {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
     border-radius: 40px;
-    background-color: #E7E7E7;
-    color: #232323;
     padding: 12px;
     font-size: 18px;
     margin: 10px 0px 10px 0px;
     transition: .2s;
 }
 .button-link-container a:hover {
-    background-color: #6b2cf5;
     color: #E7E7E7;
+}
+
+.no-accent-button {
+    color: #232323;
+    background-color: #E7E7E7;
+}
+.no-accent-button:hover {
+    background-color: #6b2cf5;
+}
+.accent-button {
+    color: #E7E7E7;
+    background: rgb(255,10,108);
+    background: linear-gradient(to left, rgba(255,10,108,.7) 20%, rgba(74,60,219,1) 80%) right;
+    background-size: 200%;
+}
+.accent-button:hover {
+    background: linear-gradient(to right, rgba(255,10,108,1) 50%, rgba(74,60,219,1) 50%) left;
+    background-size: 200%;
 }
 
 .contacts-container {
@@ -163,4 +184,32 @@ ul li {
 .container-links a:hover, .contacts-container a:hover {
     text-decoration: line-through;
     color: #6b2cf5;
+}
+
+
+.box-pricing {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.box-pricing h3 {
+    text-align: center;
+    font-size: 22px;
+}
+.box-pricing p {
+    font-size: 16px;
+}
+.box-pricing div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.text-hitting {
+    color: #797979;
+    font-size: 10px;
 }
