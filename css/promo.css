@@ -1,0 +1,158 @@
+@font-face {
+	font-family: 'Libra';
+	src: url(../fonts/libra.woff2);
+}
+@font-face {
+	font-family: 'LCD';
+	src: url(../fonts/LibreCaslonDisplay.ttf);
+}
+@font-face {
+	font-family: 'SFNS';
+	src: url(../fonts/SF-Display.ttf);
+}
+
+body {
+    background-color: #1A191F;
+    padding: 20px;
+    font-family: 'SFNS';
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    color: #D6D6D6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+h1 {
+    padding: 10px;
+    font-family: 'LCD';
+    font-size: 38px;
+    color: #939393;
+}
+.container-links {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+.container-links a {
+    font-family: 'Libra';
+    color: #fbfbfb;
+    font-size: 26px;
+}
+
+hr {
+    background-color: #00E0C7;
+    width: 90%;
+	height: 3px;
+	margin-bottom: 1.5em;
+	border: none;
+	border-radius: 40px;
+	text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #D6D6D6;
+    margin-left: 5%;
+}
+
+h2, img {
+    margin-left: 5%;
+}
+
+.container-message {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #111;
+    display: flex;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: width .2s ease-in-out;
+}
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -20px;
+    left: 20px;
+    border-radius: 20px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid #111;
+}
+
+ul li {
+    font-size: 18px;
+}
+
+.button-link-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+.button-link-container a {
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 40px;
+    background-color: #E7E7E7;
+    color: #232323;
+    padding: 12px;
+    margin: 10px 0px 10px 0px;
+    transition: .2s;
+}
+.button-link-container a:hover {
+    background-color: #232323;
+    color: #E7E7E7;
+}
+
+.contacts-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color: #111;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.contacts-container a {
+    font-size: 28px;
+    font-family: 'Libra';
+    color: #fbfbfb;
+}
+.contacts-container p {
+    color: #ADADAD;
+    margin-bottom: 10px;
+}
+.contacts-container a, .contacts-container p {
+    font-size: 28px;
+    padding: 0 20px 0 20px;
+}
+
+
+.container-message, .contacts-container {
+    box-shadow: .3em .3em .5em .5em rgba(31, 31, 31, 0.4);
+}
+/* ССЫЛКИ: ОБЩИЕ ПАРАМЕТРЫ */
+.container-links a, .contacts-container a {
+    transition: .2s;
+}
+
+/* ПРИ НАВЕДЕНИИ НА ССЫЛКИ */
+.container-links a:hover, .contacts-container a:hover {
+    text-decoration: underline;
+    color: #6b2cf5;
+}
