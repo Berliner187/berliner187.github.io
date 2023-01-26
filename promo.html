@@ -40,13 +40,12 @@
         window.onload = function loader () {
             let preloader = document.getElementById('preloader');
             let content = document.getElementById("content");
-            let hide = document.getElementById("hide");
+            let container_message = document.getElementById("container_message");
             let contacts = document.getElementById("contacts");
 
             content.style.opacity = '0';
-            // hide.style.opacity = '0';
+            container_message.style.opacity = '0';
             contacts.style.opacity = '0';
-            // content.style.display = 'none';
 
             document.body.style.overflow = 'hidden';
 
@@ -59,56 +58,42 @@
                 preloader.classList.add('preloader-hidden');
                 content.classList.add('startBlock');
                 content.style.opacity = '1';
-                // content.style.display = 'block';
-                // hide.classList.add('startBlock');
-                // hide.style.opacity = '1';
                 contacts.style.opacity = '1';
+                container_message.style.opacity = '1';
             }, 1000);
         }
 
     </script>
 
     <div id="content" class="container">
-
         <h1>KOZAK</h1>
         <div class="container-links">
             <a target="_blank" href="https://vk.cc/cl3bXt">СТУДЕНТ</a>
             <a target="_blank" href="https://vk.cc/cl3BRu">ПРОГРАММИСТ</a>
             <a target="_blank" href="https://vk.cc/cl3BSH">ВЕБ-РАЗРАБОТЧИК</a>
         </div>
-
         <hr>
-
         <h2>Чем я занимаюсь?</h2>
-        
         <img src="img/photo.png" alt="">
-
-        <div class="container-message">
-            <div class="triangle">
-                
-            </div>
+        <div class="container-message" id="container_message">
+            <div class="triangle"></div>
             <ul>
                 <li>написанием студенческих работ по программированию: самостоятельные, <br> лабораторные, <br> курсовые</li>
                 <li>дизайном и разработкой сайтов</li>
                 <li>проектированием и разработкой программ</li>
             </ul>
         </div>
-
         <div class="button-link-container">
             <a href="https://vk.cc/cl3BU9" class="button-link">ПРАЙС-ЛИСТ</a>
         </div>
-
         <hr>
-
         <h2>Оставайся на связи:</h2>
-
         <div id="contacts" class="contacts-container">
             <a target="_blank" href="https://vk.cc/cl3BVd">ТЕЛЕГРАМ</a>
             <a target="_blank" href="https://vk.cc/cl3BVJ">ВКОНТАКТЕ</a>
             <p>Мой репозиторий</p>
             <a target="_blank" href="https://github.com/Berliner187">GITHUB</a>
         </div>
-
     </div>
 
 </body>
