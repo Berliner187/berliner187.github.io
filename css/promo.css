@@ -20,7 +20,6 @@ body {
 /* Для прелоадера */
 #preloader h1 {
     font-family: 'Libra';
-    text-align: center;
 }
 
 .container {
@@ -31,13 +30,13 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 
 h1 {
     padding: 10px;
-    font-family: 'LCD';
+    font-family: 'SFNS';
     font-size: 38px;
     color: #939393;
 }
@@ -121,7 +120,7 @@ ul li {
     transition: .2s;
 }
 .button-link-container a:hover {
-    background-color: #232323;
+    background-color: #6b2cf5;
     color: #E7E7E7;
 }
 
@@ -160,6 +159,6 @@ ul li {
 
 /* ПРИ НАВЕДЕНИИ НА ССЫЛКИ */
 .container-links a:hover, .contacts-container a:hover {
-    text-decoration: underline;
+    text-decoration: line-through;
     color: #6b2cf5;
 }
