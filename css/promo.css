@@ -201,7 +201,7 @@ ul li {
     text-align: center;
     font-size: 22px;
 }
-.box-pricing p {
+.box-pricing p, .box-pricing p span {
     font-size: 16px;
 }
 .box-pricing div {
@@ -216,7 +216,7 @@ ul li {
     font-size: 10px;
 }
 .text-gradient {
-    background: linear-gradient(to right, rgba(255,10,108,1) 10%, rgba(74,60,219,1) 50%) left;
+    background: linear-gradient(to right, rgba(255,10,108,1) 0%, rgba(74,60,219,1) 50%) left;
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
