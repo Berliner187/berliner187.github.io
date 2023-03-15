@@ -1,0 +1,444 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url('../fonts/SF-Pro.ttf');
+}
+@font-face {
+    font-family: 'SF Pro Bold';
+    src: url('../fonts/SF-Pro-Bold.otf');
+}
+@font-face {
+    font-family: 'SF Pro Regular';
+    src: url('../fonts/SF-Pro-Regular.OTF');
+}
+@font-face {
+    font-family: 'SF Pro Medium';
+    src: url('../fonts/SF-Pro-Medium.OTF');
+}
+@font-face {
+    font-family: 'Raleway Regular';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+
+body {
+    background-color: #fefefe;
+    font-family: 'SF Pro Regular';
+    margin: 0;
+    min-width: 1330px;
+}
+
+h1 {
+    font-family: 'SF Pro Regular';
+    font-size: 128px;
+    color: #FEFEFE;
+    margin: 0;
+}
+
+
+header, footer {
+    background-color: black;
+    width: 92%;
+    margin: 0 auto;
+}
+/* ВЕРХНЯЯ ЧАСТЬ. НАВИГАЦИЯ, НАЗВАНИЕ, СЛОГАН */
+header {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+header section {
+    display: flex;
+    flex-direction: row;
+}
+header section div {
+    width: 60%;
+}
+header section div h2 {
+    font-family: 'SF Pro Medium';
+    color: #FEFEFE;
+    font-size: 42px;
+}
+.header-content-right p {
+    font-family: 'Raleway Regular';
+    color: #BEBEBE;
+    font-size: 36px;
+    padding-bottom: 10%;
+}
+.header-content-right {
+    width: 35%;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+nav img {
+    width: 76px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+nav section {
+    margin-left: 180px;
+}
+nav section a {
+    color: #9E9E9E;
+    font-size: 32px;
+    text-decoration: none;
+    margin-left: 30px;
+}
+nav section a:hover {
+    text-decoration: underline;
+}
+
+nav div a {
+    font-size: 32px;
+    background-color: #202020;
+    color: #FEFEFE;
+    text-decoration: none;
+    border-radius: 40px;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 10px;
+}
+
+
+/* АНИМАЦИЯ */
+nav section a:hover, 
+nav div a:hover,
+.button-redirect:hover {
+    opacity: .75;
+}
+nav section a, nav div a,
+.button-redirect {
+    transition: .2s;
+}
+
+
+/* КНОПКИ */
+.button-redirect {
+    text-decoration: none;
+    color: #FEFEFE;
+    font-size: 32px;
+    padding: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 40px;
+    margin-top: 30px;
+}
+.accent-color-1 {
+    background-color: #5B5BFF;
+}
+.accent-color-2 {
+    background-color: #000000;
+}
+.accent-color-3 {
+    background-color: #FFF;
+    color: #000000;
+}
+.accent-color-trans {
+    background-color: rgba(0, 0, 0, 0);
+    color: #232323;
+}
+
+.header-gradient {
+    background: linear-gradient(to right, #5B5BFF 0%, #4AADFF 50%) left;
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ОБЩИЕ */
+.buttons-container {
+    width: 40%;
+}
+
+
+/* 01 КОНТЕЙНЕР */
+.container-content {
+    width: 90%;
+    min-width: 1300px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.container-content sub, 
+.container-content p {
+    color: #7D7D7D;
+}
+.container-content span {
+    position: absolute;
+    font-size: 256px;
+    color: rgba(0, 0, 0, .08);
+}
+.container-content h2 {
+    font-family: 'Raleway Regular';
+    font-size: 64px;
+    left: 0;
+    top: 0;
+}
+
+.sub-title, .title {
+    display: block;
+    font-size: 30px;
+}
+.sub-title {
+    display: block;
+    font-size: 30px;
+    width: 65%;
+    margin-bottom: 50px;
+}
+
+.container-01 div {
+    width: 60%;
+}
+
+.button-learn-more {
+    font-size: 36px;
+    color: #FEFEFE;
+    background-color: #000000;
+    text-decoration: none;
+    margin-top: 100px;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.container-01 section div section {
+    width: 60%;
+}
+
+.container-01 section {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container-01 section div {
+    text-align: center;
+    width: 280px;
+    height: 280px;
+    background-color: #EAEAEA;
+    margin-top: 40px;
+    margin-top: 40px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 10px;
+    border-radius: 40px;
+}
+.container-01 section div img {
+    align-self: center;
+    margin: 0 auto;
+    display: block;
+}
+.container-01 section div sub {
+    font-size: 24px;
+}
+
+
+.container-02 {
+    display: block;
+}
+.container-02 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container-02 div p {
+    width: 60%;
+    margin: 0 auto;
+}
+.container-02 section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.container-02 section div {
+    display: block;
+    background-color: #EAEAEA;
+    text-align: center;
+    width: 25%;
+    min-width: 400px;
+    max-width: 600px;
+    border-radius: 40px;
+    padding: 10px;
+}
+.container-02 section div h3 {
+    color: #7D7D7D;
+    font-size: 96px;
+    margin: 0;
+}
+.accent-text-color {
+    background: linear-gradient(to right, #C813C1 0%, #5B5BFF 50%) left;
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* КОНТЕЙНЕР №3 */
+.container-03 {
+    background-color: #000000;
+    border-radius: 50px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    display: block;
+}
+.container-03 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.container-03 span {
+    color: rgba(255, 255, 255, .08);
+}
+.container-03 h2, .container-03 a {
+    margin-left: 50px;
+}
+.container-03 h2 {
+    padding-top: 100px;
+    width: 60%;
+    color: #FFF;
+}
+
+
+/* КОНТЕЙНЕР №5 */
+.container-05 {
+    display: block;
+}
+.container-05 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.container-05 div h2 {
+    width: 40%;
+}
+.container-05 div p {
+    color: #7D7D7D;
+    font-size: 32px;
+    width: 40%;
+}
+
+/* VID */
+.video-frame {
+    margin: 0 auto;
+    width: 80%;
+    min-width: 600px;
+    max-width: 1500px;
+    text-align: center;
+    background-color: #EDEDED;
+    border-radius: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    user-select: none;
+}
+.video-frame h2 {
+    margin: 50px;
+    text-align: center;
+    font-family: 'SF Pro Regular';
+    background: linear-gradient(to right, #00E5FF 0%, #1200FF 50%) left;
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 146px;
+}
+.video-frame p {
+    border-radius: 20px;
+    text-align: center;
+    padding: 8px;
+    font-size: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #E4E4E4;
+    margin: 0 auto;
+    width: fit-content;
+}
+.video-frame a {
+    position: relative;
+    align-self: center;
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: .5s;
+    padding: 3%;
+    font-size: 64px;
+    color: black;
+}
+.video-frame-player {
+    position: inherit;
+    background-color: rgba(217, 217, 217, .5);
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+.video-frame a img {
+    padding: 20px;
+}
+.video-frame a:hover {
+    backdrop-filter: blur(6px);
+    opacity: .5;
+}
+
+
+/* ОБЩИЕ ПАРАМЕТРЫ ТЕКСТА */
+.container-01 section p, 
+.container-02 div p {
+    font-size: 24px;
+}
+.container-01 section div, .container-02 section div, .video-frame {
+    -webkit-box-shadow: 0px 2px 24px 1px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 2px 24px 1px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 2px 24px 2px rgba(34, 60, 80, 0.2);
+}
+
+
+footer {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+}
+footer h2 {
+    color: #FFF;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 64px;
+    min-width: 650px;
+    margin-bottom: 30px;
+}
+footer div {
+    margin: 50px;
+}
+footer div a {
+    font-size: 24px;
+}
+footer section {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer section a {
+    color: #BEBEBE;
+    text-decoration: none;
+    transition: .2s;
+}
+footer section a:hover {
+    text-decoration: underline;
+    opacity: .8;
+}
