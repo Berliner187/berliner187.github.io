@@ -5,15 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/preloader.css">
     <title>Art of Zeno</title>
 	<link rel="shortcut icon" href="img/logo.png" type="image/png">
 </head>
 <body>
+    <!-- START Прелоадер -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+        const preloader = document.getElementById('preloader');
+        setTimeout(function () {
+            preloader.classList.add('loaded');
+            const content = document.getElementById('content');
+            content.classList.add('loaded');
+        }, 500);
+        });
+
+    </script>
+
     <header>
         <p>ART OF ZENO</p>
     </header>
 
-    <div class="under-header-block">
+    <div id="content" class="under-header-block">
         <img src="img/zeno-header.png" alt="Art Of Zeno" class="under-header-img">
         <p>ОСНОВАТЕЛЬ ЭЛЕЙСКОЙ ШКОЛЫ ФИЛОСОФИИ</p>
     </div>
@@ -146,9 +164,9 @@
             Таким образом, Зенон Элейский оставил огромный след в&nbsp;истории мысли, который продолжает вдохновлять новые поколения ученых и&nbsp;мыслителей. Его идеи остаются актуальными и&nbsp;вызывают интерес и&nbsp;уважение даже в&nbsp;наше время.</p>
     </div>
 
-    <footer class="heading heading-even">
+    <footer class="heading">
         <a href="https://berliner187.github.io">KOZAK • DEVELOPER ↗</a>
-        <p>DESIGN BY KOZAK<br>2023</p>
+        <p>DESIGN BY <span>KOZAK</span><br>2023</p>
     </footer>
 
 </body>
