@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Century Gothic';
+    src: url(../fonts/centurygothic.ttf);
+}
+@font-face {
+    font-family: 'Century Gothic Bold';
+    src: url(../fonts/centurygothic_bold.ttf);
+}
+@font-face {
+    font-family: 'SF Pro Regular';
+    src: url(../fonts/SFPRODISPLAYREGULAR.OTF);
+}
+@font-face {
+    font-family: 'SF Pro Bold';
+    src: url(../fonts/SFPRODISPLAYBOLD.OTF);
+}
+
+
+body {
+    font-family: 'SF Pro Regular';
+    margin: 0;
+}
+header {
+    margin: 0;
+    background-color: #C6C6C6;
+    font-family: 'Century Gothic';
+    font-size: 96px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+header p {
+    margin: 0;
+    text-align: center;
+    color: #F5F5F5;
+}
+.under-header-block p {
+    font-family: 'Century Gothic';
+    font-size: 32px;
+}
+.under-header-block img {
+    width: 100%;
+}
+.under-header-block {
+    text-align: center;
+}
+
+.content div {
+    margin: 0 auto;
+    width: 90%;
+    min-width: 800px;
+    max-width: 1920px;
+}
+.content section, .heading-01 div {
+    width: fit-content;
+}
+.content section h2 {
+    color: #151515;
+}
+
+.content section hr,
+.heading section hr {
+    background-color: #C6C6C6;
+    height: 14px;
+    border-radius: 20px;
+    border: none;
+}
+
+.content ol {
+    margin: 0;
+    font-size: 40px;
+    color: #232323;
+}
+.content p {
+    font-size: 32px;
+    text-align: center;
+}
+
+
+/* ЗАГОЛОВКИ, ОБЩИЕ ПАРАМЕТРЫ */
+.content section h2,
+.heading section h2 {
+    margin: 0;
+    font-size: 64px;
+    font-family: 'Century Gothic Bold';
+}
+.heading {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.heading section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.heading section p {
+    font-size: 96px;
+    color: #8A8A8A;
+    margin: 0;
+}
+.heading {
+    margin-top: 200px;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.heading-uneven {
+    background-color: #B5A391
+}
+.heading-uneven h2 {
+    color: #F0F0F0;
+}
+.heading-uneven p {
+    color: #f1f1f1;
+}
+
+/* Новый уровень абстракции */
+.heading-even h2 {
+    color: #151515;
+}
+.heading-even p {
+    color: #232323;
+}
+
+
+.heading-01 {
+    color: #F0F0F0;
+    background-color: #B5A391;
+}
+.heading-01 section h2 {
+    color: #F0F0F0;
+}
+.heading p {
+    font-size: 40px;
+}
+
+
+.heading h3 {
+    font-family: 'SF Pro Bold';
+    font-size: 40px;
+}
+
+
+.heading-03 {
+    background-color: #B5A391;
+}
+.heading-03 h2 {
+    color: #F0F0F0;
+}
+.heading-03 p {
+    color: #f1f1f1;
+}
+
+.conclusion {
+    background-color: #EBEBEB;
+}
+.conclusion section div hr {
+    background-color: #B5A391;
+}
+
+
+.footer-developer {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 50px;
+    transition: .25s;
+    font-size: 24px;
+}
+footer {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+footer a {
+    font-size: 40px;
+    text-decoration: none;
+    background-color: #485CCC;
+    border-radius: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: #F0F0F0;
+    transition: .3s;
+}
+footer a:hover {
+    opacity: .7;
+}
+footer p {
+    color: #232323;
+    letter-spacing: 20px;
+    font-family: 'SF Pro Bold';
+}
+
+
+/* Прочее */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #C0C0C0;
+    border-radius: 4px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: #A0A0A0;
+}
+  
+::-webkit-scrollbar-thumb:active {
+    background-color: #808080;
+}
