@@ -1,931 +1,399 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rostislav Kozak — Systems, ML & BI Software Engineer</title>
-  <meta name="description" content="Engineering index of Rostislav Kozak (Berliner187). Timeline of shipped products, local ML systems, and enterprise Data/BI analytics.">
-  <link type="image/png" href="img/favicon.png" rel="shortcut icon">
-  <meta name="author" content="Rostislav Kozak">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://github.com/Berliner187">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rostislav Kozak · SaaS, macOS, BI</title>
+<meta name="description" content="Rostislav Kozak (Berliner187) runs Letychka, a service that turns lecture files into online tests. Also builds a macOS dictation app in Swift and BI/ETL pipelines.">
+<meta name="author" content="Rostislav Kozak">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://berliner187.github.io/">
+<link rel="icon" type="image/png" href="img/favicon.png">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="profile">
-  <meta property="og:title" content="Rostislav Kozak — Systems, ML & BI Software Engineer">
-  <meta property="og:description" content="Maker of Golosok, Letychka, and Taxi Watcher. Native macOS utilities, local ML, and enterprise BI analytics.">
-  <meta property="og:url" content="https://github.com/Berliner187">
-  <meta name="twitter:card" content="summary">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Rostislav Kozak">
+<meta property="og:title" content="Rostislav Kozak · SaaS, macOS, BI">
+<meta property="og:description" content="Letychka (tests from lecture files), Golosok (offline dictation for macOS), Taxi Watcher. Python, Swift, BI and ETL.">
+<meta property="og:url" content="https://berliner187.github.io/">
+<meta property="og:image" content="https://berliner187.github.io/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://berliner187.github.io/img/og.png">
 
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113935909', 'ym');
-
-    ym(113935909, 'init', {ssr:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/113935909" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
-
-  <!-- Schema.org Person -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Rostislav Kozak",
-    "alternateName": "Berliner187",
-    "jobTitle": "Systems, ML & BI Software Engineer",
-    "url": "https://github.com/Berliner187",
-    "sameAs": [
-      "https://productradar.ru/user/kozak187er/",
-      "https://github.com/Berliner187",
-      "https://t.me/fancycode",
-      "https://dprofile.ru/kozak_developer",
-      "https://dribbble.com/kozak_developer"
-    ],
-    "knowsAbout": [
-      "Swift",
-      "Apple Metal",
-      "CoreML",
-      "Python",
-      "Django",
-      "BI Analytics",
-      "Visiology",
-      "Apache Airflow",
-      "Pandas",
-      "BI Semantic Layer",
-      "ClickHouse",
-      "SQL / ETL Pipelines"
-    ],
-    "maker": [
-      {
-        "@type": "SoftwareApplication",
-        "name": "Golosok",
-        "url": "https://golosok.space/",
-        "operatingSystem": "macOS 13.0+"
-      },
-      {
-        "@type": "WebApplication",
-        "name": "Letychka",
-        "url": "https://letychka.ru/"
-      },
-      {
-        "@type": "SoftwareApplication",
-        "name": "Taxi Watcher",
-        "url": "https://taxi-watcher.ru/"
-      }
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg: #000000;
-      --surface: #0c0c0e;
-      --surface-hover: #141418;
-      --border: #242429;
-      --border-interactive: #383842;
-      --text-high: #ffffff;
-      --text-mid: #b2b2ba;
-      --text-dim: #787882;
-      --mono: "SF Mono", "Menlo", "Consolas", ui-monospace, monospace;
-      --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", system-ui, sans-serif;
-      --radius: 5px;
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://berliner187.github.io/#page",
+      "url": "https://berliner187.github.io/",
+      "mainEntity": {"@id": "https://berliner187.github.io/#me"}
+    },
+    {
+      "@type": "Person",
+      "@id": "https://berliner187.github.io/#me",
+      "name": "Rostislav Kozak",
+      "alternateName": ["Berliner187", "kozak187er", "Ростислав Козак"],
+      "jobTitle": "Software engineer",
+      "email": "mailto:kozak187er@yandex.com",
+      "url": "https://berliner187.github.io/",
+      "sameAs": [
+        "https://github.com/Berliner187",
+        "https://t.me/fancycode",
+        "https://productradar.ru/user/kozak187er/",
+        "https://dprofile.ru/kozak_developer",
+        "https://dribbble.com/kozak_developer"
+      ],
+      "knowsAbout": ["Python", "Django", "PostgreSQL", "Redis", "Celery", "Swift", "Core ML", "Apache Airflow", "ETL", "Visiology", "BI semantic layer"]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Letychka",
+      "alternateName": "Летучка",
+      "url": "https://letychka.ru/",
+      "applicationCategory": "EducationalApplication",
+      "inLanguage": "ru",
+      "description": "Generates online tests from PDF, DOCX and text files. Students open a test by link or QR code, results export to Excel.",
+      "author": {"@id": "https://berliner187.github.io/#me"}
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Golosok",
+      "alternateName": "Голосок",
+      "url": "https://golosok.space/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "macOS 13.0+",
+      "softwareVersion": "1.13.9",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": {"@id": "https://berliner187.github.io/#me"}
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Taxi Watcher",
+      "url": "https://taxi-watcher.ru/",
+      "author": {"@id": "https://berliner187.github.io/#me"}
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      background-color: var(--bg);
-      color-scheme: dark;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text-mid);
-      font-family: var(--sans);
-      font-size: 14px;
-      line-height: 1.6;
-      padding: 60px 20px 100px;
-      display: flex;
-      justify-content: center;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    main {
-      width: 100%;
-      max-width: 640px;
-      display: flex;
-      flex-direction: column;
-      gap: 44px;
-    }
-
-    a:focus-visible, button:focus-visible {
-      outline: 2px solid var(--text-high);
-      outline-offset: 3px;
-    }
-
-    /* Header */
-    header {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 4px 10px;
-      border-radius: var(--radius);
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--text-mid);
-      width: fit-content;
-    }
-
-    .status-dot {
-      width: 6px;
-      height: 6px;
-      background: #ffffff;
-      border-radius: 50%;
-      box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
-    }
-
-    h1 {
-      font-size: 26px;
-      font-weight: 600;
-      letter-spacing: -0.03em;
-      color: var(--text-high);
-    }
-
-    .bio {
-      color: var(--text-mid);
-      font-size: 14.5px;
-      line-height: 1.65;
-    }
-
-    /* Section Structure */
-    section {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 10px;
-    }
-
-    h2 {
-      font-family: var(--mono);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-dim);
-      font-weight: 600;
-    }
-
-    .counter {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--text-dim);
-    }
-
-    /* Timeline Structure */
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 46px 1fr;
-      gap: 16px;
-      align-items: start;
-    }
-
-    .timeline-year {
-      font-family: var(--sans);
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text-dim);
-      letter-spacing: -0.02em;
-      padding-top: 16px;
-      text-align: right;
-      user-select: none;
-    }
-
-    .timeline-item:first-child .timeline-year {
-      color: var(--text-high);
-    }
-
-    /* Project Card — Full Container Clickable */
-    .project-card {
-      position: relative;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      cursor: pointer;
-      transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
-    }
-
-    .project-card:hover {
-      background: var(--surface-hover);
-      border-color: var(--border-interactive);
-      transform: translateY(-1px);
-    }
-
-    .card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    /* Primary Link (Stretched across card) */
-    .primary-link {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text-high);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      letter-spacing: -0.01em;
-    }
-
-    .primary-link .card-arrow {
-      font-family: var(--mono);
-      font-size: 13px;
-      color: var(--text-dim);
-      transition: transform 0.15s ease, color 0.15s ease;
-    }
-
-    .project-card:hover .primary-link .card-arrow {
-      color: var(--text-high);
-      transform: translate(2px, -2px);
-    }
-
-    .primary-link::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      border-radius: var(--radius);
-    }
-
-    /* Badges & Shields Cluster */
-    .shields-cluster {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .shield {
-      display: inline-flex;
-      align-items: stretch;
-      font-family: var(--mono);
-      font-size: 10.5px;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      border-radius: 3px;
-      overflow: hidden;
-      line-height: 1;
-      user-select: none;
-    }
-
-    /* Readonly Badges */
-    .shield.readonly {
-      border: 1px solid #232328;
-      background: #111114;
-      cursor: default;
-    }
-
-    .shield.readonly .shield-key {
-      background: #16161a;
-      color: #7c7c86;
-      padding: 3px 6px;
-      border-right: 1px solid #232328;
-    }
-
-    .shield.readonly .shield-val {
-      padding: 3px 7px;
-      color: #c4c4cc;
-      background: #101013;
-    }
-
-    /* Interactive Badges */
-    a.shield.interactive {
-      border: 1px solid #33333d;
-      background: #151519;
-      text-decoration: none;
-      color: inherit;
-      cursor: pointer;
-      transition: border-color 0.12s ease, background-color 0.12s ease;
-    }
-
-    a.shield.interactive .shield-key {
-      background: #1c1c22;
-      color: #9898a4;
-      padding: 3px 6px;
-      border-right: 1px solid #33333d;
-      display: flex;
-      align-items: center;
-    }
-
-    a.shield.interactive .shield-val {
-      padding: 3px 7px;
-      color: #ffffff;
-      background: #121215;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      font-weight: 500;
-    }
-
-    a.shield.interactive .shield-arrow {
-      font-size: 9px;
-      opacity: 0.6;
-      transition: transform 0.12s ease, opacity 0.12s ease;
-    }
-
-    a.shield.interactive:hover {
-      border-color: #646472;
-    }
-
-    a.shield.interactive:hover .shield-arrow {
-      opacity: 1;
-      transform: translate(1px, -1px);
-    }
-
-    .desc {
-      font-size: 13.5px;
-      color: var(--text-mid);
-      line-height: 1.55;
-    }
-
-    /* Action Buttons */
-    .links-bar {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-      margin-top: 2px;
-    }
-
-    .action-btn {
-      font-family: var(--mono);
-      font-size: 11.5px;
-      font-weight: 500;
-      color: var(--text-high);
-      text-decoration: none;
-      background: #16161b;
-      border: 1px solid #2e2e38;
-      padding: 5px 10px;
-      border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: border-color 0.12s ease, background 0.12s ease, color 0.12s ease;
-    }
-
-    .action-btn:hover {
-      background: #202028;
-      border-color: #555566;
-      color: #ffffff;
-    }
-
-    .action-btn .btn-arrow {
-      font-size: 11px;
-      color: var(--text-dim);
-      transition: transform 0.12s ease, color 0.12s ease;
-    }
-
-    .action-btn:hover .btn-arrow {
-      color: #ffffff;
-      transform: translate(1px, -1px);
-    }
-
-    .stack-meta {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--text-dim);
-      border-top: 1px dashed #1c1c22;
-      padding-top: 8px;
-      margin-top: 2px;
-    }
-
-    /* Stack & Competence Chips */
-    .stack-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .stack-category {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .stack-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--text-dim);
-    }
-
-    .stack-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .chip {
-      font-family: var(--mono);
-      font-size: 11.5px;
-      color: var(--text-high);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 4px 10px;
-      border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .chip-dot {
-      width: 4px;
-      height: 4px;
-      background: var(--text-dim);
-      border-radius: 50%;
-    }
-
-    /* Recognition Box */
-    .recognition-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px 18px;
-      font-size: 13px;
-      color: var(--text-mid);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .recognition-box a {
-      color: var(--text-high);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      font-weight: 500;
-    }
-
-    .recognition-box a:hover {
-      color: #ffffff;
-      text-decoration-color: #888899;
-    }
-
-    /* Directory Grid */
-    .dir-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 8px;
-    }
-
-    .dir-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 12px 14px;
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--text-mid);
-      text-decoration: none;
-      min-height: 44px;
-      transition: border-color 0.12s ease, background 0.12s ease, color 0.12s ease;
-    }
-
-    .dir-item .dir-arrow {
-      color: var(--text-dim);
-      font-size: 11px;
-      transition: transform 0.12s ease, color 0.12s ease;
-    }
-
-    .dir-item:hover {
-      background: var(--surface-hover);
-      border-color: var(--border-interactive);
-      color: var(--text-high);
-    }
-
-    .dir-item:hover .dir-arrow {
-      color: var(--text-high);
-      transform: translate(1px, -1px);
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: var(--mono);
-      font-size: 11.5px;
-      color: var(--text-dim);
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    /* Mobile Responsive */
-    @media (max-width: 520px) {
-      body {
-        padding: 36px 14px 64px;
-      }
-
-      .timeline-item {
-        grid-template-columns: 1fr;
-        gap: 6px;
-      }
-
-      .timeline-year {
-        text-align: left;
-        padding-top: 0;
-        font-size: 12px;
-        color: var(--text-high);
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-
-      .timeline-year::before {
-        content: "";
-        width: 5px;
-        height: 5px;
-        background: #ffffff;
-        border-radius: 50%;
-      }
-
-      .project-card {
-        padding: 14px 14px;
-      }
-
-      .dir-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#0a0a0a;
+  --fg:#ececec;
+  --mid:#a6a6a6;
+  --dim:#6e6e6e;
+  --line:#1f1f1f;
+  --line2:#2c2c2c;
+  --acc:#7ee2a8;
+  --acc-dim:rgba(126,226,168,.38);
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--mid);font:15px/1.6 var(--sans);padding:56px 16px 80px;-webkit-font-smoothing:antialiased}
+main{max-width:660px;margin:0 auto}
+::selection{background:var(--acc);color:#000}
+
+/* one link style: green + underline = clickable. Grey text is not. */
+a{color:var(--acc);text-decoration:underline;text-decoration-color:var(--acc-dim);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-color:var(--acc)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:2px}
+a[target="_blank"]::after{content:"\2009↗";font-size:.8em;opacity:.7}
+a.nx::after{content:none}
+
+/* header */
+.prompt{font:13px var(--mono);color:var(--dim);margin-bottom:18px}
+.prompt b{color:var(--fg);font-weight:400}
+.cur{display:inline-block;width:7px;height:14px;background:var(--acc);vertical-align:-2px;margin-left:4px;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+h1{font:600 30px/1.15 var(--sans);letter-spacing:-.025em;color:var(--fg)}
+.role{font:13px var(--mono);color:var(--dim);margin-top:6px}
+.bio{margin-top:18px;max-width:58ch}
+.bio strong{color:var(--fg);font-weight:500}
+.quick{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:18px;font:13px var(--mono)}
+
+/* sections */
+section{margin-top:56px}
+h2{display:flex;align-items:baseline;font:500 12px var(--mono);text-transform:lowercase;letter-spacing:.04em;color:var(--dim);padding-bottom:10px;margin-bottom:24px;border-bottom:1px solid var(--line)}
+h2::before{content:"##\00a0";color:var(--line2)}
+h2 span{margin-left:auto;font-weight:400}
+
+/* main product */
+.main-p{border-left:2px solid var(--acc);padding-left:22px}
+.main-p .meta{display:flex;align-items:baseline;gap:10px;font:12.5px var(--mono);color:var(--dim)}
+.main-p .meta time{color:var(--fg);font-weight:600}
+.main-p .meta .st{color:var(--acc);font-size:11.5px}
+.main-p h3{margin-top:6px;font:600 26px/1.2 var(--sans);letter-spacing:-.02em}
+.main-p h3 a{color:var(--fg);text-decoration-color:var(--line2)}
+.main-p h3 a:hover{text-decoration-color:var(--fg)}
+.main-p h3 .alt{font-weight:400;color:var(--dim);margin-left:8px;font-size:17px}
+.main-p .lead{margin-top:10px;color:var(--fg);max-width:56ch}
+.main-p p.d{margin-top:10px;max-width:60ch}
+.big{display:flex;flex-wrap:wrap;gap:6px 28px;margin-top:18px}
+.big div{font:12px var(--mono);color:var(--dim)}
+.big b{display:block;font:600 22px/1.2 var(--sans);color:var(--fg);letter-spacing:-.01em}
+
+dl.f{display:grid;grid-template-columns:110px 1fr;gap:8px 18px;margin-top:20px;font-size:14px}
+dl.f dt{font:12px/1.9 var(--mono);color:var(--dim)}
+dl.f dd{color:var(--mid)}
+
+.lnk{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:16px;font:13px var(--mono)}
+.lnk a::before{content:"→ ";color:var(--dim)}
+.stack{margin-top:14px;padding-top:10px;border-top:1px dashed var(--line);font:11.5px var(--mono);color:var(--dim)}
+
+/* timeline */
+.tl{list-style:none;border-left:1px solid var(--line2);margin-left:5px}
+.ev{position:relative;padding:0 0 40px 26px}
+.ev:last-child{padding-bottom:0}
+.ev::before{content:"";position:absolute;left:-6px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1px solid var(--dim)}
+.ev.live::before{background:var(--fg);border-color:var(--fg)}
+.ev.now::before{background:var(--acc);border-color:var(--acc);animation:pulse 2.6s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(126,226,168,.5)}100%{box-shadow:0 0 0 9px rgba(126,226,168,0)}}
+.meta{display:flex;align-items:baseline;gap:10px;font:12.5px var(--mono);color:var(--dim)}
+.meta time{color:var(--fg);font-weight:600}
+.st{font-size:11.5px}
+.now .st{color:var(--acc)}
+.ev h3{margin-top:6px;font:600 19px/1.3 var(--sans);letter-spacing:-.01em}
+.ev h3 a{color:var(--fg);text-decoration-color:var(--line2)}
+.ev h3 a:hover{text-decoration-color:var(--fg)}
+.ev h3 .alt{font-weight:400;color:var(--dim);margin-left:6px;font-size:15px}
+.ev p.d{margin-top:8px;max-width:60ch}
+.facts{list-style:none;display:flex;flex-wrap:wrap;margin-top:12px;font:12px var(--mono);color:var(--dim)}
+.facts li+li::before{content:"·";margin:0 8px;color:var(--line2)}
+.facts b{color:var(--mid);font-weight:400}
+.awards{list-style:none;margin-top:12px;font-size:13.5px}
+.awards li{padding-left:18px;position:relative}
+.awards li::before{content:"★";position:absolute;left:0;color:var(--acc);font-size:11px;top:3px}
+
+/* github stars: large, clickable */
+.lnk a.star{font-size:14px}
+.lnk a.star::before{content:"★ ";color:var(--acc);font-size:17px;vertical-align:-1px}
+.lnk a.star::after{content:none}
+
+/* archive */
+details.arc{margin:0 0 0 5px;padding-top:36px;border-left:1px dashed var(--line2)}
+details.arc summary{list-style:none;cursor:pointer;padding:0 0 0 26px;font:12.5px var(--mono);color:var(--dim)}
+details.arc summary::-webkit-details-marker{display:none}
+details.arc summary::before{content:"[+]";color:var(--acc);margin-right:8px}
+details.arc[open] summary::before{content:"[−]"}
+details.arc summary:hover{color:var(--mid)}
+.arc .note{padding:10px 0 0 26px;font-size:13.5px;color:var(--dim);max-width:56ch}
+.arc .tl{border-left:0;margin:20px 0 0}
+.arc .ev{padding-bottom:28px;opacity:.72}
+.arc .ev:hover{opacity:1}
+.arc .ev::before{border-style:dashed}
+.arc .ev h3{font-size:16px}
+.arc .ev h3 a{color:var(--mid)}
+
+/* stack, contacts */
+dl.sk{display:grid;grid-template-columns:150px 1fr;gap:12px 20px;font-size:14px}
+dl.sk dt{font:12.5px/1.9 var(--mono);color:var(--dim)}
+dl.sk dd{color:var(--fg)}
+ul.ct{list-style:none;font:13.5px var(--mono)}
+ul.ct li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:9px 0;border-bottom:1px solid var(--line)}
+ul.ct li:last-child{border-bottom:0}
+ul.ct span{color:var(--dim)}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font:12px var(--mono);color:var(--dim);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+@media (max-width:520px){
+  body{padding:36px 16px 64px}
+  h1{font-size:26px}
+  .main-p{padding-left:16px}
+  .main-p h3{font-size:23px}
+  dl.f,dl.sk,ul.ct li{grid-template-columns:1fr;gap:2px}
+  dl.f dd,dl.sk dd{margin-bottom:10px}
+}
+@media (prefers-reduced-motion:reduce){.cur,.ev.now::before{animation:none}}
+</style>
 </head>
 <body>
+<main>
 
-  <main>
-    <!-- Header -->
-    <header>
-      <div class="status-badge">
-        <span class="status-dot"></span> Active Engineering Cycle • 2026
-      </div>
-      <h1>Rostislav Kozak</h1>
-      <p class="bio">
-        Indie software engineer and systems developer (Berliner187). Architecting native macOS client utilities, offline-first ML inference, high-frequency backend platforms B2C SaaS, and enterprise BI analytics.
+<header>
+  <p class="prompt" aria-hidden="true">~/kozak $ <b>whoami</b><span class="cur"></span></p>
+  <h1>Rostislav Kozak</h1>
+  <p class="role">@Berliner187 · kozak187er · indie developer</p>
+  <p class="bio">
+    I run <strong>Letychka</strong>, a SaaS that turns lecture files into online tests.
+    I also write a dictation app for <strong>macOS</strong> in Swift.
+    At work I build <strong>BI and ETL</strong> for companies: Airflow pipelines, Visiology dashboards, semantic layers.
+  </p>
+  <nav class="quick" aria-label="Contacts">
+    <a href="https://letychka.ru/" target="_blank" rel="noopener">letychka.ru</a>
+    <a href="https://github.com/Berliner187" target="_blank" rel="noopener">github</a>
+    <a href="https://t.me/fancycode" target="_blank" rel="noopener">telegram</a>
+    <a class="nx" href="mailto:kozak187er@yandex.com">email</a>
+  </nav>
+</header>
+
+<section aria-labelledby="h-main">
+  <h2 id="h-main">main product <span>since 2024</span></h2>
+
+  <article class="main-p">
+    <div class="meta"><time datetime="2024">2024</time><span class="st">● running</span></div>
+    <h3><a href="https://letychka.ru/" target="_blank" rel="noopener">Letychka</a><span class="alt" lang="ru">Летучка</span></h3>
+    <p class="lead">A teacher uploads a PDF or DOCX, or pastes text, and gets a ready online test. Students open it by link or QR code, with no registration.</p>
+    <p class="d">
+      Built for teachers, tutors, university departments and company training teams. Answers are checked automatically, and the teacher sees which topics students got wrong most often.
+    </p>
+
+    <div class="big">
+      <div><b>5000+</b>users</div>
+      <div><b>RU</b>interface</div>
+    </div>
+
+    <dl class="f">
+      <dt>input</dt>
+      <dd>PDF, DOC/DOCX, TXT up to 25 MB, or pasted text up to 100,000 characters</dd>
+      <dt>tests</dt>
+      <dd>Three difficulty levels, single or multiple correct answers, shuffled options, editing of any question after generation</dd>
+      <dt>students</dt>
+      <dd>Link or QR code, no account needed</dd>
+      <dt>results</dt>
+      <dd>Automatic scoring, per-question statistics, Excel export, printable A4 sheets in two variants with an answer key</dd>
+    </dl>
+
+    <nav class="lnk">
+      <a href="https://letychka.ru/" target="_blank" rel="noopener">letychka.ru</a>
+      <a href="https://letychka.ru/test-dlya-uchenikov/" target="_blank" rel="noopener">for teachers</a>
+      <a href="https://productradar.ru/product/letuchka/" target="_blank" rel="noopener">product radar</a>
+    </nav>
+    <p class="stack">python / django / postgresql / redis / celery / llm</p>
+  </article>
+</section>
+
+<section aria-labelledby="h-more">
+  <h2 id="h-more">other projects <span>2023–2026</span></h2>
+
+  <ol class="tl">
+
+    <li class="ev now">
+      <div class="meta"><time datetime="2026">2026</time><span class="st">● in development</span></div>
+      <h3><a href="https://golosok.space/" target="_blank" rel="noopener">Golosok</a><span class="alt" lang="ru">Голосок</span></h3>
+      <p class="d">
+        Offline dictation for macOS. Press ⌥&nbsp;Space, speak, and the text appears at the cursor in any app.
+        Recognition runs locally on GigaAM&nbsp;v3 or Whisper, using the GPU and Neural Engine of Apple Silicon, so audio stays on the Mac.
       </p>
-    </header>
+      <ul class="facts">
+        <li><b>v1.13.9</b></li>
+        <li>MIT</li>
+        <li>macOS 13+</li>
+        <li>Apple Silicon</li>
+        <li>free</li>
+      </ul>
+      <ul class="awards">
+        <li>1st place in <a href="https://sa-the-silicon-gazette.vercel.app/gazette/2026-08-13#repos" target="_blank" rel="noopener">Silicon Gazette</a>, repos section, 13 Aug 2026</li>
+        <li>Listed in <a href="https://github.com/jaywcjlove/awesome-swift-macos-apps" target="_blank" rel="noopener">awesome-swift-macos-apps</a> and <a href="https://github.com/jaywcjlove/awesome-mac" target="_blank" rel="noopener">awesome-mac</a></li>
+      </ul>
+      <nav class="lnk">
+        <a href="https://golosok.space/" target="_blank" rel="noopener">golosok.space</a>
+        <a href="https://golosok.space/en/" target="_blank" rel="noopener">english</a>
+        <a href="https://github.com/Berliner187/Golosok" target="_blank" rel="noopener">source</a>
+        <a class="star" id="stars" href="https://github.com/Berliner187/Golosok/stargazers" target="_blank" rel="noopener"><span id="starn">6</span> stars</a>
+        <a href="https://productradar.ru/product/golosok/" target="_blank" rel="noopener">product radar</a>
+      </nav>
+      <p class="stack">swift / metal / core ml / gigaam-v3 / whisper</p>
+    </li>
 
-    <!-- Engineering Timeline -->
-    <section>
-      <div class="section-head">
-        <h2>Engineering Timeline & Shipped Systems</h2>
-        <span class="counter">2021 — 2026</span>
-      </div>
+    <li class="ev live">
+      <div class="meta"><time datetime="2023">2023</time><span class="st">running</span></div>
+      <h3><a href="https://taxi-watcher.ru/" target="_blank" rel="noopener">Taxi Watcher</a></h3>
+      <p class="d">A Telegram bot that watches ride-hailing prices on a chosen route and writes when the fare drops.</p>
+      <ul class="awards">
+        <li>Top&nbsp;3 of the week on <a href="https://productradar.ru/product/taxi-watcher/" target="_blank" rel="noopener">Product Radar</a></li>
+      </ul>
+      <nav class="lnk">
+        <a href="https://taxi-watcher.ru/" target="_blank" rel="noopener">taxi-watcher.ru</a>
+        <a href="https://github.com/Berliner187/taxi-watcher-service" target="_blank" rel="noopener">source</a>
+      </nav>
+      <p class="stack">python / asyncio / telegram bot api</p>
+    </li>
 
-      <div class="timeline">
+  </ol>
 
-        <!-- 2026: Golosok -->
-        <div class="timeline-item">
-          <div class="timeline-year">2026</div>
-          <article class="project-card">
-            <div class="card-top">
-              <a href="https://golosok.space/" class="primary-link" target="_blank" rel="noopener">
-                Golosok / Голосок <span class="card-arrow">↗</span>
-              </a>
-              <div class="shields-cluster">
-                <!-- Silicon Gazette 1st Place -->
-                <a href="https://sa-the-silicon-gazette.vercel.app/gazette/2026-08-13#repos" class="shield interactive" target="_blank" rel="noopener">
-                  <span class="shield-key">Silicon Gazette</span>
-                  <span class="shield-val">1st Place <span class="shield-arrow">↗</span></span>
-                </a>
-                <!-- Awesome Swift macOS -->
-                <a href="https://github.com/jaywcjlove/awesome-swift-macos-apps" class="shield interactive" target="_blank" rel="noopener">
-                  <span class="shield-key">Featured In</span>
-                  <span class="shield-val">Awesome Swift macOS <span class="shield-arrow">↗</span></span>
-                </a>
-                <!-- Readonly Specs -->
-                <div class="shield readonly">
-                  <span class="shield-key"> Release</span>
-                  <span class="shield-val">v1.13.9</span>
-                </div>
-                <div class="shield readonly">
-                  <span class="shield-key">License</span>
-                  <span class="shield-val">MIT</span>
-                </div>
-                <!-- Interactive Stars -->
-                <a href="https://github.com/Berliner187/Golosok" class="shield interactive" target="_blank" rel="noopener" title="Live GitHub Stars">
-                  <span class="shield-key">Stars</span>
-                  <span class="shield-val" id="golosok-stars">6 ★ <span class="shield-arrow">↗</span></span>
-                </a>
-              </div>
-            </div>
+  <details class="arc">
+    <summary>archive · 2 early repos</summary>
+    <p class="note">Personal projects that were never released and are no longer maintained. The code is on GitHub as is.</p>
+    <ol class="tl">
+      <li class="ev">
+        <div class="meta"><time datetime="2023">2023</time><span class="st">unmaintained</span></div>
+        <h3><a href="https://github.com/Berliner187/Finanzfluss" target="_blank" rel="noopener">Finanzfluss</a></h3>
+        <p class="d">Command-line budget tracker: income, expenses and account balances.</p>
+        <p class="stack">python / cli</p>
+      </li>
+      <li class="ev">
+        <div class="meta"><time datetime="2021">2021</time><span class="st">unmaintained</span></div>
+        <h3><a href="https://github.com/Berliner187/elba" target="_blank" rel="noopener">Elba</a></h3>
+        <p class="d">Offline password and notes manager with local encryption. GPL-3.0.</p>
+        <p class="stack">python / cryptography</p>
+      </li>
+    </ol>
+  </details>
+</section>
 
-            <p class="desc">
-              Native macOS voice dictation powered by Sber GigaAM v3 and Whisper. Sub-0.1s execution on Apple Silicon GPU/ANE. Instant buffer insertion under active cursor via ⌥ + Space. 100% offline, zero cloud API dependencies.
-            </p>
+<section aria-labelledby="h-stack">
+  <h2 id="h-stack">stack</h2>
+  <dl class="sk">
+    <dt>products</dt>
+    <dd>Python, Django, FastAPI, PostgreSQL, Redis, Celery, Docker. Swift, Metal, Core ML on macOS</dd>
+    <dt>data &amp; bi</dt>
+    <dd>Apache Airflow, ETL, Pandas, SQL, Visiology, semantic layer design</dd>
+  </dl>
+</section>
 
-            <div class="links-bar">
-              <a href="https://golosok.space/" class="action-btn" target="_blank" rel="noopener">
-                Production (RU) <span class="btn-arrow">↗</span>
-              </a>
-              <a href="https://golosok.space/en/" class="action-btn" target="_blank" rel="noopener">
-                Global (EN) <span class="btn-arrow">↗</span>
-              </a>
-              <a href="https://github.com/Berliner187/Golosok" class="action-btn" target="_blank" rel="noopener">
-                Source Code <span class="btn-arrow">↗</span>
-              </a>
-            </div>
+<section aria-labelledby="h-ct">
+  <h2 id="h-ct">elsewhere</h2>
+  <ul class="ct">
+    <li><span>github</span><a href="https://github.com/Berliner187" target="_blank" rel="noopener">@Berliner187</a></li>
+    <li><span>telegram</span><a href="https://t.me/fancycode" target="_blank" rel="noopener">@fancycode</a></li>
+    <li><span>email</span><a class="nx" href="mailto:kozak187er@yandex.com">kozak187er@yandex.com</a></li>
+    <li><span>product radar</span><a href="https://productradar.ru/user/kozak187er/" target="_blank" rel="noopener">kozak187er</a></li>
+    <li><span>dprofile</span><a href="https://dprofile.ru/kozak_developer" target="_blank" rel="noopener">kozak_developer</a></li>
+    <li><span>dribbble</span><a href="https://dribbble.com/kozak_developer" target="_blank" rel="noopener">kozak_developer</a></li>
+  </ul>
+</section>
 
-            <div class="stack-meta">Swift • Apple Metal • CoreML • Sber GigaAM v3 • Whisper</div>
-          </article>
-        </div>
+<footer>
+  <span>© 2026 Rostislav Kozak</span>
+  <span>from Rostislav with Love</span>
+</footer>
 
-        <!-- 2024: Letychka -->
-        <div class="timeline-item">
-          <div class="timeline-year">2024</div>
-          <article class="project-card">
-            <div class="card-top">
-              <a href="https://letychka.ru/" class="primary-link" target="_blank" rel="noopener">
-                Letychka / Летучка <span class="card-arrow">↗</span>
-              </a>
-              <div class="shields-cluster">
-                <div class="shield readonly">
-                  <span class="shield-key">Catalog</span>
-                  <span class="shield-val">ailist.ru</span>
-                </div>
-                <a href="https://productradar.ru/product/letuchka/" class="shield interactive" target="_blank" rel="noopener">
-                  <span class="shield-key">Product Radar</span>
-                  <span class="shield-val">&gt;5000 users <span class="shield-arrow">↗</span></span>
-                </a>
-              </div>
-            </div>
+</main>
 
-            <p class="desc">
-              Automated assessment and test engine converting raw lecture documents, PDF, and DOCX files into validated interactive tests with real-time student telemetry and anti-cheat tracking.
-            </p>
+<noscript><img src="https://mc.yandex.ru/watch/113935909" style="position:absolute;left:-9999px" alt=""></noscript>
+<script>
+/* GitHub stars: after first paint, cached for the session */
+(function(){
+  var el=document.getElementById('starn'),k='golosok-stars';
+  if(!el||!window.fetch)return;
+  try{var c=sessionStorage.getItem(k);if(c){el.textContent=c;return}}catch(e){}
+  function run(){
+    fetch('https://api.github.com/repos/Berliner187/Golosok')
+      .then(function(r){return r.ok?r.json():null})
+      .then(function(d){
+        if(d&&typeof d.stargazers_count==='number'){
+          el.textContent=d.stargazers_count;
+          try{sessionStorage.setItem(k,d.stargazers_count)}catch(e){}
+        }
+      }).catch(function(){});
+  }
+  'requestIdleCallback' in window?requestIdleCallback(run,{timeout:2000}):setTimeout(run,300);
+})();
 
-            <div class="links-bar">
-              <a href="https://letychka.ru/" class="action-btn" target="_blank" rel="noopener">
-                Direct Platform <span class="btn-arrow">↗</span>
-              </a>
-            </div>
-
-            <div class="stack-meta">Python • Django • PostgreSQL • LLM Pipeline • Redis • Celery</div>
-          </article>
-        </div>
-
-        <!-- 2023: Taxi Watcher -->
-        <div class="timeline-item">
-          <div class="timeline-year">2023</div>
-          <article class="project-card">
-            <div class="card-top">
-              <a href="https://taxi-watcher.ru/" class="primary-link" target="_blank" rel="noopener">
-                Taxi Watcher <span class="card-arrow">↗</span>
-              </a>
-              <div class="shields-cluster">
-                <!-- Correct Product Radar Top #3 Badge -->
-                <a href="https://productradar.ru/product/taxi-watcher/" class="shield interactive" target="_blank" rel="noopener">
-                  <span class="shield-key">Product Radar</span>
-                  <span class="shield-val">Top #3 of Week <span class="shield-arrow">↗</span></span>
-                </a>
-              </div>
-            </div>
-
-            <p class="desc">
-              High-frequency algorithmic tariff monitoring service. Tracks dynamic surge-pricing fluctuations across ride-hailing aggregators and dispatches instant Telegram push alerts during optimal price drops.
-            </p>
-
-            <div class="links-bar">
-              <a href="https://taxi-watcher.ru/" class="action-btn" target="_blank" rel="noopener">
-                Service Site <span class="btn-arrow">↗</span>
-              </a>
-            </div>
-
-            <div class="stack-meta">Python • Asyncio • Private Aggregator APIs • Telegram Bot API</div>
-          </article>
-        </div>
-
-        <!-- 2023: Finanzfluss -->
-        <div class="timeline-item">
-          <div class="timeline-year">2023</div>
-          <article class="project-card">
-            <div class="card-top">
-              <a href="https://github.com/Berliner187/Finanzfluss" class="primary-link" target="_blank" rel="noopener">
-                Finanzfluss <span class="card-arrow">↗</span>
-              </a>
-              <div class="shields-cluster">
-                <div class="shield readonly">
-                  <span class="shield-key">Repo</span>
-                  <span class="shield-val">Open Source</span>
-                </div>
-              </div>
-            </div>
-
-            <p class="desc">
-              Local cash flow management and balance stream tracking engine for structured personal budgeting and asset accounting.
-            </p>
-
-            <div class="links-bar">
-              <a href="https://github.com/Berliner187/Finanzfluss" class="action-btn" target="_blank" rel="noopener">
-                GitHub Repository <span class="btn-arrow">↗</span>
-              </a>
-            </div>
-
-            <div class="stack-meta">Python • Data Modeling • CLI Architecture</div>
-          </article>
-        </div>
-
-        <!-- 2021: Elba -->
-        <div class="timeline-item">
-          <div class="timeline-year">2021</div>
-          <article class="project-card">
-            <div class="card-top">
-              <a href="https://github.com/Berliner187/elba" class="primary-link" target="_blank" rel="noopener">
-                Elba <span class="card-arrow">↗</span>
-              </a>
-              <div class="shields-cluster">
-                <div class="shield readonly">
-                  <span class="shield-key">License</span>
-                  <span class="shield-val">GPL-3.0</span>
-                </div>
-              </div>
-            </div>
-
-            <p class="desc">
-              Minimalist offline credential vault and encrypted note keeper built with local key-derivation standards and local-first storage.
-            </p>
-
-            <div class="links-bar">
-              <a href="https://github.com/Berliner187/elba" class="action-btn" target="_blank" rel="noopener">
-                GitHub Repository <span class="btn-arrow">↗</span>
-              </a>
-            </div>
-
-            <div class="stack-meta">Python • Cryptography • Local Security</div>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Engineering & Analytics Disciplines (Full Stack & BI) -->
-    <section>
-      <div class="section-head">
-        <h2>Engineering Disciplines &amp; Stack</h2>
-        <span class="counter">Core / BI &amp; Data</span>
-      </div>
-      <div class="stack-grid">
-        <!-- Systems & Core -->
-        <div class="stack-category">
-          <span class="stack-label">Systems &amp; Platform Architecture</span>
-          <div class="stack-chips">
-            <span class="chip"><span class="chip-dot"></span>Swift (macOS)</span>
-            <span class="chip"><span class="chip-dot"></span>Metal &amp; CoreML</span>
-            <span class="chip"><span class="chip-dot"></span>Python / Django</span>
-            <span class="chip"><span class="chip-dot"></span>FastAPI</span>
-            <span class="chip"><span class="chip-dot"></span>PostgreSQL</span>
-            <span class="chip"><span class="chip-dot"></span>Redis</span>
-            <span class="chip"><span class="chip-dot"></span>Docker</span>
-          </div>
-        </div>
-
-        <!-- BI & Data Engineering Stack (Full Pack) -->
-        <div class="stack-category">
-          <span class="stack-label">BI-Analytics &amp; Data Engineering</span>
-          <div class="stack-chips">
-            <span class="chip"><span class="chip-dot"></span>BI-Analytics</span>
-            <span class="chip"><span class="chip-dot"></span>Visiology</span>
-            <span class="chip"><span class="chip-dot"></span>Apache Airflow</span>
-            <span class="chip"><span class="chip-dot"></span>Pandas</span>
-            <span class="chip"><span class="chip-dot"></span>BI Semantic Layer</span>
-            <span class="chip"><span class="chip-dot"></span>ClickHouse</span>
-            <span class="chip"><span class="chip-dot"></span>SQL / ETL Pipelines</span>
-            <span class="chip"><span class="chip-dot"></span>Apache Superset</span>
-            <span class="chip"><span class="chip-dot"></span>dbt</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Recognition Details -->
-    <section>
-      <div class="section-head">
-        <h2>Recognition &amp; Catalog Inclusion</h2>
-      </div>
-      <div class="recognition-box">
-        <div>
-          ★ <strong>Silicon Gazette</strong> — 1st Place ranking for Golosok (<a href="https://sa-the-silicon-gazette.vercel.app/gazette/2026-08-13#repos" target="_blank" rel="noopener">Gazette Archive 2026</a>).
-        </div>
-        <div>
-          ★ <strong>Awesome Swift macOS Apps</strong> — Official curated registry of elite native Swift applications for macOS maintained by <a href="https://github.com/jaywcjlove" target="_blank" rel="noopener">@jaywcjlove</a>.
-        </div>
-        <div>
-          ★ <strong>Awesome Mac</strong> — Systematic directory of high-grade macOS software (<a href="https://github.com/jaywcjlove/awesome-mac" target="_blank" rel="noopener">jaywcjlove/awesome-mac</a>).
-        </div>
-      </div>
-    </section>
-
-    <!-- Network & Verification -->
-    <section>
-      <div class="section-head">
-        <h2>Network &amp; Verification</h2>
-      </div>
-      <div class="dir-grid">
-        <a href="https://productradar.ru/user/kozak187er/" class="dir-item" target="_blank" rel="noopener">
-          <span>Product Radar (Founder)</span>
-          <span class="dir-arrow">↗</span>
-        </a>
-        <a href="https://github.com/Berliner187" class="dir-item" target="_blank" rel="noopener">
-          <span>GitHub (@Berliner187)</span>
-          <span class="dir-arrow">↗</span>
-        </a>
-        <a href="https://t.me/fancycode" class="dir-item" target="_blank" rel="noopener">
-          <span>Telegram (@fancycode)</span>
-          <span class="dir-arrow">↗</span>
-        </a>
-        <a href="https://dprofile.ru/kozak_developer" class="dir-item" target="_blank" rel="noopener">
-          <span>Dprofile</span>
-          <span class="dir-arrow">↗</span>
-        </a>
-        <a href="https://dribbble.com/kozak_developer" class="dir-item" target="_blank" rel="noopener">
-          <span>Dribbble</span>
-          <span class="dir-arrow">↗</span>
-        </a>
-        <a href="mailto:kozak187er@yandex.com" class="dir-item">
-          <span>Direct Email</span>
-          <span class="dir-arrow">↗</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <span>Design &amp; Development by Kozak</span>
-      <span>2026 • From Rostislav with Love</span>
-    </footer>
-  </main>
-
-  <!-- Live GitHub Stars Telemetry -->
-  <script>
-    (function fetchStars() {
-      fetch('https://api.github.com/repos/Berliner187/Golosok')
-        .then(function(res) { return res.ok ? res.json() : null; })
-        .then(function(data) {
-          if (data && typeof data.stargazers_count === 'number') {
-            var el = document.getElementById('golosok-stars');
-            if (el) el.innerHTML = data.stargazers_count + ' ★ <span class="shield-arrow">↗</span>';
-          }
-        })
-        .catch(function() {});
-    })();
-  </script>
-
+/* Yandex.Metrika: loaded after the page is rendered */
+window.addEventListener('load',function(){
+  setTimeout(function(){
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();
+    for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=113935909','ym');
+    ym(113935909,'init',{ssr:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
+  },0);
+});
+</script>
 </body>
 </html>
