@@ -1,120 +1,931 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="p:domain_verify" content="e543170f93649e6e0677757fcb2d9543"/>
-    <meta name="copyright" lang="ru" content="Kozak - Developer Sites and Software" />
-	<title>Kozak - Developer</title>
-    <link type="image/png" href="img/favicon.png" rel="shortcut icon">
-    <link rel="stylesheet" type="text/css" href="css/preloader.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/const.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/light.css" id="theme-link"> -->
-    <link rel="stylesheet" type="text/css" href="css/light.css" media="(prefers-color-scheme: light)" id="theme-link">
-    <link rel="stylesheet" type="text/css" href="css/dark.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: dark)" id="theme-link">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rostislav Kozak — Systems, ML & BI Software Engineer</title>
+  <meta name="description" content="Engineering index of Rostislav Kozak (Berliner187). Timeline of shipped products, local ML systems, and enterprise Data/BI analytics.">
+  <link type="image/png" href="img/favicon.png" rel="shortcut icon">
+  <meta name="author" content="Rostislav Kozak">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://github.com/Berliner187">
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Rostislav Kozak — Systems, ML & BI Software Engineer">
+  <meta property="og:description" content="Maker of Golosok, Letychka, and Taxi Watcher. Native macOS utilities, local ML, and enterprise BI analytics.">
+  <meta property="og:url" content="https://github.com/Berliner187">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113935909', 'ym');
+
+    ym(113935909, 'init', {ssr:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/113935909" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rostislav Kozak",
+    "alternateName": "Berliner187",
+    "jobTitle": "Systems, ML & BI Software Engineer",
+    "url": "https://github.com/Berliner187",
+    "sameAs": [
+      "https://productradar.ru/user/kozak187er/",
+      "https://github.com/Berliner187",
+      "https://t.me/fancycode",
+      "https://dprofile.ru/kozak_developer",
+      "https://dribbble.com/kozak_developer"
+    ],
+    "knowsAbout": [
+      "Swift",
+      "Apple Metal",
+      "CoreML",
+      "Python",
+      "Django",
+      "BI Analytics",
+      "Visiology",
+      "Apache Airflow",
+      "Pandas",
+      "BI Semantic Layer",
+      "ClickHouse",
+      "SQL / ETL Pipelines"
+    ],
+    "maker": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Golosok",
+        "url": "https://golosok.space/",
+        "operatingSystem": "macOS 13.0+"
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Letychka",
+        "url": "https://letychka.ru/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Taxi Watcher",
+        "url": "https://taxi-watcher.ru/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #000000;
+      --surface: #0c0c0e;
+      --surface-hover: #141418;
+      --border: #242429;
+      --border-interactive: #383842;
+      --text-high: #ffffff;
+      --text-mid: #b2b2ba;
+      --text-dim: #787882;
+      --mono: "SF Mono", "Menlo", "Consolas", ui-monospace, monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", system-ui, sans-serif;
+      --radius: 5px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      background-color: var(--bg);
+      color-scheme: dark;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-mid);
+      font-family: var(--sans);
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 60px 20px 100px;
+      display: flex;
+      justify-content: center;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    main {
+      width: 100%;
+      max-width: 640px;
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--text-high);
+      outline-offset: 3px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: var(--radius);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      width: fit-content;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: var(--text-high);
+    }
+
+    .bio {
+      color: var(--text-mid);
+      font-size: 14.5px;
+      line-height: 1.65;
+    }
+
+    /* Section Structure */
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      font-weight: 600;
+    }
+
+    .counter {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    /* Timeline Structure */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .timeline-year {
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dim);
+      letter-spacing: -0.02em;
+      padding-top: 16px;
+      text-align: right;
+      user-select: none;
+    }
+
+    .timeline-item:first-child .timeline-year {
+      color: var(--text-high);
+    }
+
+    /* Project Card — Full Container Clickable */
+    .project-card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      cursor: pointer;
+      transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .project-card:hover {
+      background: var(--surface-hover);
+      border-color: var(--border-interactive);
+      transform: translateY(-1px);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Primary Link (Stretched across card) */
+    .primary-link {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-high);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: -0.01em;
+    }
+
+    .primary-link .card-arrow {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text-dim);
+      transition: transform 0.15s ease, color 0.15s ease;
+    }
+
+    .project-card:hover .primary-link .card-arrow {
+      color: var(--text-high);
+      transform: translate(2px, -2px);
+    }
+
+    .primary-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      border-radius: var(--radius);
+    }
+
+    /* Badges & Shields Cluster */
+    .shields-cluster {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .shield {
+      display: inline-flex;
+      align-items: stretch;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      border-radius: 3px;
+      overflow: hidden;
+      line-height: 1;
+      user-select: none;
+    }
+
+    /* Readonly Badges */
+    .shield.readonly {
+      border: 1px solid #232328;
+      background: #111114;
+      cursor: default;
+    }
+
+    .shield.readonly .shield-key {
+      background: #16161a;
+      color: #7c7c86;
+      padding: 3px 6px;
+      border-right: 1px solid #232328;
+    }
+
+    .shield.readonly .shield-val {
+      padding: 3px 7px;
+      color: #c4c4cc;
+      background: #101013;
+    }
+
+    /* Interactive Badges */
+    a.shield.interactive {
+      border: 1px solid #33333d;
+      background: #151519;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      transition: border-color 0.12s ease, background-color 0.12s ease;
+    }
+
+    a.shield.interactive .shield-key {
+      background: #1c1c22;
+      color: #9898a4;
+      padding: 3px 6px;
+      border-right: 1px solid #33333d;
+      display: flex;
+      align-items: center;
+    }
+
+    a.shield.interactive .shield-val {
+      padding: 3px 7px;
+      color: #ffffff;
+      background: #121215;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 500;
+    }
+
+    a.shield.interactive .shield-arrow {
+      font-size: 9px;
+      opacity: 0.6;
+      transition: transform 0.12s ease, opacity 0.12s ease;
+    }
+
+    a.shield.interactive:hover {
+      border-color: #646472;
+    }
+
+    a.shield.interactive:hover .shield-arrow {
+      opacity: 1;
+      transform: translate(1px, -1px);
+    }
+
+    .desc {
+      font-size: 13.5px;
+      color: var(--text-mid);
+      line-height: 1.55;
+    }
+
+    /* Action Buttons */
+    .links-bar {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-top: 2px;
+    }
+
+    .action-btn {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--text-high);
+      text-decoration: none;
+      background: #16161b;
+      border: 1px solid #2e2e38;
+      padding: 5px 10px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: border-color 0.12s ease, background 0.12s ease, color 0.12s ease;
+    }
+
+    .action-btn:hover {
+      background: #202028;
+      border-color: #555566;
+      color: #ffffff;
+    }
+
+    .action-btn .btn-arrow {
+      font-size: 11px;
+      color: var(--text-dim);
+      transition: transform 0.12s ease, color 0.12s ease;
+    }
+
+    .action-btn:hover .btn-arrow {
+      color: #ffffff;
+      transform: translate(1px, -1px);
+    }
+
+    .stack-meta {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-dim);
+      border-top: 1px dashed #1c1c22;
+      padding-top: 8px;
+      margin-top: 2px;
+    }
+
+    /* Stack & Competence Chips */
+    .stack-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .stack-category {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .stack-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+    }
+
+    .stack-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .chip {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--text-high);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .chip-dot {
+      width: 4px;
+      height: 4px;
+      background: var(--text-dim);
+      border-radius: 50%;
+    }
+
+    /* Recognition Box */
+    .recognition-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      font-size: 13px;
+      color: var(--text-mid);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .recognition-box a {
+      color: var(--text-high);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+
+    .recognition-box a:hover {
+      color: #ffffff;
+      text-decoration-color: #888899;
+    }
+
+    /* Directory Grid */
+    .dir-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 8px;
+    }
+
+    .dir-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-mid);
+      text-decoration: none;
+      min-height: 44px;
+      transition: border-color 0.12s ease, background 0.12s ease, color 0.12s ease;
+    }
+
+    .dir-item .dir-arrow {
+      color: var(--text-dim);
+      font-size: 11px;
+      transition: transform 0.12s ease, color 0.12s ease;
+    }
+
+    .dir-item:hover {
+      background: var(--surface-hover);
+      border-color: var(--border-interactive);
+      color: var(--text-high);
+    }
+
+    .dir-item:hover .dir-arrow {
+      color: var(--text-high);
+      transform: translate(1px, -1px);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--text-dim);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 520px) {
+      body {
+        padding: 36px 14px 64px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .timeline-year {
+        text-align: left;
+        padding-top: 0;
+        font-size: 12px;
+        color: var(--text-high);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .timeline-year::before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background: #ffffff;
+        border-radius: 50%;
+      }
+
+      .project-card {
+        padding: 14px 14px;
+      }
+
+      .dir-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
 <body>
 
-    <!-- START Прелоадер -->
-    <div id="preloader">
-        <h1>Kozak</h1>
-        <h2>Студент. Разработчик.</h2>
-        <img src="img/loader.gif" alt="Preloader">
-    </div>
-    <script src="js/preloader.js">
-        loader(); 
-    </script>
-    <!-- END Прелоадер -->
-
-    <!-- Шапка -->
-    <header id="sidebar">
-        <!-- <script src="js/header.js"></script> -->
-        <h1>Kozak</h1>
-        <nav>
-            <ul class="nav-links">
-                <li><a class="buttons boom-color" href="https://berliner187.github.io/">Профиль</a></li>
-                <li><a class="buttons white" href="https://berliner187.github.io/programming">Программирование</a></li>
-                <li><a class="buttons white" href="https://berliner187.github.io/web">Веб-разработка</a></li>
-                <li><a class="buttons accent-color" href="#contacts">Контакты</a></li>
-            </ul>
-        </nav>
+  <main>
+    <!-- Header -->
+    <header>
+      <div class="status-badge">
+        <span class="status-dot"></span> Active Engineering Cycle • 2026
+      </div>
+      <h1>Rostislav Kozak</h1>
+      <p class="bio">
+        Indie software engineer and systems developer (Berliner187). Architecting native macOS client utilities, offline-first ML inference, high-frequency backend platforms B2C SaaS, and enterprise BI analytics.
+      </p>
     </header>
 
-    <div id="content">
-        <!-- Блок с личной информацией -->
-        <div id="profile" class="block-content bg-image-about">
-            <h2>Профиль</h2>
-            <hr>
+    <!-- Engineering Timeline -->
+    <section>
+      <div class="section-head">
+        <h2>Engineering Timeline & Shipped Systems</h2>
+        <span class="counter">2021 — 2026</span>
+      </div>
 
-            <div class="pre__content">
-                <p>Привет, я Ростислав. <br>Разработчик. <br> Студент. <br><br> Разрабатываю сайты, <br> консольные, десктопные <br> и мобильные приложения.</p>
-                <img src="img/avatar.jpg" alt="ich">
-            </div>
+      <div class="timeline">
 
-            <h2 id="activity">Деятельность</h2>
-            <hr class="separator_hr">
-            <p class="p-discraption">Студент второго курса Тверского Государственного Технического Университета. 
-                Учусь на факультете Информационных технологий по направлению "Информатика и вычислительная техника".</p>
-                <br>
-            <p class="p-discraption">Занимаюсь версткой сайтов, а также разработкой программного обеспечения: консольных приложений, 
-                десктопных программ, приложений для мобильных устройств на базе Android.</p>
-
-            <!-- Список основной деятельности -->
-            <div class="block-pills">
-                <ol id="pills" class="pills">
-                    <a href="https://berliner187.github.io/web"><li>Веб-разработка на HTML, CSS и JS.</li></a>
-                    <a href="https://berliner187.github.io/programming#python"><li>Разработка на Python. Консольные приложения, GUI.</li></a>
-                    <a href="https://berliner187.github.io/programming#c-sharp"><li>Разработка на C# консольных и десктопных приложений.</li></a>
-                    <a href="https://berliner187.github.io/programming#java"><li>Мобильная разработка на Java под Android.</li></a>
-                </ol>
-            </div>
-            
-            <h2>Навыки</h2>
-            <hr class="separator_hr">
-
-            <!-- Список навыков -->
-            <div class="block-buttons">
-                <a class="button-redirect content-color-dark" href="web.html">< html /></a>
-                <a class="button-redirect content-color-dark" href="programming.html#java">< xml /></a>
-                <a class="button-redirect content-color-dark" href="web.html">// js</a>
-            </div>
-            <div class="block-buttons">
-                <a class="button-redirect content-color-dark" href="programming.html#python"># python</a>
-                <a class="button-redirect content-color-dark" href="programming.html#c-sharp">// c#</a>
-                <a class="button-redirect content-color-dark" href="programming.html#java">// java</a>
-            </div>
-
-            <h2 id="portfolio">Портфолио</h2>
-            <hr class="separator_hr">
-            <div class="portfolio">
-                <div>
-                    <p>Веб-разработка</p>
-                    <a href="https://berliner187.github.io/web">
-                        <img src="img/icons/web-tech.jpg" alt="">
-                    </a>
+        <!-- 2026: Golosok -->
+        <div class="timeline-item">
+          <div class="timeline-year">2026</div>
+          <article class="project-card">
+            <div class="card-top">
+              <a href="https://golosok.space/" class="primary-link" target="_blank" rel="noopener">
+                Golosok / Голосок <span class="card-arrow">↗</span>
+              </a>
+              <div class="shields-cluster">
+                <!-- Silicon Gazette 1st Place -->
+                <a href="https://sa-the-silicon-gazette.vercel.app/gazette/2026-08-13#repos" class="shield interactive" target="_blank" rel="noopener">
+                  <span class="shield-key">Silicon Gazette</span>
+                  <span class="shield-val">1st Place <span class="shield-arrow">↗</span></span>
+                </a>
+                <!-- Awesome Swift macOS -->
+                <a href="https://github.com/jaywcjlove/awesome-swift-macos-apps" class="shield interactive" target="_blank" rel="noopener">
+                  <span class="shield-key">Featured In</span>
+                  <span class="shield-val">Awesome Swift macOS <span class="shield-arrow">↗</span></span>
+                </a>
+                <!-- Readonly Specs -->
+                <div class="shield readonly">
+                  <span class="shield-key"> Release</span>
+                  <span class="shield-val">v1.13.9</span>
                 </div>
-                <div>
-                    <p>Программирование</p>
-                    <a href="https://berliner187.github.io/programming">
-                        <img src="img/icons/programming.jpg" alt="">
-                    </a>
+                <div class="shield readonly">
+                  <span class="shield-key">License</span>
+                  <span class="shield-val">MIT</span>
                 </div>
+                <!-- Interactive Stars -->
+                <a href="https://github.com/Berliner187/Golosok" class="shield interactive" target="_blank" rel="noopener" title="Live GitHub Stars">
+                  <span class="shield-key">Stars</span>
+                  <span class="shield-val" id="golosok-stars">6 ★ <span class="shield-arrow">↗</span></span>
+                </a>
+              </div>
             </div>
+
+            <p class="desc">
+              Native macOS voice dictation powered by Sber GigaAM v3 and Whisper. Sub-0.1s execution on Apple Silicon GPU/ANE. Instant buffer insertion under active cursor via ⌥ + Space. 100% offline, zero cloud API dependencies.
+            </p>
+
+            <div class="links-bar">
+              <a href="https://golosok.space/" class="action-btn" target="_blank" rel="noopener">
+                Production (RU) <span class="btn-arrow">↗</span>
+              </a>
+              <a href="https://golosok.space/en/" class="action-btn" target="_blank" rel="noopener">
+                Global (EN) <span class="btn-arrow">↗</span>
+              </a>
+              <a href="https://github.com/Berliner187/Golosok" class="action-btn" target="_blank" rel="noopener">
+                Source Code <span class="btn-arrow">↗</span>
+              </a>
+            </div>
+
+            <div class="stack-meta">Swift • Apple Metal • CoreML • Sber GigaAM v3 • Whisper</div>
+          </article>
         </div>
-    </div>
 
-        
-    <!-- Контейнер с контактами -->
-    <div id="contacts">
-        <script src="js/footer.js"></script>
-    </div>
+        <!-- 2024: Letychka -->
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <article class="project-card">
+            <div class="card-top">
+              <a href="https://letychka.ru/" class="primary-link" target="_blank" rel="noopener">
+                Letychka / Летучка <span class="card-arrow">↗</span>
+              </a>
+              <div class="shields-cluster">
+                <div class="shield readonly">
+                  <span class="shield-key">Catalog</span>
+                  <span class="shield-val">ailist.ru</span>
+                </div>
+                <a href="https://productradar.ru/product/letuchka/" class="shield interactive" target="_blank" rel="noopener">
+                  <span class="shield-key">Product Radar</span>
+                  <span class="shield-val">&gt;5000 users <span class="shield-arrow">↗</span></span>
+                </a>
+              </div>
+            </div>
 
-    <!-- MERRY CHRISTMAS -->
-    <!-- <footer id="merry_christmas"></footer>
-    <script src="js/templates/merry_xmas.js"></script> -->
-    <!-- END MERRY CHRISTMAS -->
+            <p class="desc">
+              Automated assessment and test engine converting raw lecture documents, PDF, and DOCX files into validated interactive tests with real-time student telemetry and anti-cheat tracking.
+            </p>
+
+            <div class="links-bar">
+              <a href="https://letychka.ru/" class="action-btn" target="_blank" rel="noopener">
+                Direct Platform <span class="btn-arrow">↗</span>
+              </a>
+            </div>
+
+            <div class="stack-meta">Python • Django • PostgreSQL • LLM Pipeline • Redis • Celery</div>
+          </article>
+        </div>
+
+        <!-- 2023: Taxi Watcher -->
+        <div class="timeline-item">
+          <div class="timeline-year">2023</div>
+          <article class="project-card">
+            <div class="card-top">
+              <a href="https://taxi-watcher.ru/" class="primary-link" target="_blank" rel="noopener">
+                Taxi Watcher <span class="card-arrow">↗</span>
+              </a>
+              <div class="shields-cluster">
+                <!-- Correct Product Radar Top #3 Badge -->
+                <a href="https://productradar.ru/product/taxi-watcher/" class="shield interactive" target="_blank" rel="noopener">
+                  <span class="shield-key">Product Radar</span>
+                  <span class="shield-val">Top #3 of Week <span class="shield-arrow">↗</span></span>
+                </a>
+              </div>
+            </div>
+
+            <p class="desc">
+              High-frequency algorithmic tariff monitoring service. Tracks dynamic surge-pricing fluctuations across ride-hailing aggregators and dispatches instant Telegram push alerts during optimal price drops.
+            </p>
+
+            <div class="links-bar">
+              <a href="https://taxi-watcher.ru/" class="action-btn" target="_blank" rel="noopener">
+                Service Site <span class="btn-arrow">↗</span>
+              </a>
+            </div>
+
+            <div class="stack-meta">Python • Asyncio • Private Aggregator APIs • Telegram Bot API</div>
+          </article>
+        </div>
+
+        <!-- 2023: Finanzfluss -->
+        <div class="timeline-item">
+          <div class="timeline-year">2023</div>
+          <article class="project-card">
+            <div class="card-top">
+              <a href="https://github.com/Berliner187/Finanzfluss" class="primary-link" target="_blank" rel="noopener">
+                Finanzfluss <span class="card-arrow">↗</span>
+              </a>
+              <div class="shields-cluster">
+                <div class="shield readonly">
+                  <span class="shield-key">Repo</span>
+                  <span class="shield-val">Open Source</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="desc">
+              Local cash flow management and balance stream tracking engine for structured personal budgeting and asset accounting.
+            </p>
+
+            <div class="links-bar">
+              <a href="https://github.com/Berliner187/Finanzfluss" class="action-btn" target="_blank" rel="noopener">
+                GitHub Repository <span class="btn-arrow">↗</span>
+              </a>
+            </div>
+
+            <div class="stack-meta">Python • Data Modeling • CLI Architecture</div>
+          </article>
+        </div>
+
+        <!-- 2021: Elba -->
+        <div class="timeline-item">
+          <div class="timeline-year">2021</div>
+          <article class="project-card">
+            <div class="card-top">
+              <a href="https://github.com/Berliner187/elba" class="primary-link" target="_blank" rel="noopener">
+                Elba <span class="card-arrow">↗</span>
+              </a>
+              <div class="shields-cluster">
+                <div class="shield readonly">
+                  <span class="shield-key">License</span>
+                  <span class="shield-val">GPL-3.0</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="desc">
+              Minimalist offline credential vault and encrypted note keeper built with local key-derivation standards and local-first storage.
+            </p>
+
+            <div class="links-bar">
+              <a href="https://github.com/Berliner187/elba" class="action-btn" target="_blank" rel="noopener">
+                GitHub Repository <span class="btn-arrow">↗</span>
+              </a>
+            </div>
+
+            <div class="stack-meta">Python • Cryptography • Local Security</div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Engineering & Analytics Disciplines (Full Stack & BI) -->
+    <section>
+      <div class="section-head">
+        <h2>Engineering Disciplines &amp; Stack</h2>
+        <span class="counter">Core / BI &amp; Data</span>
+      </div>
+      <div class="stack-grid">
+        <!-- Systems & Core -->
+        <div class="stack-category">
+          <span class="stack-label">Systems &amp; Platform Architecture</span>
+          <div class="stack-chips">
+            <span class="chip"><span class="chip-dot"></span>Swift (macOS)</span>
+            <span class="chip"><span class="chip-dot"></span>Metal &amp; CoreML</span>
+            <span class="chip"><span class="chip-dot"></span>Python / Django</span>
+            <span class="chip"><span class="chip-dot"></span>FastAPI</span>
+            <span class="chip"><span class="chip-dot"></span>PostgreSQL</span>
+            <span class="chip"><span class="chip-dot"></span>Redis</span>
+            <span class="chip"><span class="chip-dot"></span>Docker</span>
+          </div>
+        </div>
+
+        <!-- BI & Data Engineering Stack (Full Pack) -->
+        <div class="stack-category">
+          <span class="stack-label">BI-Analytics &amp; Data Engineering</span>
+          <div class="stack-chips">
+            <span class="chip"><span class="chip-dot"></span>BI-Analytics</span>
+            <span class="chip"><span class="chip-dot"></span>Visiology</span>
+            <span class="chip"><span class="chip-dot"></span>Apache Airflow</span>
+            <span class="chip"><span class="chip-dot"></span>Pandas</span>
+            <span class="chip"><span class="chip-dot"></span>BI Semantic Layer</span>
+            <span class="chip"><span class="chip-dot"></span>ClickHouse</span>
+            <span class="chip"><span class="chip-dot"></span>SQL / ETL Pipelines</span>
+            <span class="chip"><span class="chip-dot"></span>Apache Superset</span>
+            <span class="chip"><span class="chip-dot"></span>dbt</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recognition Details -->
+    <section>
+      <div class="section-head">
+        <h2>Recognition &amp; Catalog Inclusion</h2>
+      </div>
+      <div class="recognition-box">
+        <div>
+          ★ <strong>Silicon Gazette</strong> — 1st Place ranking for Golosok (<a href="https://sa-the-silicon-gazette.vercel.app/gazette/2026-08-13#repos" target="_blank" rel="noopener">Gazette Archive 2026</a>).
+        </div>
+        <div>
+          ★ <strong>Awesome Swift macOS Apps</strong> — Official curated registry of elite native Swift applications for macOS maintained by <a href="https://github.com/jaywcjlove" target="_blank" rel="noopener">@jaywcjlove</a>.
+        </div>
+        <div>
+          ★ <strong>Awesome Mac</strong> — Systematic directory of high-grade macOS software (<a href="https://github.com/jaywcjlove/awesome-mac" target="_blank" rel="noopener">jaywcjlove/awesome-mac</a>).
+        </div>
+      </div>
+    </section>
+
+    <!-- Network & Verification -->
+    <section>
+      <div class="section-head">
+        <h2>Network &amp; Verification</h2>
+      </div>
+      <div class="dir-grid">
+        <a href="https://productradar.ru/user/kozak187er/" class="dir-item" target="_blank" rel="noopener">
+          <span>Product Radar (Founder)</span>
+          <span class="dir-arrow">↗</span>
+        </a>
+        <a href="https://github.com/Berliner187" class="dir-item" target="_blank" rel="noopener">
+          <span>GitHub (@Berliner187)</span>
+          <span class="dir-arrow">↗</span>
+        </a>
+        <a href="https://t.me/fancycode" class="dir-item" target="_blank" rel="noopener">
+          <span>Telegram (@fancycode)</span>
+          <span class="dir-arrow">↗</span>
+        </a>
+        <a href="https://dprofile.ru/kozak_developer" class="dir-item" target="_blank" rel="noopener">
+          <span>Dprofile</span>
+          <span class="dir-arrow">↗</span>
+        </a>
+        <a href="https://dribbble.com/kozak_developer" class="dir-item" target="_blank" rel="noopener">
+          <span>Dribbble</span>
+          <span class="dir-arrow">↗</span>
+        </a>
+        <a href="mailto:kozak187er@yandex.com" class="dir-item">
+          <span>Direct Email</span>
+          <span class="dir-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <span>Design &amp; Development by Kozak</span>
+      <span>2026 • From Rostislav with Love</span>
+    </footer>
+  </main>
+
+  <!-- Live GitHub Stars Telemetry -->
+  <script>
+    (function fetchStars() {
+      fetch('https://api.github.com/repos/Berliner187/Golosok')
+        .then(function(res) { return res.ok ? res.json() : null; })
+        .then(function(data) {
+          if (data && typeof data.stargazers_count === 'number') {
+            var el = document.getElementById('golosok-stars');
+            if (el) el.innerHTML = data.stargazers_count + ' ★ <span class="shield-arrow">↗</span>';
+          }
+        })
+        .catch(function() {});
+    })();
+  </script>
 
 </body>
-
 </html>
