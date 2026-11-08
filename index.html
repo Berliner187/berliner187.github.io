@@ -11,7 +11,6 @@
 <meta name="color-scheme" content="dark">
 <link rel="canonical" href="https://berliner187.github.io/">
 <link rel="preload" href="fonts/sofia-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/sofia-sans-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/png" href="img/favicon.png">
 
 <meta property="og:type" content="profile">
@@ -81,303 +80,354 @@
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400..700&family=Unbounded:wght@400..600&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400..700&family=Unbounded:wght@400..600&display=swap"></noscript>
 <style>
-@font-face{font-family:"Sofia Sans";font-style:normal;font-weight:1 1000;font-display:swap;
-  src:url(fonts/sofia-sans-cyrillic-wght-normal.woff2) format("woff2");
-  unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+/* Fonts: local files only, no CDN */
 @font-face{font-family:"Sofia Sans";font-style:normal;font-weight:1 1000;font-display:swap;
   src:url(fonts/sofia-sans-latin-wght-normal.woff2) format("woff2");
   unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Sofia Sans";font-style:normal;font-weight:1 1000;font-display:swap;
+  src:url(fonts/sofia-sans-cyrillic-wght-normal.woff2) format("woff2");
+  unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+
+/* Tokens */
 :root{
   --bg:#0a0a0a;
-  --fg:#ececec;
-  --mid:#a6a6a6;
-  --dim:#6e6e6e;
-  --line:#1f1f1f;
-  --line2:#2c2c2c;
-  --acc:#7ee2a8;
-  --acc-dim:rgba(126,226,168,.38);
-  --mono:"Sofia Sans",Inter,system-ui,sans-serif;
-  --sans:"Sofia Sans",Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --fg:#f2f2f2;
+  --mid:#a8a8a8;
+  --dim:#767676;
+  --line:#242424;
+  --blue:#1e40ff;
+  --blue-hover:#3355ff;
+  --link:#7088ff;
+  --on-blue:#ffffff;
+  --on-blue-dim:rgba(255,255,255,.84);
+  --on-blue-line:rgba(255,255,255,.28);
+  --font:"Sofia Sans",Inter,"Helvetica Neue",Arial,system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+  --max:1200px;
+  --t:160ms ease-out;
 }
+
 *{box-sizing:border-box;margin:0;padding:0}
-html{background:var(--bg);-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--mid);font:17px/1.55 var(--sans);padding:56px 16px 80px;-webkit-font-smoothing:antialiased}
-main{max-width:660px;margin:0 auto}
-::selection{background:var(--acc);color:#000}
+html{background:var(--bg);-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--mid);font:400 18px/1.55 var(--font);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+::selection{background:var(--blue);color:#fff}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
 
-/* one link style: green + underline = clickable. Grey text is not. */
-a{color:var(--acc);text-decoration:underline;text-decoration-color:var(--acc-dim);text-underline-offset:3px;text-decoration-thickness:1px}
-a:hover{text-decoration-color:var(--acc)}
-a:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:2px}
-a[target="_blank"]::after{content:"\2009↗";font-size:.8em;opacity:.7}
-a.nx::after{content:none}
+/* One rule for clicks: blue + underline (or a solid button) = clickable.
+   White and grey text is never clickable. */
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.22em;text-decoration-color:rgba(112,136,255,.45);transition:color var(--t),text-decoration-color var(--t)}
+a:hover{color:#9aacff;text-decoration-color:currentColor}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+.ext::after{content:"\2009↗";display:inline-block;transition:transform var(--t)}
+a.ext:hover::after{transform:translate(2px,-2px)}
 
-/* header */
-.prompt{font:15px var(--sans);color:var(--dim);margin-bottom:18px}
-.prompt b{color:var(--fg);font-weight:400}
-.cur{display:inline-block;width:7px;height:14px;background:var(--acc);vertical-align:-2px;margin-left:4px;animation:blink 1.1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-h1 { font: 600 40px/1.15 var(--sans); letter-spacing: -.025em; color: var(--fg); }
-.role{font:15px var(--sans);color:var(--dim);margin-top:6px}
-.bio{margin-top:18px;max-width:58ch}
-.bio strong{color:var(--fg);font-weight:500}
-.quick{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:18px;font:15px var(--sans)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;font:600 17px/1 var(--font);text-decoration:none;border:1px solid transparent;transition:background-color var(--t),border-color var(--t),color var(--t)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-hover);color:#fff}
+.btn-line{border-color:#3a3a3a;color:var(--fg)}
+.btn-line:hover{border-color:var(--fg);color:var(--fg)}
+.btn-white{background:#fff;color:var(--blue)}
+.btn-white:hover{background:#e6eaff;color:var(--blue)}
+.btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
 
-/* sections */
-section{margin-top:56px}
-h2{display:flex;align-items:baseline;font:600 13.5px var(--sans);text-transform:lowercase;letter-spacing:.04em;color:var(--dim);padding-bottom:10px;margin-bottom:24px;border-bottom:1px solid var(--line)}
-h2::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--acc);margin-right:10px;align-self:center}
-h2 span{margin-left:auto;font-weight:500;letter-spacing:.04em;text-transform:none}
+/* Section label: number, name, hairline */
+.label{display:flex;align-items:baseline;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line);font:600 13px/1.4 var(--font);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.label .n{color:var(--fg);font-variant-numeric:tabular-nums}
+.label .r{margin-left:auto;letter-spacing:.06em}
 
-/* main product */
-.main-p{border-left:2px solid var(--acc);padding-left:22px}
-.main-p .meta{display:flex;align-items:baseline;gap:10px;font:14px var(--sans);color:var(--dim)}
-.main-p .meta time{color:var(--fg);font-weight:600}
-.main-p .meta .st{color:var(--acc);font-size:13.5px}
-.main-p h3{margin-top:8px;font:500 28px/1.2 var(--disp);letter-spacing:-.02em}
-.main-p h3 a{color:var(--fg);text-decoration-color:var(--line2)}
-.main-p h3 a:hover{text-decoration-color:var(--fg)}
-.main-p h3 .alt{font:400 19px var(--sans);letter-spacing:0;color:var(--dim);margin-left:10px}
-.main-p .lead{margin-top:10px;color:var(--fg);max-width:56ch}
-.main-p p.d{margin-top:10px;max-width:60ch}
-.big{display:flex;flex-wrap:wrap;gap:6px 28px;margin-top:18px}
-.big div{font:15px var(--sans);color:var(--dim)}
-.big b{display:block;font:700 26px/1.2 var(--sans);color:var(--fg);letter-spacing:-.01em}
+section{padding-top:clamp(80px,12vw,144px)}
 
-dl.f{display:grid;grid-template-columns:96px 1fr;gap:8px 18px;margin-top:22px;font-size:16px}
-dl.f dt{font:13.5px/1.8 var(--sans);color:var(--dim)}
-dl.f dd{color:var(--mid)}
+/* ---------- 01 Hero ---------- */
+.hero{padding-top:clamp(28px,5vw,48px)}
+.top{display:flex;justify-content:space-between;gap:16px;font:600 13px/1.4 var(--font);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.top b{color:var(--fg);font-weight:600}
+.name{margin-top:clamp(48px,9vw,120px);font:800 clamp(64px,22vw,200px)/.86 var(--font);letter-spacing:-.045em;color:var(--fg)}
+.name .dot{color:var(--blue)}
+.hero-low{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px 48px;align-items:end;margin-top:clamp(36px,5vw,64px)}
+.lead{font:400 clamp(21px,2.2vw,27px)/1.4 var(--font);color:var(--fg);max-width:32ch}
+.lead em{font-style:normal;color:var(--mid)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
 
-.lnk{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:16px;font:15px var(--sans)}
-.lnk a::before{content:"→ ";color:var(--dim)}
-.stack{margin-top:14px;padding-top:10px;border-top:1px dashed var(--line);font:15px var(--sans);color:var(--dim)}
+/* ---------- 02 Main product ---------- */
+.feat{margin-top:24px;background:var(--blue);color:var(--on-blue);padding:clamp(28px,5vw,64px)}
+.feat a:not(.btn){color:#fff;text-decoration-color:rgba(255,255,255,.5)}
+.feat a:not(.btn):hover{text-decoration-color:#fff}
+.feat a:focus-visible{outline-color:#fff}
+.feat-top{display:flex;justify-content:space-between;gap:16px;font:600 14px/1.4 var(--font);letter-spacing:.08em;text-transform:uppercase;color:var(--on-blue-dim)}
+.live::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;margin-right:10px;vertical-align:1px}
+.feat h3{margin-top:clamp(32px,5vw,56px);font:800 clamp(56px,11vw,140px)/.88 var(--font);letter-spacing:-.045em;color:#fff}
+.feat h3 .alt{display:block;margin-top:14px;font:500 clamp(18px,2vw,22px)/1.2 var(--font);letter-spacing:0;color:var(--on-blue-dim)}
+.feat-body{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px 48px;margin-top:clamp(32px,4vw,48px)}
+.feat .lead{color:#fff;max-width:30ch}
+.feat .d{margin-top:16px;max-width:52ch;color:var(--on-blue-dim)}
+.stat{align-self:end;justify-self:end;text-align:right}
+.stat b{display:block;font:800 clamp(64px,8vw,104px)/.9 var(--font);letter-spacing:-.04em;color:#fff;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:8px;font:600 14px/1.4 var(--font);letter-spacing:.08em;text-transform:uppercase;color:var(--on-blue-dim)}
+.specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;margin-top:clamp(40px,5vw,64px)}
+.specs div{padding:18px 0;border-top:1px solid var(--on-blue-line)}
+.specs dt{font:600 13px/1.4 var(--font);letter-spacing:.1em;text-transform:uppercase;color:var(--on-blue-dim)}
+.specs dd{margin-top:6px;font-size:17px;color:#fff}
+.feat-cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;margin-top:clamp(32px,4vw,48px)}
+.feat-cta .links{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:17px}
+.feat .stack{margin-top:clamp(32px,4vw,48px);padding-top:16px;border-top:1px solid var(--on-blue-line);font-size:15px;color:var(--on-blue-dim)}
 
-/* timeline */
-.tl{list-style:none;border-left:1px solid var(--line2);margin-left:5px}
-.ev{position:relative;padding:0 0 40px 26px}
-.ev:last-child{padding-bottom:0}
-.ev::before{content:"";position:absolute;left:-6px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1px solid var(--dim)}
-.ev.live::before{background:var(--fg);border-color:var(--fg)}
-.ev.now::before{background:var(--acc);border-color:var(--acc);animation:pulse 2.6s ease-out infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(126,226,168,.5)}100%{box-shadow:0 0 0 9px rgba(126,226,168,0)}}
-.meta{display:flex;align-items:baseline;gap:10px;font:14px var(--sans);color:var(--dim)}
-.meta time{color:var(--fg);font-weight:600}
-.st{font-size:13px}
-.now .st{color:var(--acc)}
-.ev h3{margin-top:6px;font:500 18px/1.3 var(--disp);letter-spacing:-.01em}
-.ev h3 a{color:var(--fg);text-decoration-color:var(--line2)}
-.ev h3 a:hover{text-decoration-color:var(--fg)}
-.ev h3 .alt{font:400 17px var(--sans);letter-spacing:0;color:var(--dim);margin-left:8px}
-.ev p.d{margin-top:8px;max-width:60ch}
-.facts{list-style:none;display:flex;flex-wrap:wrap;margin-top:12px;font:15px var(--sans);color:var(--dim)}
-.facts li+li::before{content:"·";margin:0 8px;color:var(--line2)}
-.facts b{color:var(--fg);font-weight:600}
-.awards{list-style:none;margin-top:12px;font-size:16px}
-.awards li{padding-left:18px;position:relative}
-.awards li::before{content:"★";position:absolute;left:0;color:var(--acc);font-size:11px;top:3px}
-
-/* github stars: large, clickable */
-.lnk a.star{font-size:16px}
-.lnk a.star::before{content:"★ ";color:var(--acc);font-size:19px;vertical-align:-1px}
-.lnk a.star::after{content:none}
+/* ---------- 03 Timeline ---------- */
+.tl{list-style:none}
+.row{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:16px 48px;padding:clamp(40px,5vw,64px) 0;border-bottom:1px solid var(--line)}
+.year{font:800 clamp(56px,8vw,112px)/.85 var(--font);letter-spacing:-.045em;color:var(--dim);font-variant-numeric:tabular-nums}
+.row.is-now .year{color:var(--fg)}
+.status{font:600 13px/1.4 var(--font);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.is-now .status{color:var(--link)}
+.is-now .status::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--link);margin-right:10px;vertical-align:1px;animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(112,136,255,.55)}100%{box-shadow:0 0 0 10px rgba(112,136,255,0)}}
+.row h3{margin-top:12px;font:700 clamp(36px,4.6vw,56px)/1 var(--font);letter-spacing:-.03em;color:var(--fg)}
+.row h3 .alt{margin-left:14px;font:500 clamp(17px,1.8vw,20px)/1 var(--font);letter-spacing:0;color:var(--dim)}
+.row .d{margin-top:16px;max-width:58ch}
+.facts{list-style:none;display:flex;flex-wrap:wrap;gap:4px 0;margin-top:20px;font-size:16px;color:var(--fg)}
+.facts li:not(:last-child)::after{content:"/";margin:0 12px;color:#4a4a4a}
+.notes{list-style:none;margin-top:20px;font-size:16px}
+.notes li{position:relative;padding-left:22px}
+.notes li+li{margin-top:6px}
+.notes li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:1px;background:var(--mid)}
+.links{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:24px;font-size:17px}
+.n-stars{display:inline-block;min-width:2ch;text-align:right;font-variant-numeric:tabular-nums}
+.row .stack{margin-top:24px;font-size:15px;color:var(--dim)}
 
 /* archive */
-details.arc{margin:0 0 0 5px;padding-top:36px;border-left:1px dashed var(--line2)}
-details.arc summary{list-style:none;cursor:pointer;padding:0 0 0 26px;font:14px var(--sans);color:var(--dim)}
-details.arc summary::-webkit-details-marker{display:none}
-details.arc summary::before{content:"[+]";color:var(--acc);margin-right:8px}
-details.arc[open] summary::before{content:"[−]"}
-details.arc summary:hover{color:var(--mid)}
-.arc .note{padding:10px 0 0 26px;font-size:15.5px;color:var(--dim);max-width:56ch}
-.arc .tl{border-left:0;margin:20px 0 0}
-.arc .ev{padding-bottom:28px;opacity:.72}
-.arc .ev:hover{opacity:1}
-.arc .ev::before{border-style:dashed}
-.arc .ev h3{font-size:15px}
-.arc .ev h3 a{color:var(--mid)}
+.arc summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:16px 48px;align-items:baseline;padding:32px 0;border-bottom:1px solid var(--line)}
+.arc summary::-webkit-details-marker{display:none}
+.arc summary .y{font:700 clamp(28px,3vw,36px)/1 var(--font);letter-spacing:-.03em;color:var(--dim)}
+.arc summary .t{display:flex;align-items:baseline;gap:12px;font-size:18px;color:var(--link);text-decoration:underline;text-decoration-color:rgba(112,136,255,.45);text-underline-offset:.22em;text-decoration-thickness:1px}
+.arc summary:hover .t{text-decoration-color:currentColor}
+.arc summary .t::before{content:"+";display:inline-block;width:1ch;font-weight:600;text-decoration:none}
+.arc[open] summary .t::before{content:"−"}
+.arc .note{padding:24px 0 0;max-width:56ch;color:var(--dim)}
+.arc .row{padding:32px 0}
+.arc .year{font-size:clamp(28px,3vw,36px);letter-spacing:-.03em}
+.arc .row h3{margin-top:0;font-size:24px;letter-spacing:-.01em}
+.arc .row .d{margin-top:8px}
+.arc .row .links{margin-top:12px}
 
-/* stack, contacts */
-dl.sk{display:grid;grid-template-columns:150px 1fr;gap:12px 20px;font-size:16.5px}
-dl.sk dt{font:14px/1.8 var(--sans);color:var(--dim)}
-dl.sk dd{color:var(--fg)}
-ul.ct{list-style:none;font:15px var(--sans)}
-ul.ct li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:9px 0;border-bottom:1px solid var(--line)}
-ul.ct li:last-child{border-bottom:0}
-ul.ct span{color:var(--dim);font:600 13px/1.9 var(--sans);letter-spacing:.06em;text-transform:uppercase}
-footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font:15px var(--sans);color:var(--dim);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+/* ---------- 04 Stack ---------- */
+.sk div{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:6px 48px;padding:24px 0;border-bottom:1px solid var(--line)}
+.sk dt{font:600 13px/1.9 var(--font);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.sk dd{font-size:clamp(19px,1.8vw,22px);line-height:1.45;color:var(--fg)}
 
-@media (max-width:520px){
-  body{padding:36px 16px 64px}
-  .main-p{padding-left:16px}
-  .main-p h3{font-size:24px}
-  dl.f,dl.sk,ul.ct li{grid-template-columns:1fr;gap:2px}
-  dl.f dd,dl.sk dd{margin-bottom:10px}
+/* ---------- 05 Contact ---------- */
+.say{margin-top:clamp(40px,6vw,72px);font:800 clamp(52px,10vw,128px)/.88 var(--font);letter-spacing:-.045em;color:var(--fg)}
+.say .dot{color:var(--blue)}
+.ct{list-style:none;margin-top:clamp(40px,5vw,64px)}
+.ct li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:4px 48px;align-items:baseline;padding:20px 0;border-top:1px solid var(--line)}
+.ct li:last-child{border-bottom:1px solid var(--line)}
+.ct span{font:600 13px/1.4 var(--font);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.ct a{font-size:clamp(20px,2vw,24px)}
+.ct li.big a{font:700 clamp(28px,3.6vw,44px)/1.1 var(--font);letter-spacing:-.02em}
+
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding:48px 0 56px;font-size:15px;color:var(--dim)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:860px){
+  .hero-low,.feat-body{grid-template-columns:1fr}
+  .actions{justify-content:flex-start}
+  .stat{justify-self:start;text-align:left}
 }
-@media (prefers-reduced-motion:reduce){.cur,.ev.now::before{animation:none}}
+@media (max-width:720px){
+  body{font-size:17px}
+  .row,.arc summary,.sk div,.ct li{grid-template-columns:1fr}
+  .row{gap:20px}
+  .specs{grid-template-columns:1fr}
+  .arc .row{gap:6px}
+  .top .hide-s{display:none}
+  .btn{flex:1 1 auto}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
 </style>
 </head>
 <body>
-<main>
 
-<header>
-  <p class="prompt" aria-hidden="true">~/kozak $ <b>whoami</b><span class="cur"></span></p>
-  <h1>Rostislav Kozak</h1>
-  <p class="role">@Berliner187 · kozak187er · indie developer</p>
-  <p class="bio">
-    I run <strong>Letychka</strong>, a SaaS that turns lecture files into online tests.
-    I also write a dictation app for <strong>macOS</strong> in Swift.
-    At work I build <strong>BI and ETL</strong> for companies: Airflow pipelines, Visiology dashboards, semantic layers.
-  </p>
-  <nav class="quick" aria-label="Contacts">
-    <a href="https://letychka.ru/" target="_blank" rel="noopener">letychka.ru</a>
-    <a href="https://github.com/Berliner187" target="_blank" rel="noopener">github</a>
-    <a href="https://t.me/fancycode" target="_blank" rel="noopener">telegram</a>
-    <a class="nx" href="mailto:kozak187er@yandex.com">email</a>
-  </nav>
+<div class="wrap">
+
+<!-- 01 · Who: name first, then what I do, then how to reach me -->
+<header class="hero">
+  <div class="top">
+    <span><b>Indie developer</b></span>
+    <span class="hide-s">SaaS / macOS / BI</span>
+    <span>@Berliner187</span>
+  </div>
+
+  <h1 class="name">Rostislav<br>Kozak<span class="dot">.</span></h1>
+
+  <div class="hero-low">
+    <p class="lead">
+      I run Letychka, a SaaS that turns lecture files into online tests.
+      <em>I also write a dictation app for macOS in Swift and build BI and ETL for companies.</em>
+    </p>
+    <nav class="actions" aria-label="Contact">
+      <a class="btn btn-blue" href="https://t.me/fancycode" target="_blank" rel="noopener">Telegram <span aria-hidden="true">↗</span></a>
+      <a class="btn btn-line" href="mailto:kozak187er@yandex.com">Email</a>
+      <a class="btn btn-line" href="https://github.com/Berliner187" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
 </header>
 
+<!-- 02 · The one thing to remember: the main product, the only blue block -->
 <section aria-labelledby="h-main">
-  <h2 id="h-main">main product <span>since 2024</span></h2>
+  <h2 class="label" id="h-main"><span class="n">01</span>Main product<span class="r">since 2024</span></h2>
 
-  <article class="main-p">
-    <div class="meta"><time datetime="2024">2024</time><span class="st">● running</span></div>
-    <h3><a href="https://letychka.ru/" target="_blank" rel="noopener">Letychka</a><span class="alt" lang="ru">Летучка</span></h3>
-    <p class="lead">A teacher uploads a PDF or DOCX, or pastes text, and gets a ready online test. Students open it by link or QR code, with no registration.</p>
-    <p class="d">
-      Built for teachers, tutors, university departments and company training teams. Answers are checked automatically, and the teacher sees which topics students got wrong most often.
-    </p>
-
-    <div class="big">
-      <div><b>4500+</b>users</div>
-      <div><b>RU</b>interface</div>
+  <article class="feat">
+    <div class="feat-top">
+      <span>2024 — now</span>
+      <span class="live">Running</span>
     </div>
 
-    <dl class="f">
-      <dt>input</dt>
-      <dd>PDF, DOC/DOCX, TXT up to 25 MB, or pasted text up to 100,000 characters</dd>
-      <dt>tests</dt>
-      <dd>Three difficulty levels, single or multiple correct answers, shuffled options, editing of any question after generation</dd>
-      <dt>students</dt>
-      <dd>Link or QR code, no account needed</dd>
-      <dt>results</dt>
-      <dd>Automatic scoring, per-question statistics, Excel export, printable A4 sheets in two variants with an answer key</dd>
+    <h3>Letychka<span class="alt" lang="ru">Летучка</span></h3>
+
+    <div class="feat-body">
+      <div>
+        <p class="lead">A teacher uploads a PDF or DOCX, or pastes text, and gets a ready online test.</p>
+        <p class="d">Students open it by link or QR code, with no registration. Answers are checked automatically, and the teacher sees which topics students got wrong most often. Built for teachers, tutors, university departments and company training teams.</p>
+      </div>
+      <div class="stat"><b>4500+</b><span>users · RU interface</span></div>
+    </div>
+
+    <dl class="specs">
+      <div><dt>Input</dt><dd>PDF, DOC/DOCX, TXT up to 25 MB, or pasted text up to 100,000 characters</dd></div>
+      <div><dt>Tests</dt><dd>Three difficulty levels, single or multiple correct answers, shuffled options, editing of any question</dd></div>
+      <div><dt>Students</dt><dd>Link or QR code, no account needed</dd></div>
+      <div><dt>Results</dt><dd>Automatic scoring, per-question statistics, Excel export, printable A4 sheets with an answer key</dd></div>
     </dl>
 
-    <nav class="lnk">
-      <a href="https://letychka.ru/" target="_blank" rel="noopener">letychka.ru</a>
-      <a href="https://letychka.ru/test-dlya-uchenikov/" target="_blank" rel="noopener">for teachers</a>
-      <a href="https://productradar.ru/product/letuchka/" target="_blank" rel="noopener">product radar</a>
-    </nav>
-    <p class="stack">python / django / postgresql / redis / celery / llm</p>
+    <div class="feat-cta">
+      <a class="btn btn-white" href="https://letychka.ru/" target="_blank" rel="noopener">Open letychka.ru <span aria-hidden="true">↗</span></a>
+      <div class="links">
+        <a class="ext" href="https://letychka.ru/test-dlya-uchenikov/" target="_blank" rel="noopener">For teachers</a>
+        <a class="ext" href="https://productradar.ru/product/letuchka/" target="_blank" rel="noopener">Product Radar</a>
+      </div>
+    </div>
+
+    <p class="stack">Python / Django / PostgreSQL / Redis / Celery / LLM</p>
   </article>
 </section>
 
+<!-- 03 · Everything else, by year -->
 <section aria-labelledby="h-more">
-  <h2 id="h-more">other projects <span>2023–2026</span></h2>
+  <h2 class="label" id="h-more"><span class="n">02</span>Projects by year<span class="r">2021–2026</span></h2>
 
   <ol class="tl">
 
-    <li class="ev now">
-      <div class="meta"><time datetime="2026">2026</time><span class="st">● in development</span></div>
-      <h3><a href="https://golosok.space/" target="_blank" rel="noopener">Golosok</a><span class="alt" lang="ru">Голосок</span></h3>
-      <p class="d">
-        Offline dictation for macOS. Press ⌥&nbsp;Space, speak, and the text appears at the cursor in any app.
-        Recognition runs locally on GigaAM&nbsp;v3 or Whisper, using the GPU and Neural Engine of Apple Silicon, so audio stays on the Mac.
-      </p>
-      <ul class="facts">
-        <li><b>v1.13.9</b></li>
-        <li>MIT</li>
-        <li>macOS 13+</li>
-        <li>Apple Silicon</li>
-        <li>free</li>
-      </ul>
-      <ul class="awards">
-        <li>1st place in <a href="https://sa-the-silicon-gazette.vercel.app/gazette/2026-08-13#repos" target="_blank" rel="noopener">Silicon Gazette</a>, repos section, 13 Aug 2026</li>
-        <li>Listed in <a href="https://github.com/jaywcjlove/awesome-swift-macos-apps" target="_blank" rel="noopener">awesome-swift-macos-apps</a> and <a href="https://github.com/jaywcjlove/awesome-mac" target="_blank" rel="noopener">awesome-mac</a></li>
-      </ul>
-      <nav class="lnk">
-        <a href="https://golosok.space/" target="_blank" rel="noopener">golosok.space</a>
-        <a href="https://golosok.space/en/" target="_blank" rel="noopener">english</a>
-        <a href="https://github.com/Berliner187/Golosok" target="_blank" rel="noopener">source</a>
-        <a class="star" id="stars" href="https://github.com/Berliner187/Golosok/stargazers" target="_blank" rel="noopener"><span id="starn">6</span> stars</a>
-        <a href="https://productradar.ru/product/golosok/" target="_blank" rel="noopener">product radar</a>
-      </nav>
-      <p class="stack">swift / metal / core ml / gigaam-v3 / whisper</p>
+    <li class="row is-now">
+      <div class="year"><time datetime="2026">2026</time></div>
+      <div>
+        <p class="status">In development</p>
+        <h3>Golosok<span class="alt" lang="ru">Голосок</span></h3>
+        <p class="d">Offline dictation for macOS. Press ⌥&nbsp;Space, speak, and the text appears at the cursor in any app. Recognition runs locally on GigaAM&nbsp;v3 or Whisper, using the GPU and Neural Engine of Apple Silicon, so audio stays on the Mac.</p>
+        <ul class="facts">
+          <li>v1.13.9</li><li>MIT</li><li>macOS 13+</li><li>Apple Silicon</li><li>Free</li>
+        </ul>
+        <ul class="notes">
+          <li>1st place in <a class="ext" href="https://sa-the-silicon-gazette.vercel.app/gazette/2026-08-13#repos" target="_blank" rel="noopener">Silicon Gazette</a>, repos section, 13 Aug 2026</li>
+          <li>Listed in <a class="ext" href="https://github.com/jaywcjlove/awesome-swift-macos-apps" target="_blank" rel="noopener">awesome-swift-macos-apps</a> and <a class="ext" href="https://github.com/jaywcjlove/awesome-mac" target="_blank" rel="noopener">awesome-mac</a></li>
+        </ul>
+        <nav class="links" aria-label="Golosok links">
+          <a class="ext" href="https://golosok.space/" target="_blank" rel="noopener">golosok.space</a>
+          <a class="ext" href="https://golosok.space/en/" target="_blank" rel="noopener">English version</a>
+          <a class="ext" href="https://github.com/Berliner187/Golosok" target="_blank" rel="noopener">Source</a>
+          <a class="ext" href="https://github.com/Berliner187/Golosok/stargazers" target="_blank" rel="noopener">★ <span class="n-stars" id="starn">6</span> stars</a>
+          <a class="ext" href="https://productradar.ru/product/golosok/" target="_blank" rel="noopener">Product Radar</a>
+        </nav>
+        <p class="stack">Swift / Metal / Core ML / GigaAM-v3 / Whisper</p>
+      </div>
     </li>
 
-    <li class="ev live">
-      <div class="meta"><time datetime="2023">2023</time><span class="st">running</span></div>
-      <h3><a href="https://taxi-watcher.ru/" target="_blank" rel="noopener">Taxi Watcher</a></h3>
-      <p class="d">A Telegram bot that watches ride-hailing prices on a chosen route and writes when the fare drops.</p>
-      <ul class="awards">
-        <li>Top&nbsp;3 of the week on <a href="https://productradar.ru/product/taxi-watcher/" target="_blank" rel="noopener">Product Radar</a></li>
-      </ul>
-      <nav class="lnk">
-        <a href="https://taxi-watcher.ru/" target="_blank" rel="noopener">taxi-watcher.ru</a>
-        <a href="https://github.com/Berliner187/taxi-watcher-service" target="_blank" rel="noopener">source</a>
-      </nav>
-      <p class="stack">python / asyncio / telegram bot api</p>
+    <li class="row">
+      <div class="year"><time datetime="2024">2024</time></div>
+      <div>
+        <p class="status">Running · main product</p>
+        <h3>Letychka</h3>
+        <p class="d">Online tests from lecture files. <a href="#h-main">See above</a></p>
+      </div>
+    </li>
+
+    <li class="row">
+      <div class="year"><time datetime="2023">2023</time></div>
+      <div>
+        <p class="status">Running</p>
+        <h3>Taxi Watcher</h3>
+        <p class="d">A Telegram bot that watches ride-hailing prices on a chosen route and writes when the fare drops.</p>
+        <ul class="notes">
+          <li>Top&nbsp;3 of the week on <a class="ext" href="https://productradar.ru/product/taxi-watcher/" target="_blank" rel="noopener">Product Radar</a></li>
+        </ul>
+        <nav class="links" aria-label="Taxi Watcher links">
+          <a class="ext" href="https://taxi-watcher.ru/" target="_blank" rel="noopener">taxi-watcher.ru</a>
+          <a class="ext" href="https://github.com/Berliner187/taxi-watcher-service" target="_blank" rel="noopener">Source</a>
+        </nav>
+        <p class="stack">Python / asyncio / Telegram Bot API</p>
+      </div>
     </li>
 
   </ol>
 
   <details class="arc">
-    <summary>archive · 2 early repos</summary>
+    <summary><span class="y">2021–23</span><span class="t">Archive: 2 early repos</span></summary>
     <p class="note">Personal projects that were never released and are no longer maintained. The code is on GitHub as is.</p>
     <ol class="tl">
-      <li class="ev">
-        <div class="meta"><time datetime="2023">2023</time><span class="st">unmaintained</span></div>
-        <h3><a href="https://github.com/Berliner187/Finanzfluss" target="_blank" rel="noopener">Finanzfluss</a></h3>
-        <p class="d">Command-line budget tracker: income, expenses and account balances.</p>
-        <p class="stack">python / cli</p>
+      <li class="row">
+        <div class="year"><time datetime="2023">2023</time></div>
+        <div>
+          <h3>Finanzfluss</h3>
+          <p class="d">Command-line budget tracker: income, expenses and account balances. Python, CLI.</p>
+          <div class="links"><a class="ext" href="https://github.com/Berliner187/Finanzfluss" target="_blank" rel="noopener">Source</a></div>
+        </div>
       </li>
-      <li class="ev">
-        <div class="meta"><time datetime="2021">2021</time><span class="st">unmaintained</span></div>
-        <h3><a href="https://github.com/Berliner187/elba" target="_blank" rel="noopener">Elba</a></h3>
-        <p class="d">Offline password and notes manager with local encryption. GPL-3.0.</p>
-        <p class="stack">python / cryptography</p>
+      <li class="row">
+        <div class="year"><time datetime="2021">2021</time></div>
+        <div>
+          <h3>Elba</h3>
+          <p class="d">Offline password and notes manager with local encryption. Python, GPL-3.0.</p>
+          <div class="links"><a class="ext" href="https://github.com/Berliner187/elba" target="_blank" rel="noopener">Source</a></div>
+        </div>
       </li>
     </ol>
   </details>
 </section>
 
+<!-- 04 · Stack -->
 <section aria-labelledby="h-stack">
-  <h2 id="h-stack">stack</h2>
+  <h2 class="label" id="h-stack"><span class="n">03</span>Stack</h2>
   <dl class="sk">
-    <dt>products</dt>
-    <dd>Python, Django, FastAPI, PostgreSQL, Redis, Celery, Docker. Swift, Metal, Core ML on macOS</dd>
-    <dt>data &amp; bi</dt>
-    <dd>Apache Airflow, ETL, Pandas, SQL, Visiology, semantic layer design</dd>
+    <div><dt>Products</dt><dd>Python, Django, FastAPI, PostgreSQL, Redis, Celery, Docker. Swift, Metal, Core ML on macOS</dd></div>
+    <div><dt>Data &amp; BI</dt><dd>Apache Airflow, ETL, Pandas, SQL, Visiology, semantic layer design</dd></div>
   </dl>
 </section>
 
+<!-- 05 · Contact -->
 <section aria-labelledby="h-ct">
-  <h2 id="h-ct">elsewhere</h2>
+  <h2 class="label" id="h-ct"><span class="n">04</span>Contact</h2>
+  <p class="say" aria-hidden="true">Write me<span class="dot">.</span></p>
   <ul class="ct">
-    <li><span>github</span><a href="https://github.com/Berliner187" target="_blank" rel="noopener">@Berliner187</a></li>
-    <li><span>telegram</span><a href="https://t.me/fancycode" target="_blank" rel="noopener">@fancycode</a></li>
-    <li><span>email</span><a class="nx" href="mailto:kozak187er@yandex.com">kozak187er@yandex.com</a></li>
-    <li><span>product radar</span><a href="https://productradar.ru/user/kozak187er/" target="_blank" rel="noopener">kozak187er</a></li>
-    <li><span>dprofile</span><a href="https://dprofile.ru/kozak_developer" target="_blank" rel="noopener">kozak_developer</a></li>
-    <li><span>dribbble</span><a href="https://dribbble.com/kozak_developer" target="_blank" rel="noopener">kozak_developer</a></li>
+    <li class="big"><span>Telegram</span><a class="ext" href="https://t.me/fancycode" target="_blank" rel="noopener">@fancycode</a></li>
+    <li class="big"><span>Email</span><a href="mailto:kozak187er@yandex.com">kozak187er@yandex.com</a></li>
+    <li><span>GitHub</span><a class="ext" href="https://github.com/Berliner187" target="_blank" rel="noopener">@Berliner187</a></li>
+    <li><span>Product Radar</span><a class="ext" href="https://productradar.ru/user/kozak187er/" target="_blank" rel="noopener">kozak187er</a></li>
+    <li><span>Dprofile</span><a class="ext" href="https://dprofile.ru/kozak_developer" target="_blank" rel="noopener">kozak_developer</a></li>
+    <li><span>Dribbble</span><a class="ext" href="https://dribbble.com/kozak_developer" target="_blank" rel="noopener">kozak_developer</a></li>
   </ul>
 </section>
 
 <footer>
-  <span>© 2026 Rostislav Kozak</span>
+  <span>• 2026 // Kozak Developer</span>
   <span>from Rostislav with Love</span>
 </footer>
 
-</main>
+</div>
 
 <noscript><img src="https://mc.yandex.ru/watch/113935909" style="position:absolute;left:-9999px" alt=""></noscript>
 <script>
-/* GitHub stars: after first paint, cached for the session */
+/* GitHub stars: after first paint, cached for the session. Width is reserved, so nothing shifts. */
 (function(){
   var el=document.getElementById('starn'),k='golosok-stars';
   if(!el||!window.fetch)return;
